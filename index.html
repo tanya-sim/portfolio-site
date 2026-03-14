@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanya Simkhovich — Design</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ─── Navigation ──────────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-headshot">
+        <img class="nav-avatar" src="assets/avatar.png" alt="Tanya Simkhovich" />
+        <span class="nav-name">Tanya Simkhovich</span>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#hero" class="active">HOME</a></li>
+          <li><a href="#work">WORK</a></li>
+          <li><a href="#philosophy">ABOUT</a></li>
+          <li><a href="#">JOURNEY</a></li>
+          <li><a href="#footer">CONTACT</a></li>
+        </ul>
+        <!-- Dark/light mode toggle -->
+        <button class="toggle-mode" id="toggleMode" aria-label="Toggle dark/light mode" data-mode="dark">
+          <span class="toggle-mode__bg"></span>
+          <img class="toggle-mode__icon" src="assets/icon-moon.svg" alt="" />
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ─── Hero ─────────────────────────────────────────────────── -->
+    <section id="hero">
+      <div class="hero-inner">
+        <p class="hero-name">Tanya Simkhovich</p>
+        <h1 class="hero-title">Design</h1>
+        <div class="hero-line"></div>
+      </div>
+    </section>
+
+    <!-- ─── Crafting Human Experiences ───────────────────────────── -->
+    <section id="crafting">
+      <div class="crafting-inner">
+        <div class="crafting-line">
+          <span class="crafting-word-1 anim-from-left">Crafting</span>
+          <span class="crafting-word-2 anim-from-right delay-1">Human</span>
+          <span class="crafting-word-3 anim-from-left delay-2">Experiences</span>
+        </div>
+        <p class="crafting-desc anim-unfold-x delay-4">
+          20 years transforming complex enterprise challenges into intuitive, accessible digital products
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── Stats ─────────────────────────────────────────────────── -->
+    <section id="stats">
+      <div class="stats-grid">
+
+        <!-- Card 1: slides from left + rotates -->
+        <div class="stat-card stat-card-1 anim-card-left">
+          <p class="stat-number">20</p>
+          <p class="stat-label">Years of Enterprise Design</p>
+        </div>
+
+        <!-- Card 2: rises from bottom + scales -->
+        <div class="stat-card stat-card-2 anim-card-up delay-1">
+          <img class="stat-icon" src="assets/icon-accessibility.png" alt="Accessibility" />
+          <p class="stat-label">Passion for Accessibility</p>
+        </div>
+
+        <!-- Card 3: slides from right + rotates -->
+        <div class="stat-card stat-card-3 anim-card-right delay-2">
+          <p class="stat-number">5</p>
+          <p class="stat-label">Patented UX Innovations</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── Selected Work ─────────────────────────────────────────── -->
+    <section id="work">
+      <div class="work-inner">
+
+        <h2 class="work-title anim-title-expand">Selected Work</h2>
+
+        <div class="projects-list">
+
+          <!-- Project 1: Pulse — slides from left -->
+          <div class="project-card anim-from-left" tabindex="0"
+               style="background-image: radial-gradient(ellipse at 12% 35%, rgba(255,245,218,0.5) 9%, rgba(228,231,252,0.2) 72%, rgba(255,255,255,0) 100%);">
+            <img class="project-thumb" src="assets/project-pulse.png" alt="Pulse Design System" />
+            <div class="project-info">
+              <p class="project-category">design systems</p>
+              <h3 class="project-title">Pulse Design System Documentation Site</h3>
+              <p class="project-desc">Led a documentation redesign initiative for the Digital Pulse design system, unifying a fragmented experience. Through research, testing, workshops, and hands-on prototyping, I built a scalable, multi-platform documentation structure.</p>
+              <a class="project-link" href="#">
+                View Project
+                <img src="assets/icon-arrow.png" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2: CVS — slides from right -->
+          <div class="project-card anim-from-right" tabindex="0"
+               style="background-image: radial-gradient(ellipse at 78% 36%, rgba(255,245,218,0.5) 9%, rgba(228,231,252,0.2) 72%, rgba(255,255,255,0) 100%);">
+            <img class="project-thumb" src="assets/project-cvs.png" alt="CVS Super App" />
+            <div class="project-info">
+              <p class="project-category">design systems</p>
+              <h3 class="project-title">CVS "Super App" and Pulse Velocity</h3>
+              <p class="project-desc">Captures my approach to building and evolving design systems that balance clarity, accessibility, and scalability. The work focused on creating a stronger foundation that supports both current teams and future growth.</p>
+              <a class="project-link" href="#">
+                View Project
+                <img src="assets/icon-arrow.png" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3: Weather — scales from center -->
+          <div class="project-card anim-scale-center" tabindex="0"
+               style="background-image: radial-gradient(ellipse at 52% 65%, rgba(255,245,218,0.5) 9%, rgba(228,231,252,0.2) 72%, rgba(255,255,255,0) 100%);">
+            <img class="project-thumb" src="assets/project-weather.png" alt="Weather InSight App" />
+            <div class="project-info">
+              <p class="project-category">mobile app</p>
+              <h3 class="project-title">The Weather InSight App</h3>
+              <p class="project-desc">Designed and oversaw the entire implementation cycle of a unique weather app that delivers snapshots of relative local weather information with negative and positive meteorologist highlights.</p>
+              <a class="project-link" href="#">
+                View Project
+                <img src="assets/icon-arrow.png" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4: John Hancock — rises from bottom -->
+          <div class="project-card anim-from-bottom" tabindex="0"
+               style="background-image: radial-gradient(ellipse at 12% 37%, rgba(255,245,218,0.5) 9%, rgba(228,231,252,0.2) 72%, rgba(255,255,255,0) 100%);">
+            <img class="project-thumb" src="assets/project-jhancook.png" alt="John Hancock Participant Site" />
+            <div class="project-info">
+              <p class="project-category">web design</p>
+              <h3 class="project-title">John Hancock Participant Site</h3>
+              <p class="project-desc">Successfully launched new John Hancock Retirement Services Participant website reaching 1.7 million users in order to acquire new clients and retain existing ones.</p>
+              <a class="project-link" href="#">
+                View Project
+                <img src="assets/icon-arrow.png" alt="" />
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- View All Work CTA — unfolds from center -->
+        <div class="view-all-wrap anim-unfold-x delay-1">
+          <button class="btn-view-all">View All Work</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── Philosophy ────────────────────────────────────────────── -->
+    <section id="philosophy">
+      <div class="philosophy-inner">
+
+        <h2 class="philosophy-heading anim-clip-reveal">
+          Taste and craft are <em>Human.</em><br>
+          <em>System Thinking</em> turns them into comprehensive solutions.
+        </h2>
+
+        <p class="philosophy-body anim-from-bottom delay-1">
+          I'm constantly experimenting with design patterns, seeking for what works for people navigating complex experiences while building trust and engagement.
+        </p>
+
+        <a class="philosophy-link anim-from-bottom delay-2" href="#">
+          Learn more about me
+          <img src="assets/icon-arrow.png" alt="" />
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── Footer ────────────────────────────────────────────────── -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© All rights reserved 2026 Tanya Simkhovich.</p>
+      <div class="footer-contact">
+        <span class="footer-connect">Connect&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <a class="footer-email" href="mailto:tsimkhovich@gmail.com">tsimkhovich@gmail.com</a>
+        <a class="footer-linkedin" href="https://linkedin.com" target="_blank" rel="noopener">
+          <img src="assets/linkedin-logo.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
