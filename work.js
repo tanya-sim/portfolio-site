@@ -10,10 +10,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('.work-section');
 
   function applyFilter(filter) {
+    const toAnimate = [];
+
     // 1. Show / hide cards — support space-separated multi-category values
     cards.forEach(card => {
       const categories = (card.dataset.category || '').split(' ');
-      card.hidden = filter !== 'all' && !categories.includes(filter);
+      const shouldShow = filter === 'all' || categories.includes(filter);
+
+      if (!shouldShow) {
+        card.hidden = true;
+        card.classList.remove('is-visible');
+      } else {
+        card.hidden = false;
+        card.classList.remove('is-visible');
+        toAnimate.push(card);
+      }
     });
 
     // 2. Hide rows that have no visible cards
@@ -26,6 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => {
       const hasVisible = [...section.querySelectorAll('.work-card')].some(c => !c.hidden);
       section.hidden = !hasVisible;
+    });
+
+    // 4. Flush layout so the browser registers the reset state, then stagger cards in
+    void document.body.offsetHeight;
+    toAnimate.forEach((card, i) => {
+      setTimeout(() => card.classList.add('is-visible'), i * 70);
     });
   }
 
