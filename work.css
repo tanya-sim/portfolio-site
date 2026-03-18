@@ -46,7 +46,7 @@
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
-  transition: background 0.55s ease, box-shadow 0.55s ease, font-weight 0.55s ease;
+  transition: background 0.55s ease, box-shadow 0.55s ease;
   text-transform: capitalize;
 }
 .chip:hover {
@@ -55,8 +55,6 @@
 
 .chip--active {
   background: #98d2ef;
-  font-weight: 600;
-  /* inset shadow fakes the 2px border so it can transition smoothly instead of snapping */
   box-shadow: inset 0 0 0 1px var(--blue-70);
 }
 .chip--active:hover {
