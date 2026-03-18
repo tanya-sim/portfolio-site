@@ -38,6 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
         c.classList.remove('chip--active');
         c.setAttribute('aria-pressed', 'false');
       });
+      // Force animation replay even if this chip was already active
+      chip.classList.remove('chip--active');
+      void chip.offsetWidth; // reflow
       chip.classList.add('chip--active');
       chip.setAttribute('aria-pressed', 'true');
 
