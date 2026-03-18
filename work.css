@@ -23,12 +23,6 @@
   line-height: 1;
 }
 
-/* ─── Chip Animations ───────────────────────────────────────────── */
-@keyframes chip-check-pop {
-  0%   { opacity: 0; transform: translateY(-4px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
 /* ─── Chip Group ────────────────────────────────────────────────── */
 .chip-group {
   display: flex;
@@ -69,16 +63,6 @@
   background: #7fc6e8;
 }
 
-.chip__check {
-  width: 16px;
-  height: 16px;
-  display: none;
-  flex-shrink: 0;
-}
-.chip--active .chip__check {
-  display: block;
-  animation: chip-check-pop 0.7s ease-out both;
-}
 
 /* ─── Work Section ──────────────────────────────────────────────── */
 .work-section {
@@ -244,9 +228,6 @@ body.dark-mode .chip--active {
 }
 body.dark-mode .chip--active:hover {
   background: rgba(109, 182, 218, 0.3);
-}
-body.dark-mode .chip__check {
-  filter: brightness(0) saturate(100%) invert(69%) sepia(27%) saturate(617%) hue-rotate(161deg) brightness(101%) contrast(89%);
 }
 
 body.dark-mode .work-section-header {
