@@ -21,8 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
         card.hidden = true;
         card.classList.remove('is-visible');
       } else {
-        card.hidden = false;
+        // Disable transition so the reset to hidden state is instant (no fade-back fighting the fade-in)
+        card.style.transition = 'none';
         card.classList.remove('is-visible');
+        card.hidden = false;
         toAnimate.push(card);
       }
     });
@@ -39,9 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
       section.hidden = !hasVisible;
     });
 
-    // 4. Flush layout so the browser registers the reset state, then stagger cards in
+    // 4. Flush layout — browser registers the reset position while transitions are off
     void document.body.offsetHeight;
+
+    // 5. Restore transitions, then stagger cards in
     toAnimate.forEach((card, i) => {
+      card.style.transition = '';
       setTimeout(() => card.classList.add('is-visible'), i * 70);
     });
   }
