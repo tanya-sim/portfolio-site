@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work — Tanya Simkhovich</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Inria+Serif:ital,wght@1,400;1,700&display=block" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="work.css" />
+</head>
+<body>
+
+  <!-- ─── Navigation ──────────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-headshot">
+        <img class="nav-avatar" src="assets/avatar.png" alt="Tanya Simkhovich" />
+        <span class="nav-name">Tanya Simkhovich</span>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="work.html" class="active">WORK</a></li>
+          <li><a href="index.html#philosophy">ABOUT</a></li>
+          <li><a href="#">JOURNEY</a></li>
+          <li><a href="#footer">CONTACT</a></li>
+        </ul>
+        <button class="toggle-mode" id="toggleMode" aria-label="Toggle dark/light mode" data-mode="light">
+          <span class="toggle-mode__bg"></span>
+          <img class="toggle-mode__icon" src="assets/icon-moon.svg" alt="" />
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+          <img src="assets/icon-hamburger.svg" alt="" />
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__panel">
+      <div class="mobile-menu__header">
+        <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+          <img src="assets/icon-close.svg" alt="" />
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="index.html#philosophy">About</a></li>
+        <li><a href="#">Journey</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main class="work-page">
+    <div class="work-inner">
+
+      <h1 class="work-page-title anim-from-bottom">Portfolio</h1>
+
+      <!-- ─── Filter chips ──────────────────────────────────────── -->
+      <div class="chip-group anim-from-bottom" role="group" aria-label="Filter by category">
+        <button class="chip chip--active" data-filter="all" aria-pressed="true">
+          <img class="chip__check" src="assets/icon-check.svg" alt="" />
+          View All
+        </button>
+        <button class="chip" data-filter="design-systems" aria-pressed="false">
+          <img class="chip__check" src="assets/icon-check.svg" alt="" />
+          Design Systems
+        </button>
+        <button class="chip" data-filter="mobile-design" aria-pressed="false">
+          <img class="chip__check" src="assets/icon-check.svg" alt="" />
+          Mobile Design
+        </button>
+        <button class="chip" data-filter="web-design" aria-pressed="false">
+          <img class="chip__check" src="assets/icon-check.svg" alt="" />
+          Web Design
+        </button>
+        <button class="chip" data-filter="desktop-system" aria-pressed="false">
+          <img class="chip__check" src="assets/icon-check.svg" alt="" />
+          Desktop System
+        </button>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════════════════
+           SECTION 1 — CVS Health (2020–2025)
+      ════════════════════════════════════════════════════════════ -->
+      <section class="work-section" data-section="cvs">
+        <div class="work-section-header anim-from-bottom">
+          <p class="work-era">2020–2025</p>
+          <p class="work-industry">Healthcare</p>
+          <h2 class="work-company">CVS Health</h2>
+        </div>
+        <h3 class="work-collection-label anim-from-bottom">Case Studies</h3>
+
+        <div class="work-row">
+          <!-- Pulse Design System Doc Site — design-systems -->
+          <div class="work-card anim-from-bottom" data-category="design-systems web-design" tabindex="0">
+            <div class="work-card__thumb">
+              <div class="work-card__thumb-clip"><img src="assets/work-pulse-doc.png" alt="Pulse Design System Documentation Site" style="inset:0;width:100%;height:100%;object-fit:cover;" /></div>
+            </div>
+            <div class="work-card__body">
+              <p class="work-card__category">Design Systems | Web Design</p>
+              <h3 class="work-card__title">Pulse Design System Documentation Site</h3>
+              <p class="work-card__desc">Led a documentation redesign initiative for the Digital Pulse design system, unifying a fragmented experience. Through research, testing, workshops, and hands-on prototyping, I built a scalable, multi-platform documentation structure.</p>
+              <a class="project-link" href="#">
+                View Project
+                <img src="assets/icon-arrow.svg" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <!-- CVS Super App — design-systems -->
+          <div class="work-card anim-from-bottom delay-1" data-category="design-systems mobile-design" tabindex="0">
+            <div class="work-card__thumb">
+              <div class="work-card__thumb-clip"><img src="assets/work-cvs-super.png" alt="CVS Super App and Pulse Velocity" style="inset:0;width:100%;height:100%;object-fit:cover;" /></div>
+            </div>
+            <div class="work-card__body">
+              <p class="work-card__category">Design Systems | Mobile Design</p>
+              <h3 class="work-card__title">CVS "Super App" and Pulse Velocity</h3>
+              <p class="work-card__desc">Captures my approach to building and evolving design systems that balance clarity, accessibility, and scalability. The work focused on creating a stronger foundation that supports both current teams and future growth.</p>
+              <a class="project-link" href="#">
+                View Project
+                <img src="assets/icon-arrow.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div><!-- /.work-row -->
+
+        <div class="work-row work-row--single">
+          <!-- CVS Icon Library Redesign — design-systems -->
+          <div class="work-card anim-from-bottom" data-category="design-systems" tabindex="0">
+            <div class="work-card__thumb">
+              <div class="work-card__thumb-clip"><img src="assets/work-cvs-icons.png" alt="CVS Icon Library Redesign" style="inset:0;width:100%;height:100%;object-fit:cover;" /></div>
+            </div>
+            <div class="work-card__body">
+              <p class="work-card__category">Design Systems</p>
+              <h3 class="work-card__title">CVS Icon Library Redesign</h3>
+              <p class="work-card__desc">Collaborated with creative team on redesigning the 400+ icon set. Defined technical requirements and optimal library architecture for overall success of the initiative.</p>
+              <a class="project-link" href="#">
+                View Project
+                <img src="assets/icon-arrow.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div><!-- /.work-row -->
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════
+           SECTION 2 — The Weather Company / IBM (2016–2020)
+      ════════════════════════════════════════════════════════════ -->
+      <section class="work-section" data-section="twc">
+        <div class="work-section-header anim-from-bottom">
+          <p class="work-era">2016–2020</p>
+          <p class="work-industry">Weather Intelligence &amp; Climate Technology</p>
+          <h2 class="work-company">The Weather Company / IBM</h2>
+        </div>
+        <h3 class="work-collection-label anim-from-bottom">A Selection of Case Studies and Projects</h3>
+
+        <div class="work-row">
+          <!-- Weather InSight App — mobile-design -->
+          <div class="work-card anim-from-bottom" data-category="mobile-design" tabindex="0">
+            <div class="work-card__thumb">
+              <div class="work-card__thumb-clip"><img src="assets/work-weather-insight.png" alt="Weather InSight App" style="left:-33.33%;top:-25.3%;width:162.88%;height:289.71%;" /></div>
+            </div>
+            <div class="work-card__body">
+              <p class="work-card__category">Mobile Design</p>
+              <h3 class="work-card__title">Weather InSight App</h3>
+              <p class="work-card__desc">Designed and oversaw the entire implementation cycle of unique weather app that delivers snapshots of relative local weather information with negative and positive meteorologist highlights.</p>
+              <a class="project-link" href="#">
+                View Project
+                <img src="assets/icon-arrow.svg" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Map Interface Upgrade — mobile-design -->
+          <div class="work-card anim-from-bottom delay-1" data-category="mobile-design" tabindex="0">
+            <div class="work-card__thumb">
+              <div class="work-card__thumb-clip"><img src="assets/work-map.png" alt="Map Interface Upgrade" style="left:0.76%;top:-11.66%;width:100%;height:177.87%;" /></div>
+            </div>
+            <div class="work-card__body">
+              <p class="work-card__category">Mobile Design</p>
+              <h3 class="work-card__title">Map Interface Upgrade</h3>
+              <p class="work-card__desc">Delivered an engaging and fun experience enabling users to explore the numerous map visualization layers and generate more ad revenue.</p>
+              <a class="project-link" href="#">
+                View Project
+                <img src="assets/icon-arrow.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div><!-- /.work-row -->
+
+        <div class="work-row">
+          <!-- Video View Optimization — mobile-design -->
+          <div class="work-card anim-from-bottom" data-category="mobile-design" tabindex="0">
+            <div class="work-card__thumb">
+              <div class="work-card__thumb-clip"><img src="assets/work-video.png" alt="Video View Optimization" style="left:-31.06%;top:-110.93%;width:161.36%;height:485.66%;" /></div>
+            </div>
+            <div class="work-card__body">
+              <p class="work-card__category">Mobile Design</p>
+              <h3 class="work-card__title">Video View Optimization</h3>
+              <p class="work-card__desc">Designed engaging multi-point video viewing experiences throughout the app in order to promote more video consumption and more ad revenue.</p>
+              <a class="project-link" href="#">
+                View Project
+                <img src="assets/icon-arrow.svg" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <!-- B2B White Label Weather App — mobile-design -->
+          <div class="work-card anim-from-bottom delay-1" data-category="mobile-design" tabindex="0">
+            <div class="work-card__thumb">
+              <div class="work-card__thumb-clip"><img src="assets/work-b2b-weather.png" alt="B2B White Label Weather App" style="left:-12.12%;top:-151.55%;width:184.85%;height:280.21%;" /></div>
+            </div>
+            <div class="work-card__body">
+              <p class="work-card__category">Mobile Design</p>
+              <h3 class="work-card__title">B2B White Label Weather App</h3>
+              <p class="work-card__desc">End-to-end UX/UI support for new features, enhancements, and maintenance of the B2B white-label mobile platform (iOS and Android).</p>
+              <a class="project-link" href="#">
+                View Project
+                <img src="assets/icon-arrow.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div><!-- /.work-row -->
+
+        <div class="work-row work-row--single">
+          <!-- Weather Company MAX Redesign — desktop-system -->
+          <div class="work-card anim-from-bottom" data-category="desktop-system" tabindex="0">
+            <div class="work-card__thumb">
+              <div class="work-card__thumb-clip"><img src="assets/work-twc-max.png" alt="Weather Company MAX Redesign" style="left:-53.78%;top:-16.44%;width:206.81%;height:115.68%;" /></div>
+            </div>
+            <div class="work-card__body">
+              <p class="work-card__category">Desktop System</p>
+              <h3 class="work-card__title">Weather Company MAX Redesign</h3>
+              <p class="work-card__desc">The Weather Company Max is a workstation-based system that is used by 90%+ of all local TV stations in North America to produce visualizations and graphics for broadcast.</p>
+              <a class="project-link" href="#">
+                View Project
+                <img src="assets/icon-arrow.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div><!-- /.work-row -->
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════
+           SECTION 3 — John Hancock (2014–2016)
+      ════════════════════════════════════════════════════════════ -->
+      <section class="work-section" data-section="jh">
+        <div class="work-section-header anim-from-bottom">
+          <p class="work-era">2014–2016</p>
+          <p class="work-industry">Fintech</p>
+          <h2 class="work-company">John Hancock</h2>
+        </div>
+
+        <div class="work-row work-row--single">
+          <!-- Participant Site Redesign — web-design -->
+          <div class="work-card anim-from-bottom" data-category="web-design" tabindex="0">
+            <div class="work-card__thumb">
+              <div class="work-card__thumb-clip"><img src="assets/work-jh-participant.png" alt="Participant Site Redesign" style="left:-127.65%;top:0;width:318.56%;height:212.37%;" /></div>
+            </div>
+            <div class="work-card__body">
+              <p class="work-card__category">Web Design</p>
+              <h3 class="work-card__title">Participant Site Redesign</h3>
+              <p class="work-card__desc">Successfully launched new John Hancock Retirement Services Participant website reaching 1.7 million users in order to acquire new clients and retain existing ones.</p>
+              <a class="project-link" href="#">
+                View Project
+                <img src="assets/icon-arrow.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div><!-- /.work-row -->
+      </section>
+
+    </div><!-- /.work-inner -->
+  </main>
+
+  <!-- ─── Footer ────────────────────────────────────────────────── -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© All rights reserved 2026 Tanya Simkhovich.</p>
+      <div class="footer-contact">
+        <span class="footer-connect">Connect&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <a class="footer-email" href="mailto:tsimkhovich@gmail.com">tsimkhovich@gmail.com</a>
+        <a class="footer-linkedin" href="https://linkedin.com" target="_blank" rel="noopener">
+          <img src="assets/linkedin-logo.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="work.js"></script>
+</body>
+</html>

@@ -1,6 +1,3 @@
-/* ─── Fonts ─────────────────────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Inria+Serif:ital,wght@1,400;1,700&display=swap');
-
 /* ─── Reset & Base ──────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -15,13 +12,17 @@
   --violet-50: #3345c9;
   --yellow-30: #ffda79;
   --blue-40: #449fcb;
+  --blue-60: #077bb3;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Manrope', sans-serif;
-  background: #fff;
+  background-color: #fff;
+  background-image: radial-gradient(ellipse at 50% 10%, rgba(251,244,224,0.4) 9%, rgba(235,236,250,0.4) 40%, rgba(255,255,255,0) 70%);
+  background-attachment: fixed;
+  background-size: 100% 100%;
   color: var(--gray-95);
   overflow-x: hidden;
 }
@@ -154,21 +155,6 @@ body.light-mode .toggle-mode:hover .toggle-mode__bg { opacity: 1; }
   align-items: center;
   justify-content: center;
   padding-top: 96px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Soft radial gradient background */
-#hero::before {
-  content: '';
-  position: absolute;
-  width: 1476px;
-  height: 1522px;
-  top: 0; left: 50%;
-  transform: translateX(-50%);
-  border-radius: 36px;
-  background: radial-gradient(ellipse at 50% 30%, rgba(251,244,224,0.4) 9%, rgba(235,236,250,0.4) 63%, rgba(255,255,255,0) 100%);
-  pointer-events: none;
 }
 
 .hero-inner {
@@ -221,7 +207,6 @@ body.light-mode .toggle-mode:hover .toggle-mode__bg { opacity: 1; }
   align-items: center;
   justify-content: center;
   padding: 80px 32px;
-  overflow: hidden;
 }
 
 .crafting-inner {
@@ -229,34 +214,45 @@ body.light-mode .toggle-mode:hover .toggle-mode__bg { opacity: 1; }
   max-width: 1220px;
 }
 
-.crafting-line {
-  line-height: 1.1;
-  margin-bottom: 0;
+/* Absolutely-positioned word cluster matching Figma node 23:119 */
+/* Positions are % of 1440px Figma frame width, tops are px offsets from first word */
+.crafting-cluster {
+  position: relative;
+  height: 310px; /* fits Experiences (top 212px) + ~100px line height */
 }
 
 .crafting-word-1 {
-  display: block;
-  font-size: 68px;
+  position: absolute;
+  left: 34.5%;
+  top: 0;
+  font-size: 58px;
   font-weight: 300;
   color: var(--gray-95);
-  margin-bottom: 0;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .crafting-word-2 {
-  display: block;
+  position: absolute;
+  left: 46.1%;
+  top: 93px;
   font-size: 96px;
   font-family: 'Inria Serif', serif;
   font-style: italic;
   color: var(--carot-50);
-  text-align: right;
-  margin-bottom: 0;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .crafting-word-3 {
-  display: block;
+  position: absolute;
+  left: 25%;
+  top: 212px;
   font-size: 68px;
   font-weight: 400;
   color: var(--gray-95);
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .crafting-desc {
@@ -287,6 +283,9 @@ body.light-mode .toggle-mode:hover .toggle-mode__bg { opacity: 1; }
 }
 
 .stat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 24px;
   padding: 32px 32px 40px;
   box-shadow: 8px 8px 24px rgba(0,0,0,0.2);
@@ -294,17 +293,30 @@ body.light-mode .toggle-mode:hover .toggle-mode__bg { opacity: 1; }
 }
 
 .stat-card-1 {
-  background: linear-gradient(142deg, rgb(228,231,252) 7%, rgb(255,255,255) 76%);
+  background: linear-gradient(142.03deg, rgb(228,231,252) 6.85%, rgb(255,255,255) 76.46%);
 }
 .stat-card-2 {
-  background: linear-gradient(164deg, rgb(252,245,226) 3%, rgb(255,255,255) 74%);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding-top: 34px;
+  background: linear-gradient(163.88deg, rgb(252,245,226) 2.85%, rgb(255,255,255) 73.76%);
+  padding-top: 28px;
 }
+
+.stat-card-2__pic {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 19px 13px 8px;
+  width: 100%;
+}
+
+.stat-card-2__icon {
+  width: 60px;
+  height: 66.667px;
+  display: block;
+  flex-shrink: 0;
+}
+
 .stat-card-3 {
-  background: linear-gradient(142deg, rgb(228,231,252) 7%, rgb(255,255,255) 76%);
+  background: linear-gradient(142.03deg, rgb(228,231,252) 6.85%, rgb(255,255,255) 76.46%);
 }
 
 .stat-number {
@@ -312,7 +324,6 @@ body.light-mode .toggle-mode:hover .toggle-mode__bg { opacity: 1; }
   font-weight: 500;
   color: var(--violet-50);
   line-height: 1;
-  margin-bottom: 8px;
 }
 
 .stat-label {
@@ -321,11 +332,6 @@ body.light-mode .toggle-mode:hover .toggle-mode__bg { opacity: 1; }
   color: var(--gray-70);
 }
 
-.stat-icon {
-  width: 60px;
-  height: auto;
-  margin: 19px 13px 8px;
-}
 
 /* ─── Work Section ──────────────────────────────────────────────────── */
 #work {
@@ -365,15 +371,15 @@ body.light-mode .toggle-mode:hover .toggle-mode__bg { opacity: 1; }
   text-decoration: none;
 }
 .project-card:hover {
-  border-color: var(--blue-70);
-  box-shadow: 4px 4px 32px 0px rgba(35, 140, 191, 0.34);
+  border-color: var(--blue-40);
+  box-shadow: 4px 4px 24px 0px rgba(35, 140, 191, 0.24);
 }
 .project-card:active {
-  border-color: var(--blue-40);
+  border-color: var(--blue-60);
   box-shadow: 4px 4px 32px 0px rgba(35, 140, 191, 0.48);
 }
 .project-card:focus-visible {
-  border: 2px solid var(--gray-95);
+  border: 2px solid black;
   box-shadow: none;
 }
 
@@ -436,14 +442,14 @@ body.light-mode .toggle-mode:hover .toggle-mode__bg { opacity: 1; }
   font-weight: 600;
   color: var(--blue-70);
   text-transform: capitalize;
-  transition: gap 0.2s;
 }
-.project-link:hover { gap: 12px; }
 
 .project-link img {
   width: 24px;
   height: 24px;
+  transition: transform 0.2s ease;
 }
+.project-link:hover img { transform: translateX(4px); }
 
 /* View all button */
 .view-all-wrap {
@@ -479,7 +485,6 @@ body.light-mode .toggle-mode:hover .toggle-mode__bg { opacity: 1; }
 /* ─── Philosophy Section ────────────────────────────────────────────── */
 #philosophy {
   padding: 128px 32px;
-  background: linear-gradient(to bottom, #fff, #f9f9f9);
 }
 
 .philosophy-inner {
@@ -488,29 +493,81 @@ body.light-mode .toggle-mode:hover .toggle-mode__bg { opacity: 1; }
   text-align: center;
 }
 
-.philosophy-heading {
+/* Word cluster — absolutely positioned to match Figma node 51:376 */
+/* Positions are % of 1440px frame; top offsets are px from first line */
+.philosophy-cluster {
+  position: relative;
+  height: 345px;
+  margin-bottom: 64px;
+  text-align: left;
+}
+
+.phil-taste {
+  position: absolute;
+  left: 27.5%;
+  top: 0;
   font-size: 40px;
   font-weight: 500;
   color: var(--gray-95);
-  line-height: 1.4;
-  margin-bottom: 48px;
-  clip-path: inset(0 50% 0 50%);
+  line-height: 1;
+  white-space: nowrap;
 }
 
-.philosophy-heading em {
+.phil-human {
+  position: absolute;
+  left: 49.5%;
+  top: 45px;
+  font-size: 78px;
+  font-family: 'Inria Serif', serif;
+  font-style: italic;
+  color: var(--carot-50);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.phil-row3 {
+  position: absolute;
+  left: 24.6%;
+  top: 189px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  white-space: nowrap;
+}
+
+.phil-system {
+  font-size: 60px;
   font-family: 'Inria Serif', serif;
   font-style: italic;
   font-weight: 700;
   color: var(--carot-50);
+  line-height: 1;
+}
+
+.phil-turns {
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--gray-95);
+  line-height: 1;
+}
+
+.phil-into {
+  position: absolute;
+  left: 31.3%;
+  top: 281px;
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--gray-95);
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .philosophy-body {
   max-width: 742px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   font-size: 20px;
-  line-height: 1.8;
+  line-height: 1.6;
   color: var(--gray-70);
-  margin-bottom: 40px;
 }
 
 .philosophy-link {
@@ -521,10 +578,14 @@ body.light-mode .toggle-mode:hover .toggle-mode__bg { opacity: 1; }
   font-weight: 600;
   color: var(--blue-70);
   text-transform: capitalize;
-  transition: gap 0.2s;
 }
-.philosophy-link:hover { gap: 12px; }
-.philosophy-link img { width: 24px; height: 24px; }
+
+.philosophy-link img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+.philosophy-link:hover img { transform: translateX(4px); }
 
 /* ─── Footer ────────────────────────────────────────────────────────── */
 footer {
@@ -674,3 +735,320 @@ footer {
 .delay-2 { transition-delay: 0.4s !important; }
 .delay-3 { transition-delay: 0.6s !important; }
 .delay-4 { transition-delay: 0.8s !important; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RESPONSIVE — hamburger + mobile menu
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Hamburger button — hidden on desktop */
+.hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+.hamburger img { width: 24px; height: 24px; display: block; }
+
+/* Mobile menu — scrim (outer) + right panel (inner) */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 101;
+  background: transparent;
+  pointer-events: none;
+  transition: background 0.35s ease;
+}
+.mobile-menu.is-open {
+  background: rgba(0, 0, 0, 0.6);
+  pointer-events: auto;
+}
+
+/* Right-side panel */
+.mobile-menu__panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.mobile-menu.is-open .mobile-menu__panel {
+  transform: translateX(0);
+}
+
+/* Panel header row — close button right-aligned */
+.mobile-menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 12px 16px 12px 24px;
+  flex-shrink: 0;
+}
+
+.mobile-close {
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-close img { width: 24px; height: 24px; display: block; }
+
+/* Nav items */
+.mobile-nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.mobile-nav-links li a {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding-left: 32px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gray-95);
+  transition: color 0.2s;
+}
+.mobile-nav-links li a:hover { color: var(--blue-70); }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RESPONSIVE — 768px breakpoint (tablet + mobile)
+   ═══════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Nav ── */
+  nav { padding: 12px 16px; }
+  .mobile-menu { display: block; }
+
+  .nav-links { display: none; }
+
+  .hamburger { display: flex; }
+
+  .nav-right { gap: 12px; }
+
+  .nav-name { font-size: 16px; }
+
+  /* ── Hero ── */
+  .hero-title { font-size: clamp(64px, 22vw, 120px); }
+  .hero-name  { font-size: 18px; letter-spacing: 0.15em; }
+
+  /* ── Crafting cluster ── */
+  /* Scale positions from 1440px → 375px frame */
+  .crafting-cluster { height: 265px; }
+
+  .crafting-word-1 {
+    font-size: 48px;
+    left: 12%;
+    top: 0;
+  }
+  .crafting-word-2 {
+    font-size: 72px;
+    left: 26.1%;
+    top: 83px;
+  }
+  .crafting-word-3 {
+    font-size: 56px;
+    left: 4.85%;
+    top: 188px;
+  }
+
+  .crafting-desc { font-size: 18px; max-width: 320px; }
+
+  /* ── Stats — stack vertically ── */
+  #stats { min-height: auto; padding: 60px 16px; }
+  .stats-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 32px;
+  }
+
+  /* ── Work section ── */
+  #work { padding: 60px 16px; }
+  .work-title { font-size: 48px; margin-bottom: 40px; }
+
+  /* Cards: full width, no stagger, no thumbnail */
+  .project-card:nth-child(1),
+  .project-card:nth-child(2),
+  .project-card:nth-child(3),
+  .project-card:nth-child(4) {
+    width: 100%;
+    margin-left: 0;
+  }
+  .project-thumb { display: none; }
+  .project-title { font-size: 24px; }
+  .project-desc  { font-size: 14px; }
+
+  /* ── Philosophy cluster ── */
+  #philosophy { padding: 80px 16px; }
+  .philosophy-cluster { height: 360px; }
+
+  .phil-taste {
+    font-size: 32px;
+    left: 4.4%;
+    top: 0;
+  }
+  .phil-human {
+    font-size: 72px;
+    left: 10.5%;
+    top: 37px;
+  }
+  /* Break system+turns row into column */
+  .phil-row3 {
+    flex-direction: column;
+    align-items: flex-start;
+    left: 4.3%;
+    top: 145px;
+    gap: 0;
+  }
+  .phil-system { font-size: 42px; }
+  .phil-turns  { font-size: 32px; margin-top: 39px; margin-left: 30px; }
+
+  .phil-into {
+    font-size: 32px;
+    left: 12.4%;
+    top: 273px;
+    white-space: normal;
+    width: 280px;
+  }
+
+  .philosophy-body { font-size: 18px; max-width: 343px; }
+
+  /* ── Footer ── */
+  footer { padding: 16px; }
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .footer-copy { font-size: 11px; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RESPONSIVE — 480px (small phones)
+   ═══════════════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .nav-avatar { width: 52px; height: 52px; }
+  .hero-title { font-size: clamp(56px, 24vw, 100px); }
+  .crafting-word-2 { font-size: clamp(52px, 18vw, 72px); }
+  .phil-human      { font-size: clamp(52px, 18vw, 72px); }
+  .stats-grid      { width: 100%; }
+  .stat-card       { width: 100%; max-width: 320px; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   DARK MODE
+   ═══════════════════════════════════════════════════════════════════════ */
+
+body.dark-mode {
+  /* ── Override color tokens ── */
+  --gray-95:  #f0f0f0;
+  --gray-70:  #aaaaaa;
+  --gray-60:  #888888;
+  --gray-30:  #2e2e2e;
+  --gray-20:  #222222;
+  --blue-70:  #6db6da;
+  --blue-40:  #449fcb;
+  --blue-60:  #3a9ac4;
+  --violet-50: #8b9ef5;
+
+  /* ── Page background ── */
+  background-color: #111111;
+  background-image: radial-gradient(ellipse at 50% 10%,
+    rgba(40,35,20,0.45) 9%,
+    rgba(20,22,45,0.4) 40%,
+    rgba(15,15,15,0) 70%);
+  color: var(--gray-95);
+}
+
+/* Nav */
+body.dark-mode nav {
+  background: #111111;
+  border-bottom-color: var(--gray-20);
+}
+body.dark-mode .nav-name,
+body.dark-mode .nav-links a { color: var(--gray-95); }
+body.dark-mode .hamburger img { filter: invert(1); }
+
+/* Mobile menu */
+body.dark-mode .mobile-menu__panel { background: #1a1a1a; }
+body.dark-mode .mobile-close img { filter: invert(1); }
+body.dark-mode .mobile-nav-links li a { color: var(--gray-95); }
+body.dark-mode .mobile-nav-links li a:hover { color: var(--blue-70); }
+
+/* Toggle hover bg */
+body.dark-mode .toggle-mode__bg { background: rgba(109,182,218,0.25); }
+
+/* Stat cards */
+body.dark-mode .stat-card {
+  box-shadow: 8px 8px 24px rgba(0,0,0,0.5);
+}
+body.dark-mode .stat-card-1,
+body.dark-mode .stat-card-3 {
+  background: linear-gradient(142.03deg, rgb(28,32,70) 7%, rgb(18,18,30) 76%);
+}
+body.dark-mode .stat-card-2 {
+  background: linear-gradient(163.88deg, rgb(48,36,18) 3%, rgb(20,18,14) 74%);
+}
+
+/* Project cards */
+body.dark-mode .project-card {
+  background: #1a1a1a !important;
+  border-color: var(--gray-30);
+}
+body.dark-mode .project-card:hover {
+  border-color: var(--blue-40);
+}
+body.dark-mode .project-card:active {
+  border-color: var(--blue-60);
+}
+body.dark-mode .project-card:focus-visible {
+  border-color: var(--gray-95);
+}
+
+/* View all button */
+body.dark-mode .btn-view-all {
+  background: transparent;
+  color: var(--blue-70);
+  border-color: var(--blue-70);
+}
+body.dark-mode .btn-view-all:hover {
+  background: var(--blue-70);
+  color: #111;
+}
+
+/* Philosophy section */
+body.dark-mode #philosophy {
+  background: transparent;
+}
+
+/* Link arrows — recolor to match dark-mode --blue-70 (#6db6da) */
+body.dark-mode .project-link img,
+body.dark-mode .philosophy-link img {
+  filter: brightness(0) saturate(100%) invert(69%) sepia(27%) saturate(617%) hue-rotate(161deg) brightness(101%) contrast(89%);
+}
+
+/* Footer */
+body.dark-mode footer {
+  border-top-color: var(--gray-20);
+}
+
+/* Smooth transition on mode switch */
+body, nav, .mobile-menu, footer, #philosophy {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}

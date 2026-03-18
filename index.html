@@ -6,6 +6,9 @@
   <title>Tanya Simkhovich — Design</title>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Inria+Serif:ital,wght@1,400;1,700&display=block" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -20,19 +23,41 @@
       <div class="nav-right">
         <ul class="nav-links">
           <li><a href="#hero" class="active">HOME</a></li>
-          <li><a href="#work">WORK</a></li>
+          <li><a href="work.html">WORK</a></li>
           <li><a href="#philosophy">ABOUT</a></li>
           <li><a href="#">JOURNEY</a></li>
           <li><a href="#footer">CONTACT</a></li>
         </ul>
         <!-- Dark/light mode toggle -->
-        <button class="toggle-mode" id="toggleMode" aria-label="Toggle dark/light mode" data-mode="dark">
+        <button class="toggle-mode" id="toggleMode" aria-label="Toggle dark/light mode" data-mode="light">
           <span class="toggle-mode__bg"></span>
           <img class="toggle-mode__icon" src="assets/icon-moon.svg" alt="" />
+        </button>
+        <!-- Hamburger — mobile only -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+          <img src="assets/icon-hamburger.svg" alt="" />
         </button>
       </div>
     </div>
   </nav>
+
+  <!-- Mobile menu — scrim + right-side panel -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__panel">
+      <div class="mobile-menu__header">
+        <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+          <img src="assets/icon-close.svg" alt="" />
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="#philosophy">About</a></li>
+        <li><a href="#">Journey</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </div>
+  </div>
 
   <main>
 
@@ -48,7 +73,7 @@
     <!-- ─── Crafting Human Experiences ───────────────────────────── -->
     <section id="crafting">
       <div class="crafting-inner">
-        <div class="crafting-line">
+        <div class="crafting-cluster">
           <span class="crafting-word-1 anim-from-left">Crafting</span>
           <span class="crafting-word-2 anim-from-right delay-1">Human</span>
           <span class="crafting-word-3 anim-from-left delay-2">Experiences</span>
@@ -71,8 +96,10 @@
 
         <!-- Card 2: rises from bottom + scales -->
         <div class="stat-card stat-card-2 anim-card-up delay-1">
-          <img class="stat-icon" src="assets/icon-accessibility.png" alt="Accessibility" />
-          <p class="stat-label">Passion for Accessibility</p>
+          <div class="stat-card-2__pic">
+            <img class="stat-card-2__icon" src="assets/icon-a11y.svg" alt="" />
+          </div>
+          <p class="stat-label">Passion&nbsp; for Accessibility</p>
         </div>
 
         <!-- Card 3: slides from right + rotates -->
@@ -102,7 +129,7 @@
               <p class="project-desc">Led a documentation redesign initiative for the Digital Pulse design system, unifying a fragmented experience. Through research, testing, workshops, and hands-on prototyping, I built a scalable, multi-platform documentation structure.</p>
               <a class="project-link" href="#">
                 View Project
-                <img src="assets/icon-arrow.png" alt="" />
+                <img src="assets/icon-arrow.svg" alt="" />
               </a>
             </div>
           </div>
@@ -117,7 +144,7 @@
               <p class="project-desc">Captures my approach to building and evolving design systems that balance clarity, accessibility, and scalability. The work focused on creating a stronger foundation that supports both current teams and future growth.</p>
               <a class="project-link" href="#">
                 View Project
-                <img src="assets/icon-arrow.png" alt="" />
+                <img src="assets/icon-arrow.svg" alt="" />
               </a>
             </div>
           </div>
@@ -132,7 +159,7 @@
               <p class="project-desc">Designed and oversaw the entire implementation cycle of a unique weather app that delivers snapshots of relative local weather information with negative and positive meteorologist highlights.</p>
               <a class="project-link" href="#">
                 View Project
-                <img src="assets/icon-arrow.png" alt="" />
+                <img src="assets/icon-arrow.svg" alt="" />
               </a>
             </div>
           </div>
@@ -147,7 +174,7 @@
               <p class="project-desc">Successfully launched new John Hancock Retirement Services Participant website reaching 1.7 million users in order to acquire new clients and retain existing ones.</p>
               <a class="project-link" href="#">
                 View Project
-                <img src="assets/icon-arrow.png" alt="" />
+                <img src="assets/icon-arrow.svg" alt="" />
               </a>
             </div>
           </div>
@@ -166,18 +193,23 @@
     <section id="philosophy">
       <div class="philosophy-inner">
 
-        <h2 class="philosophy-heading anim-clip-reveal">
-          Taste and craft are <em>Human.</em><br>
-          <em>System Thinking</em> turns them into comprehensive solutions.
-        </h2>
+        <div class="philosophy-cluster">
+          <span class="phil-taste anim-from-left">Taste and craft are</span>
+          <span class="phil-human anim-from-right delay-1">Human.</span>
+          <div class="phil-row3 anim-from-left delay-2">
+            <span class="phil-system">System Thinking</span>
+            <span class="phil-turns">turns them</span>
+          </div>
+          <span class="phil-into anim-from-bottom delay-3">into comprehensive solutions.</span>
+        </div>
 
         <p class="philosophy-body anim-from-bottom delay-1">
-          I'm constantly experimenting with design patterns, seeking for what works for people navigating complex experiences while building trust and engagement.
+          I'm constantly experimenting with design patterns, seeking for what works for people navigating complex experiences while building trust and engagement with the product.
         </p>
 
         <a class="philosophy-link anim-from-bottom delay-2" href="#">
           Learn more about me
-          <img src="assets/icon-arrow.png" alt="" />
+          <img src="assets/icon-arrow.svg" alt="" />
         </a>
 
       </div>

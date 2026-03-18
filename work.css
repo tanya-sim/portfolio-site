@@ -1,0 +1,281 @@
+/* Reinforce [hidden] — author CSS display rules can override the UA stylesheet */
+[hidden] { display: none !important; }
+
+/* ─── Work Page Layout ──────────────────────────────────────────── */
+.work-page {
+  padding-top: 152px;
+  padding-bottom: 80px;
+}
+
+.work-inner {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.work-page-title {
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--gray-95);
+  line-height: 1;
+}
+
+/* ─── Chip Group ────────────────────────────────────────────────── */
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 40px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: 24px;
+  border: 1px solid var(--blue-70);
+  background: #fafafa;
+  color: var(--blue-70);
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.2s, border-width 0.1s, font-weight 0.1s;
+  text-transform: capitalize;
+}
+.chip:hover {
+  background: #e8f5fb;
+}
+
+.chip--active {
+  background: #98d2ef;
+  border-width: 2px;
+  font-weight: 600;
+}
+.chip--active:hover {
+  background: #7fc6e8;
+}
+
+.chip__check {
+  width: 16px;
+  height: 16px;
+  display: none;
+  flex-shrink: 0;
+}
+.chip--active .chip__check {
+  display: block;
+}
+
+/* ─── Work Section ──────────────────────────────────────────────── */
+.work-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.work-section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 20px;
+}
+
+.work-era {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gray-95);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  padding-bottom: 16px;
+}
+
+.work-industry {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--gray-70);
+  text-transform: uppercase;
+  letter-spacing: 0.36px;
+}
+
+.work-company {
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--gray-95);
+  line-height: 1.1;
+}
+
+.work-collection-label {
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--gray-95);
+}
+
+/* ─── Work Rows ─────────────────────────────────────────────────── */
+.work-row {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+  padding-bottom: 12px;
+}
+
+.work-row--single {
+  padding-bottom: 140px;
+}
+
+/* Last section has less bottom space before footer */
+[data-section="jh"] .work-row--single {
+  padding-bottom: 120px;
+}
+
+/* First card row after a collection label gets top padding */
+.work-collection-label + .work-row {
+  padding-top: 24px;
+}
+
+/* ─── Work Card ─────────────────────────────────────────────────── */
+.work-card {
+  flex: 1;
+  max-width: calc(50% - 12px);
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  padding: 32px;
+  border: 1px solid var(--gray-30);
+  border-radius: 36px;
+  background-image: radial-gradient(ellipse at 12% 35%, rgba(255,245,218,0.5) 9%, rgba(228,231,252,0.2) 72%, rgba(255,255,255,0) 100%);
+  cursor: pointer;
+  outline: none;
+  transition: opacity 0.8s ease, transform 0.8s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.work-card:hover {
+  border-color: var(--blue-40);
+  box-shadow: 4px 4px 24px 0px rgba(35, 140, 191, 0.24);
+}
+.work-card:active {
+  border-color: var(--blue-60);
+  box-shadow: 4px 4px 32px 0px rgba(35, 140, 191, 0.48);
+}
+.work-card:focus-visible {
+  border: 2px solid black;
+  box-shadow: none;
+}
+
+.work-card__thumb {
+  position: relative;
+  width: 132px;
+  height: 132px;
+  flex-shrink: 0;
+  border-radius: 32px;
+  background: var(--yellow-30);
+}
+.work-card__thumb img {
+  position: absolute;
+  display: block;
+  max-width: none;
+}
+/* Inner clip div — matches Figma structure for reliable cross-browser clipping */
+.work-card__thumb-clip {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 32px;
+}
+
+.work-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.work-card__category {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--gray-60);
+  text-transform: uppercase;
+  letter-spacing: 0.52px;
+  line-height: 24px;
+}
+
+.work-card__title {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--gray-95);
+  line-height: 1.15;
+}
+
+.work-card__desc {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray-70);
+  line-height: 24px;
+}
+
+/* Reuse .project-link from styles.css for the arrow link */
+
+/* ─── Dark Mode ─────────────────────────────────────────────────── */
+body.dark-mode .chip {
+  background: #1e1e1e;
+  border-color: var(--blue-70);
+  color: var(--blue-70);
+}
+body.dark-mode .chip:hover {
+  background: #2a2a2a;
+}
+body.dark-mode .chip--active {
+  background: rgba(109, 182, 218, 0.2);
+  border-color: var(--blue-70);
+}
+body.dark-mode .chip--active:hover {
+  background: rgba(109, 182, 218, 0.3);
+}
+body.dark-mode .chip__check {
+  filter: brightness(0) saturate(100%) invert(69%) sepia(27%) saturate(617%) hue-rotate(161deg) brightness(101%) contrast(89%);
+}
+
+body.dark-mode .work-section-header {
+  border-top-color: var(--gray-30);
+}
+
+body.dark-mode .work-card {
+  background: #1a1a1a !important;
+  border-color: var(--gray-30);
+}
+body.dark-mode .work-card:hover { border-color: var(--blue-40); }
+body.dark-mode .work-card:active { border-color: var(--blue-60); }
+body.dark-mode .work-card:focus-visible { border-color: var(--gray-95); }
+
+/* ─── Responsive ────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .work-page { padding-top: 110px; }
+  .work-inner { padding: 0 16px; gap: 20px; }
+
+  .work-page-title { font-size: 32px; }
+
+  .chip-group { gap: 8px; padding-top: 16px; padding-bottom: 24px; }
+  .chip { font-size: 14px; padding: 4px 10px; }
+
+  .work-company { font-size: 28px; }
+  .work-industry { font-size: 14px; }
+  .work-collection-label { font-size: 22px; }
+
+  .work-row { flex-direction: column; gap: 16px; padding-bottom: 8px; }
+  .work-row--single { padding-bottom: 48px; }
+  [data-section="jh"] .work-row--single { padding-bottom: 40px; }
+  .work-collection-label + .work-row { padding-top: 12px; }
+  .work-card { max-width: 100%; }
+
+  .work-card { gap: 16px; padding: 20px; }
+  .work-card__thumb { width: 80px; height: 80px; border-radius: 20px; }
+  .work-card__thumb-clip { border-radius: 20px; }
+  .work-card__title { font-size: 22px; }
+  .work-card__desc { font-size: 14px; }
+}
