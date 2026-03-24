@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CVS Super App Case Study — Tanya Simkhovich</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Inria+Serif:ital,wght@1,400;1,700&display=block" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cvs-case-study.css" />
+</head>
+<body>
+
+  <!-- ─── Navigation ──────────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-headshot">
+        <img class="nav-avatar" src="assets/avatar.png" alt="Tanya Simkhovich" />
+        <span class="nav-name">Tanya Simkhovich</span>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="work.html" class="active">WORK</a></li>
+          <li><a href="index.html#philosophy">ABOUT</a></li>
+          <li><a href="#">JOURNEY</a></li>
+          <li><a href="#footer">CONTACT</a></li>
+        </ul>
+        <button class="toggle-mode" id="toggleMode" aria-label="Toggle dark/light mode" data-mode="light">
+          <span class="toggle-mode__bg"></span>
+          <img class="toggle-mode__icon" src="assets/icon-moon.svg" alt="" />
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+          <img src="assets/icon-hamburger.svg" alt="" />
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__panel">
+      <div class="mobile-menu__header">
+        <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+          <img src="assets/icon-close.svg" alt="" />
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="index.html#philosophy">About</a></li>
+        <li><a href="#">Journey</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main class="case-study">
+    <div class="cs-inner">
+
+      <!-- ─── Case Study Header ──────────────────────────────────── -->
+      <div class="cs-header anim-from-bottom">
+        <p class="cs-dates">January 2023 – December 2024</p>
+        <p class="cs-label">Case Study</p>
+        <h1 class="cs-title">CVS "Super App" and Pulse Velocity</h1>
+      </div>
+
+      <!-- ─── Content ─────────────────────────────────────────────── -->
+      <div class="cs-content">
+
+        <h2 class="anim-from-bottom">"Super App" Initiative</h2>
+
+        <p class="anim-from-bottom">Before the January 2025 launch announcement of the CVS Health App (often referred to internally as the "Super App"), there were nearly two years of hard work that made this major release possible.</p>
+
+        <p class="anim-from-bottom">The years 2023–2024 were especially exciting for the CVS Digital enterprise — and for the design community in particular. The Super App initiative quickly became an all-hands-on-deck effort across the organization. Teams came together around a shared goal: to unify CVS's complex ecosystem into a single, cohesive experience.</p>
+
+        <p class="anim-from-bottom">The Super App delivered on both iOS and Android platforms:</p>
+
+        <ul class="anim-from-bottom">
+          <li>A unified CVS Health app that brings prescriptions, benefits, and wellness into one experience</li>
+          <li>Family-wide prescription management, personalized health tasks, AI-powered search, and faster in-store pickup — including barcodes and, in some locations, app-unlocked cabinets</li>
+          <li>A redesigned home screen that surfaces reminders, orders, and tailored recommendations in one place</li>
+        </ul>
+
+        <p class="anim-from-bottom">For more information read the official press release:</p>
+
+        <p class="anim-from-bottom"><a class="cs-link" href="https://www.cvshealth.com/news/innovation/introducing-the-cvs-health-app-your-go-to-companion-for-health-and-wellness.html" target="_blank" rel="noopener noreferrer">https://www.cvshealth.com/news/innovation/introducing-the-cvs-health-app-your-go-to-companion-for-health-and-wellness.html</a></p>
+
+        <h2 class="anim-from-bottom">Digital Pulse Design System Team Impact</h2>
+
+        <p class="anim-from-bottom">The Pulse Design System team played a key role in the Super App launch, delivering updated iOS and Android libraries under tight timelines.</p>
+
+        <p class="anim-from-bottom">At the same time, multiple parallel changes increased complexity:</p>
+
+        <ul class="anim-from-bottom">
+          <li><strong>Brand shift:</strong> Primary color changed from red to blue, impacting many components and requiring engineering updates beyond the system</li>
+          <li><strong>Token alignment:</strong> Finalized tokens required rapid library updates across design and code</li>
+          <li><strong>Android transition:</strong> Ongoing shift to Material 2 added complexity to component updates</li>
+        </ul>
+
+        <p class="anim-from-bottom">With compressed timelines, the team adapted quickly:</p>
+
+        <ul class="anim-from-bottom">
+          <li><strong>Figma-first delivery:</strong> Design components shipped ahead of code</li>
+          <li><strong>Incremental releases:</strong> Components delivered progressively, not as a single drop</li>
+        </ul>
+
+        <h2 class="anim-from-bottom">Pulse Multi-faceted Support</h2>
+
+        <p class="anim-from-bottom">The Pulse team extended beyond component libraries and documentation, providing hands-on support across product teams.</p>
+
+        <p class="anim-from-bottom">As CVS shifted to native iOS and Android, many designers—primarily from web backgrounds—were working in unfamiliar ecosystems. Platform-specific patterns, components, and conventions introduced a steep learning curve, often reflected in web patterns carried into native designs.</p>
+
+        <p class="anim-from-bottom">Pulse played a key role in supporting this transition, helping teams adapt quickly and design confidently within native platforms.</p>
+      </div>
+
+      <!-- ─── Info Cards ──────────────────────────────────────────── -->
+      <div class="cs-cards-row anim-from-bottom">
+        <div class="cs-info-card">
+          <h3 class="cs-info-card__title">Pulse Office Hours</h3>
+          <p class="cs-info-card__text">Twice-weekly Pulse office hours for product designers — an open space for questions, guidance, and knowledge sharing.</p>
+          <p class="cs-info-card__text">Cross-platform and accessibility representation (Web, iOS, Android), supporting a collaborative and approachable environment.</p>
+        </div>
+        <div class="cs-info-card">
+          <h3 class="cs-info-card__title">Native Platforms Knowledge Center</h3>
+          <p class="cs-info-card__text">A native design knowledge center in Confluence, created in partnership with the Pulse iOS designer, to support designers working on iOS and Android. Documentation of platform fundamentals — screen sizes, resolutions, densities, measurement units, typography — alongside common patterns and a cross-platform component matrix, clarifying usage, context, and differences between iOS and Android.</p>
+        </div>
+        <div class="cs-info-card">
+          <h3 class="cs-info-card__title">Design Review Committee</h3>
+          <p class="cs-info-card__text">Pulse design system designers as part of the Design Review Committee — overseeing, critiquing, and approving designs before production.</p>
+          <p class="cs-info-card__text">Direct exposure to product needs and real-world use cases, informing system evolution. A platform for advocacy, education on system thinking, and reinforcement of accessibility standards.</p>
+        </div>
+      </div>
+
+      <!-- ─── More Content ────────────────────────────────────────── -->
+      <div class="cs-content">
+
+        <h2 class="anim-from-bottom">Android Team Contribution</h2>
+
+        <p class="anim-from-bottom">Over six months, the Android team delivered 20 core components with supporting usage guidance (component documentation), followed by ongoing custom components and enhancements driven by product needs.</p>
+
+        <p class="anim-from-bottom">In parallel, design supported engineering to maintain implementation momentum, with components released incrementally and integrated into production flows.</p>
+
+        <p class="anim-from-bottom">Early adoption in live user journeys validated the system's impact and real-world use.</p>
+
+        <h2 class="anim-from-bottom">My Role</h2>
+
+        <p class="anim-from-bottom">I often led the Android team in the absence of consistent PM coverage, running standups, backlog grooming, PI planning, sprint planning, and related ceremonies.</p>
+
+        <p class="anim-from-bottom">I represented Android in cross-platform workshops and foundational initiatives, shaping team agreements, processes, and creating checklists and templates.</p>
+
+        <p class="anim-from-bottom">A key initiative was the development of the Pulse design token architecture, where I defined Android-specific token needs, ensuring full component coverage while maintaining a balanced and scalable shared system.</p>
+
+        <h2 class="anim-from-bottom">"Super App" Experience on Android</h2>
+
+        <p class="anim-from-bottom">The Pulse Design System team began to see our efforts paying off. The app experiences product designers were crafting increasingly reflected platform specificities and aligned with well-established ecosystem patterns.</p>
+
+        <p class="anim-from-bottom">Pulse Android components started appearing in production flows and were released in the app. Seeing the fruits of our labor live in real experiences was both reassuring and gratifying.</p>
+
+        <h2 class="cs-section-heading anim-from-bottom">App Main Sections</h2>
+      </div>
+
+      <!-- ─── Phone Screenshots: Main Sections ───────────────────── -->
+      <div class="cs-phones-row anim-from-bottom">
+        <button class="cs-phone-btn" data-modal-group="main" data-modal-index="0" aria-label="View Home Screen details">
+          <img src="assets/cs-main-homepage.png" alt="App Home Screen" />
+        </button>
+        <button class="cs-phone-btn" data-modal-group="main" data-modal-index="1" aria-label="View Savings Screen details">
+          <img src="assets/cs-main-shopsave.png" alt="Shop &amp; Save Screen" />
+        </button>
+        <button class="cs-phone-btn" data-modal-group="main" data-modal-index="2" aria-label="View Health Screen details">
+          <img src="assets/cs-main-health.png" alt="Health Screen" />
+        </button>
+      </div>
+
+      <div class="cs-content">
+        <h2 class="cs-section-heading anim-from-bottom">Shopping Experience</h2>
+      </div>
+
+      <!-- ─── Phone Screenshots: Shopping ─────────────────────────── -->
+      <div class="cs-phones-row anim-from-bottom">
+        <button class="cs-phone-btn" data-modal-group="shopping" data-modal-index="0" aria-label="View Delivery options details">
+          <img src="assets/cs-shopping-1.png" alt="Shopping Screen 1" />
+        </button>
+        <button class="cs-phone-btn" data-modal-group="shopping" data-modal-index="1" aria-label="View Product recommendations details">
+          <img src="assets/cs-shopping-2.png" alt="Shopping Screen 2" />
+        </button>
+        <button class="cs-phone-btn" data-modal-group="shopping" data-modal-index="2" aria-label="View Checkout details">
+          <img src="assets/cs-shopping-3.png" alt="Shopping Screen 3" />
+        </button>
+      </div>
+
+      <div class="cs-content">
+        <h2 class="cs-section-heading anim-from-bottom">Health: Scheduling Experience</h2>
+      </div>
+
+      <!-- ─── Phone Screenshots: Health row 1 ─────────────────────── -->
+      <div class="cs-phones-row anim-from-bottom">
+        <button class="cs-phone-btn" data-modal-group="health1" data-modal-index="0" aria-label="View Health scheduling details">
+          <img src="assets/cs-health-1.png" alt="Health Screen 1" />
+        </button>
+        <button class="cs-phone-btn" data-modal-group="health1" data-modal-index="1" aria-label="View Health scheduling details">
+          <img src="assets/cs-health-2.png" alt="Health Screen 2" />
+        </button>
+        <button class="cs-phone-btn" data-modal-group="health1" data-modal-index="2" aria-label="View Health scheduling details">
+          <img src="assets/cs-health-3.png" alt="Health Screen 3" />
+        </button>
+      </div>
+
+      <!-- ─── Phone Screenshots: Health row 2 ─────────────────────── -->
+      <div class="cs-phones-row anim-from-bottom">
+        <button class="cs-phone-btn" data-modal-group="health2" data-modal-index="0" aria-label="View Health scheduling details">
+          <img src="assets/cs-health-4.png" alt="Health Screen 4" />
+        </button>
+        <button class="cs-phone-btn" data-modal-group="health2" data-modal-index="1" aria-label="View Health scheduling details">
+          <img src="assets/cs-health-5.png" alt="Health Screen 5" />
+        </button>
+        <button class="cs-phone-btn" data-modal-group="health2" data-modal-index="2" aria-label="View Health scheduling details">
+          <img src="assets/cs-health-6.png" alt="Health Screen 6" />
+        </button>
+      </div>
+
+      <!-- ─── Post-screenshots Content ────────────────────────────── -->
+      <div class="cs-content">
+        <p class="anim-from-bottom">Our team received both praise and critique, often around speed and the time required for internal processes and decision-making.</p>
+
+        <p class="anim-from-bottom">We regularly explained why releasing components required multiple cycles—especially when stock iOS and Android components already existed. It raised a common question: why not simply adapt Material components to match brand styles and ship?</p>
+
+        <p class="anim-from-bottom">These were valid questions, and we addressed them openly.</p>
+
+        <h2 class="anim-from-bottom">Accessibility as Baseline of Pulse Quality Assurance</h2>
+
+        <p class="anim-from-bottom">Accessibility was foundational to Pulse quality. Every component, pattern, style, and token went through multidisciplinary review, with designers partnering closely with accessibility specialists, developers, and content strategists to fully vet contributions.</p>
+
+        <p class="anim-from-bottom">At every step, we asked practical questions: <strong>Is it accessible to all users? Can it be fully implemented as designed? Does the content hierarchy work for both visual users and those using assistive technologies?</strong></p>
+
+        <p class="anim-from-bottom">Even after release, components continued through regression testing and could be flagged for accessibility defects.</p>
+
+        <p class="anim-from-bottom">Producing high-quality components required rigorous, ongoing validation. To support this, Pulse accessibility designers created an Accessibility Annotations Kit, enabling clear and effective design-to-development handoff.</p>
+
+        <p class="anim-from-bottom">Infotip is one example of how these standards were applied in practice.</p>
+      </div>
+
+      <!-- ─── Accessibility Images ────────────────────────────────── -->
+      <div class="cs-a11y-row anim-from-bottom">
+        <div class="cs-a11y-img cs-a11y-img--narrow">
+          <img src="assets/cs-a11y-annotations.png" alt="Android A11y Annotations" />
+        </div>
+        <div class="cs-a11y-img cs-a11y-img--wide">
+          <img src="assets/cs-infotip-plain.png" alt="Plain Infotip" />
+        </div>
+      </div>
+
+      <div class="cs-a11y-row anim-from-bottom">
+        <div class="cs-a11y-img">
+          <img src="assets/cs-infotip-prompted.png" alt="Prompted Rich Infotip" />
+        </div>
+        <div class="cs-a11y-img">
+          <img src="assets/cs-infotip-unprompted.png" alt="Unprompted Rich Infotip" />
+        </div>
+      </div>
+
+      <!-- ─── Community Model & Conclusion ────────────────────────── -->
+      <div class="cs-content">
+
+        <h2 class="anim-from-bottom">Community Model</h2>
+
+        <p class="anim-from-bottom"><strong>Design systems do not innovate — they curate and stabilize an organization's design ecosystem.</strong> They are the infrastructure of the building. Only well-researched, tested, and proven components and patterns can become part of that infrastructure, which means prioritizing quality over speed. At the same time, a design system should not become a bottleneck for shipping products.</p>
+
+        <p class="anim-from-bottom">To balance these needs, CVS design leadership decided to move forward with a contribution model. Community library building teams were formed to create their own product-level libraries, allowing them to innovate and ship faster in response to immediate demands.</p>
+
+        <p class="anim-from-bottom">The Pulse team then evaluated and "graduated" component and pattern candidates when they met specific criteria — for example, when their use cases extended beyond a single product. After careful evaluation and a rigorous adjustment process to ensure they met Pulse standards, these components could be standardized and absorbed into the Pulse libraries.</p>
+
+        <h2 class="anim-from-bottom">Conclusion</h2>
+
+        <p class="anim-from-bottom">The CVS Health App launch was the result of sustained, cross-team effort over several years. For Pulse, it meant consistently delivering under pressure—building foundational libraries, supporting a rapidly scaling design organization, and upholding quality, accessibility, and platform integrity as timelines tightened.</p>
+
+        <p class="anim-from-bottom">Pulse functioned as both a system and infrastructure—enabling teams to move faster without sacrificing usability or coherence. Through documentation, education, office hours, cross-platform collaboration, and a contribution model, the team helped shape a scalable design ecosystem for an enterprise-level product.</p>
+
+        <p class="anim-from-bottom">My role spanned <strong>design</strong>, <strong>systems thinking</strong>, and <strong>leadership</strong>. I contributed to the Android library, partnered with engineering and accessibility, led the Android team when needed, represented the platform in cross-team work, and helped define token architecture while balancing platform-specific needs with system integrity.</p>
+
+        <p class="anim-from-bottom">Seeing components ship in production—and product experiences mature into native, accessible, and scalable solutions—was both validating and rewarding. It reinforced my belief that strong design systems create clarity, trust, and a foundation that enables teams to do their best work.</p>
+      </div>
+
+    </div><!-- /.cs-inner -->
+  </main>
+
+  <!-- ─── Modal ───────────────────────────────────────────────────── -->
+  <div class="cs-modal" id="csModal" hidden>
+    <div class="cs-modal__scrim"></div>
+    <div class="cs-modal__panel">
+      <div class="cs-modal__header">
+        <div class="cs-modal__nav">
+          <button class="cs-modal__arrow cs-modal__arrow--prev" id="modalPrev" aria-label="Previous">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M6 0L0 9.867L6 9.867L12 9.867L6 0Z" fill="currentColor" transform="translate(10, 11)"/></svg>
+          </button>
+          <button class="cs-modal__arrow cs-modal__arrow--next" id="modalNext" aria-label="Next">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M6 9.867L12 0L6 0L0 0L6 9.867Z" fill="currentColor" transform="translate(10, 11)"/></svg>
+          </button>
+        </div>
+        <button class="cs-modal__close" id="modalClose" aria-label="Close modal">
+          <img src="assets/icon-close.svg" alt="" />
+        </button>
+      </div>
+      <div class="cs-modal__body">
+        <div class="cs-modal__left">
+          <p class="cs-modal__screen-title" id="modalScreenTitle"></p>
+          <div class="cs-modal__phone">
+            <img id="modalPhoneImg" src="" alt="" />
+          </div>
+        </div>
+        <div class="cs-modal__right">
+          <p class="cs-modal__comp-title" id="modalCompTitle"></p>
+          <p class="cs-modal__comp-desc" id="modalCompDesc"></p>
+          <div class="cs-modal__detail-wrap">
+            <img class="cs-modal__detail-img" id="modalDetailImg" src="" alt="Component detail" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Footer ────────────────────────────────────────────────── -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; All rights reserved 2026 Tanya Simkhovich.</p>
+      <div class="footer-contact">
+        <span class="footer-connect">Connect&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <a class="footer-email" href="mailto:tsimkhovich@gmail.com">tsimkhovich@gmail.com</a>
+        <a class="footer-linkedin" href="https://linkedin.com" target="_blank" rel="noopener">
+          <img src="assets/linkedin-logo.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="cvs-case-study.js"></script>
+</body>
+</html>
