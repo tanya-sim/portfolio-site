@@ -231,16 +231,14 @@
 .cs-modal__header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding-top: 8px;
 }
 
 .cs-modal__nav {
-  flex: 1;
   display: flex;
-  gap: 8px;
+  gap: 4px;
   align-items: center;
-  justify-content: flex-end;
-  padding-top: 12px;
 }
 
 .cs-modal__arrow {
@@ -262,14 +260,14 @@
 }
 
 .cs-modal__close {
-  width: 324px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   border: none;
   background: none;
   cursor: pointer;
   padding: 0;
+  margin-left: auto;
 }
 
 .cs-modal__close img {
@@ -338,11 +336,13 @@
   position: absolute;
   left: -5px;
   top: 145px;
+  width: 559px;
 }
 
 .cs-modal__detail-img {
   display: block;
-  max-width: none;
+  width: 100%;
+  height: auto;
 }
 
 /* ─── Dark Mode ─────────────────────────────────────────────────── */
