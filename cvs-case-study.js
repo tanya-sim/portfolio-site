@@ -21,21 +21,24 @@ document.addEventListener('DOMContentLoaded', () => {
         compTitle: 'Android Card Component',
         compDesc: 'A card with a slotted architecture offers great flexibility for building custom layouts.',
         image: 'assets/cs-main-homepage.png',
-        detailImage: 'assets/cs-detail-card.png'
+        detailImage: 'assets/cs-detail-card.png',
+        detailStyle: { left: '-5px', top: '145px', width: '559px', height: '542px' }
       },
       {
         screenTitle: 'Savings Screen',
         compTitle: 'Android Tabs Component',
         compDesc: 'Tabs organize content across different screens and views.',
         image: 'assets/cs-main-shopsave.png',
-        detailImage: 'assets/cs-detail-tabs.png'
+        detailImage: 'assets/cs-detail-tabs.png',
+        detailStyle: { left: '-2px', top: '157px', width: '519px', height: '287px' }
       },
       {
         screenTitle: 'Your Health Screen',
         compTitle: 'Android List Component',
         compDesc: 'Lists support quick scanning and action by keeping items short and logically ordered.',
         image: 'assets/cs-main-health.png',
-        detailImage: 'assets/cs-detail-list.png'
+        detailImage: 'assets/cs-detail-list.png',
+        detailStyle: { left: '-94px', top: '167px', width: '441px', height: '530px' }
       }
     ],
     shopping: [
@@ -44,21 +47,24 @@ document.addEventListener('DOMContentLoaded', () => {
         compTitle: 'Android Choice Button Component',
         compDesc: 'A choice button is a custom control that supports single or multiple selection.',
         image: 'assets/cs-shopping-1.png',
-        detailImage: 'assets/cs-shopping-detail-1.png'
+        detailImage: 'assets/cs-shopping-detail-1.png',
+        detailStyle: { left: '-9px', top: '147px', width: '777px', height: '614px' }
       },
       {
         screenTitle: 'Product recommendations',
         compTitle: 'Android Button Component',
         compDesc: 'Buttons provide a clear and consistent way to trigger actions.',
         image: 'assets/cs-shopping-2.png',
-        detailImage: 'assets/cs-shopping-detail-2.png'
+        detailImage: 'assets/cs-shopping-detail-2.png',
+        detailStyle: { left: '-39px', top: '157px', width: '512px', height: '282px' }
       },
       {
         screenTitle: 'Checkout',
         compTitle: 'Android Bottom Sheet Component',
         compDesc: 'Bottom sheets present secondary content from the bottom of the screen.',
         image: 'assets/cs-shopping-3.png',
-        detailImage: 'assets/cs-shopping-detail-3.png'
+        detailImage: 'assets/cs-shopping-detail-3.png',
+        detailStyle: { left: '-9px', top: '155px', width: '480px', height: '721px' }
       }
     ],
     health1: [
@@ -67,21 +73,24 @@ document.addEventListener('DOMContentLoaded', () => {
         compTitle: 'Android Important Note Component',
         compDesc: 'An important note is a system feedback message that highlights additional contextual information.',
         image: 'assets/cs-health-1.png',
-        detailImage: 'assets/cs-health-detail-1.png'
+        detailImage: 'assets/cs-health-detail-1.png',
+        detailStyle: { left: '-77px', top: '170px', width: '458px', height: '485px' }
       },
       {
         screenTitle: 'Product recommendations',
         compTitle: 'Android Action List and Checkbox Components',
         compDesc: 'Lists help people find a specific item and act on it.',
         image: 'assets/cs-health-2.png',
-        detailImage: 'assets/cs-health-detail-2.png'
+        detailImage: 'assets/cs-health-detail-2.png',
+        detailStyle: { left: '-252px', top: '161px', width: '656px', height: '613px' }
       },
       {
         screenTitle: 'Checkout',
         compTitle: 'Android Choice Button Group Component',
         compDesc: 'A choice button is a custom control that supports single or multiple selection.',
         image: 'assets/cs-health-3.png',
-        detailImage: 'assets/cs-health-detail-3.png'
+        detailImage: 'assets/cs-health-detail-3.png',
+        detailStyle: { left: '11px', top: '203px', width: '357px', height: '420px' }
       }
     ],
     health2: [
@@ -90,21 +99,24 @@ document.addEventListener('DOMContentLoaded', () => {
         compTitle: 'Android Chip Component',
         compDesc: 'Chips provide a compact way to support input, selection, filtering, and actions.',
         image: 'assets/cs-health-4.png',
-        detailImage: 'assets/cs-health-detail-4.png'
+        detailImage: 'assets/cs-health-detail-4.png',
+        detailStyle: { left: '-41px', top: '213px', width: '505px', height: '372px' }
       },
       {
         screenTitle: 'Product recommendations',
         compTitle: 'Android Dialog Component',
         compDesc: 'Dialogs present important prompts within a user flow.',
         image: 'assets/cs-health-5.png',
-        detailImage: 'assets/cs-health-detail-5.png'
+        detailImage: 'assets/cs-health-detail-5.png',
+        detailStyle: { left: '13px', top: '175px', width: '522px', height: '458px' }
       },
       {
         screenTitle: 'Checkout',
         compTitle: 'Android Date Picker Component',
         compDesc: 'Date pickers let users select a date or a range of dates.',
         image: 'assets/cs-health-6.png',
-        detailImage: 'assets/cs-health-detail-6.png'
+        detailImage: 'assets/cs-health-detail-6.png',
+        detailStyle: { left: '3px', top: '165px', width: '502px', height: '332px' }
       }
     ]
   };
@@ -113,6 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = 0;
 
   /* ── Helpers ──────────────────────────────────────────────────── */
+  const detailWrap = document.querySelector('.cs-modal__detail-wrap');
+
   function show(group, index) {
     currentGroup = group;
     currentIndex = index;
@@ -125,6 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
     compTitle.textContent   = item.compTitle;
     compDesc.textContent    = item.compDesc;
     detailImg.src           = item.detailImage;
+
+    if (item.detailStyle) {
+      Object.assign(detailWrap.style, item.detailStyle);
+    }
 
     prevBtn.disabled = index === 0;
     nextBtn.disabled = index === items.length - 1;
