@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         detailStyle: { left: '-9px', top: '155px', width: '480px', height: '721px' }
       }
     ],
-    health1: [
+    health: [
       {
         screenTitle: 'Delivery options',
         compTitle: 'Android Important Note Component',
@@ -91,9 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         image: 'assets/cs-health-3.png',
         detailImage: 'assets/cs-health-detail-3.png',
         detailStyle: { left: '11px', top: '203px', width: '357px', height: '420px' }
-      }
-    ],
-    health2: [
+      },
       {
         screenTitle: 'Delivery options',
         compTitle: 'Android Chip Component',
