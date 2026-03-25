@@ -224,6 +224,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  width: 795px;
   max-height: 90vh;
   overflow-y: auto;
 }
@@ -282,6 +283,7 @@
 }
 
 .cs-modal__left {
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -296,6 +298,7 @@
 
 .cs-modal__phone {
   width: 320px;
+  flex-shrink: 0;
 }
 
 .cs-modal__phone img {
@@ -305,12 +308,13 @@
 }
 
 .cs-modal__right {
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding-top: 48px;
   width: 379px;
-  max-height: 702px;
+  min-height: 702px;
   overflow: hidden;
   position: relative;
 }
