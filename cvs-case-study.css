@@ -369,6 +369,10 @@ body.dark-mode .cs-modal__panel {
   background: #1a1a1a;
 }
 
+body.dark-mode .cs-modal__close img {
+  filter: invert(1);
+}
+
 /* ─── Responsive ────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .cs-inner { padding: 0 48px; }
