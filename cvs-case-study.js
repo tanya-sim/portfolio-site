@@ -145,12 +145,12 @@ document.addEventListener('DOMContentLoaded', () => {
     prevBtn.disabled = index === 0;
     nextBtn.disabled = index === items.length - 1;
 
-    modalEl.hidden = false;
+    modalEl.classList.add('is-open');
     document.body.style.overflow = 'hidden';
   }
 
   function close() {
-    modalEl.hidden = true;
+    modalEl.classList.remove('is-open');
     document.body.style.overflow = '';
   }
 
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
   nextBtn.addEventListener('click', () => navigate(1));
 
   document.addEventListener('keydown', e => {
-    if (modalEl.hidden) return;
+    if (!modalEl.classList.contains('is-open')) return;
     if (e.key === 'Escape')      close();
     if (e.key === 'ArrowLeft')   navigate(-1);
     if (e.key === 'ArrowRight')  navigate(1);

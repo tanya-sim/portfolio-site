@@ -203,10 +203,14 @@
   align-items: center;
   justify-content: center;
   padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 
-.cs-modal[hidden] {
-  display: none !important;
+.cs-modal.is-open {
+  opacity: 1;
+  visibility: visible;
 }
 
 .cs-modal__scrim {
@@ -227,6 +231,12 @@
   width: 795px;
   max-height: 90vh;
   overflow-y: auto;
+  transform: scale(0.96);
+  transition: transform 0.35s ease;
+}
+
+.cs-modal.is-open .cs-modal__panel {
+  transform: scale(1);
 }
 
 .cs-modal__header {
