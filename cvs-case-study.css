@@ -173,9 +173,11 @@
   display: flex;
   gap: 64px;
   padding-bottom: 32px;
+  margin-top: 24px;
 }
 
 .cs-a11y-row + .cs-a11y-row {
+  margin-top: 0;
   gap: 32px;
   padding-bottom: 48px;
 }
