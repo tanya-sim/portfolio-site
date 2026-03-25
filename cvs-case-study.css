@@ -290,6 +290,29 @@
   display: flex;
   gap: 32px;
   align-items: flex-start;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.cs-modal__body.slide-out-left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.cs-modal__body.slide-out-right {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+.cs-modal__body.slide-in-left {
+  transition: none;
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+.cs-modal__body.slide-in-right {
+  transition: none;
+  opacity: 0;
+  transform: translateX(-40px);
 }
 
 .cs-modal__left {

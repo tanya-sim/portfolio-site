@@ -154,12 +154,39 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
+  const modalBody = modalEl.querySelector('.cs-modal__body');
+  let isAnimating = false;
+
   function navigate(dir) {
     const items = modalData[currentGroup];
     const next  = currentIndex + dir;
-    if (next >= 0 && next < items.length) {
+    if (next < 0 || next >= items.length || isAnimating) return;
+    isAnimating = true;
+
+    // Slide out in the direction of travel
+    const outClass = dir > 0 ? 'slide-out-left' : 'slide-out-right';
+    const inClass  = dir > 0 ? 'slide-in-left'  : 'slide-in-right';
+
+    modalBody.classList.add(outClass);
+
+    modalBody.addEventListener('transitionend', function onOut() {
+      modalBody.removeEventListener('transitionend', onOut);
+      modalBody.classList.remove(outClass);
+
+      // Swap content while hidden
       show(currentGroup, next);
-    }
+
+      // Position for slide-in (no transition)
+      modalBody.classList.add(inClass);
+      void modalBody.offsetHeight; // force reflow
+
+      // Animate in
+      modalBody.classList.remove(inClass);
+      modalBody.addEventListener('transitionend', function onIn() {
+        modalBody.removeEventListener('transitionend', onIn);
+        isAnimating = false;
+      });
+    });
   }
 
   /* ── Event listeners ──────────────────────────────────────────── */
