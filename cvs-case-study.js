@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
     health: [
       {
-        screenTitle: 'Delivery options',
+        screenTitle: 'Find Care',
         compTitle: 'Android Important Note Component',
         compDesc: 'An important note is a system feedback message that highlights additional contextual information.',
         image: 'assets/cs-health-1.png',
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         detailStyle: { left: '-77px', top: '170px', width: '458px', height: '485px' }
       },
       {
-        screenTitle: 'Product recommendations',
+        screenTitle: 'Visit Options',
         compTitle: 'Android Action List and Checkbox Components',
         compDesc: 'Lists help people find a specific item and act on it.',
         image: 'assets/cs-health-2.png',
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         detailStyle: { left: '-252px', top: '161px', width: '656px', height: '613px' }
       },
       {
-        screenTitle: 'Checkout',
+        screenTitle: 'Location Details',
         compTitle: 'Android Choice Button Group Component',
         compDesc: 'A choice button is a custom control that supports single or multiple selection.',
         image: 'assets/cs-health-3.png',
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         detailStyle: { left: '11px', top: '203px', width: '357px', height: '420px' }
       },
       {
-        screenTitle: 'Delivery options',
+        screenTitle: 'Find Care',
         compTitle: 'Android Chip Component',
         compDesc: 'Chips provide a compact way to support input, selection, filtering, and actions.',
         image: 'assets/cs-health-4.png',
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         detailStyle: { left: '-41px', top: '213px', width: '505px', height: '372px' }
       },
       {
-        screenTitle: 'Product recommendations',
+        screenTitle: 'Health Check',
         compTitle: 'Android Dialog Component',
         compDesc: 'Dialogs present important prompts within a user flow.',
         image: 'assets/cs-health-5.png',
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         detailStyle: { left: '13px', top: '175px', width: '522px', height: '458px' }
       },
       {
-        screenTitle: 'Checkout',
+        screenTitle: 'Find Care',
         compTitle: 'Android Date Picker Component',
         compDesc: 'Date pickers let users select a date or a range of dates.',
         image: 'assets/cs-health-6.png',
