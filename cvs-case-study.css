@@ -604,9 +604,18 @@
   margin-top: 8px;
 }
 
+.wf-modal__img-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
 .wf-modal__img-wrap {
   width: 880px;
   max-width: 100%;
+  flex-shrink: 0;
 }
 
 .wf-modal__img {
@@ -643,15 +652,6 @@
   transition: none;
   opacity: 0;
   transform: translateX(-100%);
-}
-
-.wf-modal__nav {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-  padding-top: 12px;
-  height: 44px;
 }
 
 .wf-modal__arrow {
