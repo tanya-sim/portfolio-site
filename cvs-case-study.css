@@ -454,6 +454,7 @@
   font-weight: 600;
   line-height: 42px;
   color: var(--gray-95);
+  margin: 24px 0;
 }
 
 /* ─── Subsection Heading ───────────────────────────────────────── */
@@ -475,9 +476,6 @@
   padding-bottom: 24px;
 }
 
-.cs-img-row--tight-top {
-  margin-top: -16px;
-}
 
 .cs-img-row__item {
   flex: 1;
