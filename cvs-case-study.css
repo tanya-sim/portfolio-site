@@ -482,6 +482,11 @@
   flex: 1;
 }
 
+.cs-img-row--no-grow .cs-img-row__item {
+  flex: none;
+  width: 300px;
+}
+
 .cs-img-row__item img {
   width: 100%;
   height: auto;
