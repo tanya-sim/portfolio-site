@@ -384,6 +384,122 @@
   object-fit: cover;
 }
 
+/* ─── Title Row (title + button side by side) ──────────────────── */
+.cs-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.cs-title-row .cs-title {
+  flex: 1;
+}
+
+/* ─── Demo Button ──────────────────────────────────────────────── */
+.cs-btn-demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 226px;
+  flex-shrink: 0;
+  padding: 12px;
+  border-radius: 24px;
+  background: var(--blue-60, #077bb3);
+  border: 1px solid var(--blue-60, #077bb3);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.cs-btn-demo:hover {
+  opacity: 0.85;
+}
+
+/* ─── Two-column Layout ────────────────────────────────────────── */
+.cs-two-col {
+  display: flex;
+  gap: 24px;
+}
+
+.cs-two-col__main {
+  flex: 1;
+}
+
+.cs-two-col__sidebar {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+/* ─── Heading with Button ──────────────────────────────────────── */
+.cs-heading-with-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cs-heading-with-btn .cs-section-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* ─── Flow Label ───────────────────────────────────────────────── */
+.cs-flow-label {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 42px;
+  color: var(--gray-95);
+}
+
+/* ─── Subsection Heading ───────────────────────────────────────── */
+.cs-subsection-heading {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  color: var(--gray-95);
+}
+
+/* ─── Image Rows ───────────────────────────────────────────────── */
+.cs-img-row {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+}
+
+.cs-img-row--pb {
+  padding-bottom: 24px;
+}
+
+.cs-img-row__item {
+  flex: 1;
+}
+
+.cs-img-row__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── Info Card List ───────────────────────────────────────────── */
+.cs-info-card__list {
+  padding-left: 21px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cs-info-card__list li {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--gray-95);
+}
+
 /* ─── Dark Mode ─────────────────────────────────────────────────── */
 body.dark-mode .cs-label {
   color: #8b9cf7;
@@ -436,4 +552,11 @@ body.dark-mode .cs-modal__close img {
   .cs-modal__right { width: 100%; max-height: none; position: static; }
   .cs-modal__detail-wrap { position: static; }
   .cs-modal__close { width: auto; }
+
+  .cs-title-row { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .cs-btn-demo { width: 100%; }
+  .cs-two-col { flex-direction: column; }
+  .cs-two-col__sidebar { width: 100%; }
+  .cs-img-row { flex-direction: column; gap: 24px; }
+  .cs-heading-with-btn { flex-direction: column; align-items: flex-start; gap: 16px; }
 }

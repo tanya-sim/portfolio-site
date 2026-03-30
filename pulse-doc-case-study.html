@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse Documentation Case Study — Tanya Simkhovich</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Inria+Serif:ital,wght@1,400;1,700&display=block" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cvs-case-study.css" />
+</head>
+<body>
+
+  <!-- ─── Navigation ──────────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-headshot">
+        <img class="nav-avatar" src="assets/avatar.png" alt="Tanya Simkhovich" />
+        <span class="nav-name">Tanya Simkhovich</span>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="work.html" class="active">WORK</a></li>
+          <li><a href="index.html#philosophy">ABOUT</a></li>
+          <li><a href="#">JOURNEY</a></li>
+          <li><a href="#footer">CONTACT</a></li>
+        </ul>
+        <button class="toggle-mode" id="toggleMode" aria-label="Toggle dark/light mode" data-mode="light">
+          <span class="toggle-mode__bg"></span>
+          <img class="toggle-mode__icon" src="assets/icon-moon.svg" alt="" />
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+          <img src="assets/icon-hamburger.svg" alt="" />
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__panel">
+      <div class="mobile-menu__header">
+        <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+          <img src="assets/icon-close.svg" alt="" />
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="index.html#philosophy">About</a></li>
+        <li><a href="#">Journey</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main class="case-study">
+    <div class="cs-inner">
+
+      <!-- ─── Case Study Header ──────────────────────────────────── -->
+      <div class="cs-header anim-from-bottom">
+        <p class="cs-dates">January 2024 – November 2025</p>
+        <p class="cs-label">Case Study</p>
+        <div class="cs-title-row">
+          <h1 class="cs-title">Pulse Design System Documentation Site</h1>
+          <a class="cs-btn-demo" href="https://pulse-design-system-docs.netlify.app" target="_blank" rel="noopener noreferrer">LIVE&nbsp;&nbsp;DEMONSTRATION</a>
+        </div>
+      </div>
+
+      <!-- ─── Two-column: Problem Statement + Stakeholders ───────── -->
+      <div class="cs-two-col">
+        <div class="cs-two-col__main cs-content">
+
+          <h2 class="anim-from-bottom">Problem Statement</h2>
+
+          <p class="anim-from-bottom">The Digital Pulse design system (DS) team started a unified documentation initiative in early 2025. The resources product designers relied on to deliver solutions that were accessible, brand-aligned, and consistent with content guidelines were scattered across multiple portals and sites throughout the organization—such as SharePoint and Confluence to name a few.</p>
+
+          <p class="anim-from-bottom">This fragmentation made it difficult for teams to find the right guidance at the right time and often resulted in duplicated effort, outdated information, or confusing guidance.</p>
+
+          <h2 class="anim-from-bottom">Goal</h2>
+
+          <p class="anim-from-bottom">The goal was to bring as much content onto a single platform as possible and provide a clear information structure with intuitive navigation.</p>
+
+          <p class="anim-from-bottom">Some resources—such as the CVS Accessibility Wiki—had been hosted on SharePoint for a long time. Due to their size and long-term ownership, it would have been unreasonable to migrate them to a different platform. Instead, the unified documentation site would provide contextual links to relevant external content that needed to remain where it was, while still feeling like part of a cohesive system.</p>
+
+          <h2 class="cs-section-heading anim-from-bottom">Platform</h2>
+
+          <p class="anim-from-bottom">The Pulse engineering team already had a publishing platform—Docusaurus—for their technical documentation. It had matured over several years and was meeting their needs well.</p>
+
+          <p class="anim-from-bottom">Since the design system team did not have the budget to invest in a third-party CMS, the decision was made to leverage this existing solution and adapt it to support design system documentation.</p>
+
+          <h2 class="anim-from-bottom">Game Plan</h2>
+        </div>
+
+        <div class="cs-two-col__sidebar cs-content">
+          <h2 class="cs-section-heading anim-from-bottom">Stakeholders</h2>
+          <ul class="anim-from-bottom">
+            <li>Pulse leadership</li>
+            <li>Pulse creative design lead</li>
+            <li>Pulse platform designers and engineers</li>
+            <li>Pulse accessibility designers</li>
+            <li>Content strategy leads</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ─── Info Cards ──────────────────────────────────────────── -->
+      <div class="cs-cards-row anim-from-bottom">
+        <div class="cs-info-card">
+          <h3 class="cs-info-card__title">Discovery</h3>
+          <ul class="cs-info-card__list">
+            <li>Inventory of all existing documentation resources</li>
+            <li>Competitive research (public Design System sites)</li>
+            <li>Evaluation of Docusaurus capabilities</li>
+          </ul>
+        </div>
+        <div class="cs-info-card">
+          <h3 class="cs-info-card__title">Site Architecture &amp; Navigation</h3>
+          <ul class="cs-info-card__list">
+            <li>Sitemap</li>
+            <li>Wireframe iterations</li>
+            <li>Interactive low-fidelity prototypes for testing</li>
+            <li>A/B testing to gather feedback, identify user needs, and surface pain points</li>
+            <li>Iterations based on user feedback</li>
+            <li>Final proposed site architecture reviewed and approved by stakeholders and leadership</li>
+          </ul>
+        </div>
+        <div class="cs-info-card">
+          <h3 class="cs-info-card__title">Design &amp; Prototyping</h3>
+          <ul class="cs-info-card__list">
+            <li>High-fidelity mockups (Figma)</li>
+            <li>Interactive flows (Figma)</li>
+          </ul>
+          <p class="cs-info-card__text"><strong>Stretch goal:</strong> building a live prototype in GitHub branch</p>
+        </div>
+      </div>
+
+      <!-- ─── Discovery Results ───────────────────────────────────── -->
+      <div class="cs-content">
+
+        <h2 class="cs-section-heading anim-from-bottom">Discovery results</h2>
+
+        <ul class="anim-from-bottom">
+          <li>I started by locating and documenting all existing resources across the organization that I either wanted to pull into the site or reference from it. I met with accessibility designers, content strategists, and Pulse designers to align on findings, expectations, and gaps.</li>
+          <li>I conducted and documented comparative research of publicly available design system sites in Miro. I was specifically interested in systems that provided guidance for both web and native platforms, and there were only a handful that truly addressed both.</li>
+          <li>One particularly exciting discovery was that Docusaurus could utilize Pulse React components. This meant we could truly "dogfood" our system—using our own components to build the documentation site itself. It also opened the door to integrating design tokens and supporting light and dark modes out of the box.</li>
+        </ul>
+
+        <h2 class="cs-section-heading anim-from-bottom">A/B Testing</h2>
+
+        <p class="anim-from-bottom">After completing research, iterating on site architecture, and creating wireframes, I felt ready to test my ideas. User testing became a critical tool for validating assumptions, pressure-testing concepts, and understanding how designers would actually navigate the site.</p>
+
+        <p class="anim-from-bottom">I consider this step one of the most important parts of the process, so I invested a lot of time in preparation. I reached out to several solution designers, and they were enthusiastic about participating.</p>
+
+        <p class="anim-from-bottom"><strong>Testing setup:</strong></p>
+
+        <ul class="anim-from-bottom">
+          <li>Three distinct navigation flows (interactive Figma prototypes)</li>
+          <li>8 participants</li>
+          <li>50-minute sessions</li>
+        </ul>
+
+        <p class="anim-from-bottom"><strong>Task:</strong><br />Participants were asked to navigate from the homepage to Button documentation across all three platforms—Web, iOS, and Android.</p>
+
+        <h3 class="cs-flow-label anim-from-bottom">Flow 1</h3>
+      </div>
+
+      <!-- ─── Wireframes: Flow 1 ──────────────────────────────────── -->
+      <div class="cs-img-row anim-from-bottom">
+        <div class="cs-img-row__item"><img src="assets/cs-doc-wireframe-home1.png" alt="Homepage wireframe flow 1" /></div>
+        <div class="cs-img-row__item"><img src="assets/cs-doc-wireframe-comlanding1.png" alt="Component landing wireframe flow 1" /></div>
+        <div class="cs-img-row__item"><img src="assets/cs-doc-wireframe-compage1.png" alt="Component page wireframe flow 1" /></div>
+      </div>
+
+      <div class="cs-content">
+        <h3 class="cs-flow-label anim-from-bottom">Flow 2</h3>
+      </div>
+
+      <!-- ─── Wireframes: Flow 2 ──────────────────────────────────── -->
+      <div class="cs-img-row anim-from-bottom">
+        <div class="cs-img-row__item"><img src="assets/cs-doc-wireframe-home2.png" alt="Homepage wireframe flow 2" /></div>
+        <div class="cs-img-row__item"><img src="assets/cs-doc-wireframe-comlanding2.png" alt="Component landing wireframe flow 2" /></div>
+        <div class="cs-img-row__item"><img src="assets/cs-doc-wireframe-compage2.png" alt="Component page wireframe flow 2" /></div>
+      </div>
+
+      <div class="cs-content">
+        <h3 class="cs-flow-label anim-from-bottom">Flow 3</h3>
+      </div>
+
+      <!-- ─── Wireframes: Flow 3 ──────────────────────────────────── -->
+      <div class="cs-img-row cs-img-row--pb anim-from-bottom">
+        <div class="cs-img-row__item"><img src="assets/cs-doc-wireframe-home3.png" alt="Homepage wireframe flow 3" /></div>
+        <div class="cs-img-row__item"><img src="assets/cs-doc-wireframe-comlanding3.png" alt="Component landing wireframe flow 3" /></div>
+        <div class="cs-img-row__item"><img src="assets/cs-doc-wireframe-compage3.png" alt="Component page wireframe flow 3" /></div>
+      </div>
+
+      <!-- ─── Testing Key Takeaways ───────────────────────────────── -->
+      <div class="cs-content">
+
+        <h2 class="cs-section-heading anim-from-bottom">Testing: Key Takeaways</h2>
+
+        <ul class="anim-from-bottom">
+          <li>The three-tier navigation resonated with all participants.</li>
+          <li>Designers preferred browsing components alphabetically. At the same time, they liked seeing components grouped by category—as long as those groupings lived outside of primary navigation.</li>
+          <li>The matrix-style component table was a clear hit. Designers were excited to see components listed side by side by platform, and they especially valued component status indicators such as "available", "to do", and "not applicable for this platform".</li>
+          <li>Most participants found the segmented button for platform switching in the side panel interesting, though somewhat unorthodox.</li>
+          <li>Search stood out as one of the most positively received features. Since this was the first time many designers had access to search within Pulse documentation, it was often their instinctive first action—several participants immediately used it to find the Button component.</li>
+          <li>All participants were able to accurately (or very closely) predict what content would live under the Foundations section.</li>
+          <li>Designers also responded positively to seeing Components featured as a prominent tile on the homepage.</li>
+          <li>Only one participant preferred Web, iOS, and Android to be treated as three separate content "buckets." The rest favored having platform-specific component guidance in close proximity and expressed that linking equivalent or functionally similar components across platforms would be especially helpful.</li>
+          <li>Feedback on component-level tabs—Usage, Code, Accessibility, and Content Strategy—was evenly split across participants.</li>
+        </ul>
+      </div>
+
+      <!-- ─── Aligning Insights ───────────────────────────────────── -->
+      <div class="cs-content">
+
+        <h2 class="cs-section-heading anim-from-bottom">Aligning Insights with the Pulse Team</h2>
+
+        <p class="anim-from-bottom">I brought the testing results back to the Pulse design system team, with a focus on ensuring that user needs and ideas aligned with the designers who would be authoring and maintaining the documentation.</p>
+
+        <p class="anim-from-bottom">To do this, I organized and moderated a series of discussions and working sessions. We reviewed findings together, zoomed into individual site sections, and workshopped solutions collaboratively—balancing user feedback with authoring workflows and long-term maintainability.</p>
+
+        <h2 class="cs-section-heading anim-from-bottom">Component Categorization Brainstorm</h2>
+
+        <h3 class="cs-flow-label anim-from-bottom">Card Sorting Exercise</h3>
+
+        <p class="anim-from-bottom">I want to highlight one of several workshops focused on organizing Pulse components into meaningful categories.</p>
+
+        <p class="anim-from-bottom">For this exercise, I used a card-sorting technique, with boards set up in FigJam. It took three focused and productive sessions to arrive at a solution everyone felt confident in.</p>
+
+        <h4 class="cs-subsection-heading anim-from-bottom">Goal</h4>
+
+        <ul class="anim-from-bottom">
+          <li>Organize components across all three platforms</li>
+          <li>Ensure category names make sense for Web, iOS, and Android</li>
+          <li>Keep the total number of categories to eight or fewer</li>
+        </ul>
+
+        <h4 class="cs-subsection-heading anim-from-bottom">Sorting Criteria</h4>
+
+        <p class="anim-from-bottom">Components within a group should share a common purpose and be used in similar interaction contexts.</p>
+      </div>
+
+      <!-- ─── Card Sorting Images ─────────────────────────────────── -->
+      <div class="cs-img-row anim-from-bottom">
+        <div class="cs-img-row__item"><img src="assets/cs-doc-sorting1.png" alt="Card sorting session 1" /></div>
+        <div class="cs-img-row__item"><img src="assets/cs-doc-sorting2.png" alt="Card sorting session 2" /></div>
+        <div class="cs-img-row__item"><img src="assets/cs-doc-sorting3.png" alt="Card sorting session 3" /></div>
+      </div>
+
+      <!-- ─── Results ─────────────────────────────────────────────── -->
+      <div class="cs-content">
+
+        <h2 class="cs-section-heading anim-from-bottom">Results</h2>
+
+        <p class="anim-from-bottom">As a result of the team's collaboration, components across all three platforms were grouped into six categories:</p>
+
+        <ul class="anim-from-bottom">
+          <li>Actions</li>
+          <li>Forms</li>
+          <li>Indicators</li>
+          <li>Messaging</li>
+          <li>Navigation</li>
+          <li>Structure</li>
+        </ul>
+
+        <p class="anim-from-bottom">During the workshop, we discovered that some components naturally belonged to two—or even three—categories. To account for this overlap, we decided that filter chips would be the most effective sorting mechanism.</p>
+
+        <p class="anim-from-bottom">Components that fell into multiple groupings would be tagged at the code level with category metadata, allowing for an accurate and dynamic display on the Components overview page.</p>
+
+        <h2 class="cs-section-heading anim-from-bottom">High-fidelity Designs</h2>
+      </div>
+
+      <!-- ─── Hi-fi Designs: Row 1 ────────────────────────────────── -->
+      <div class="cs-img-row cs-img-row--pb anim-from-bottom">
+        <div class="cs-img-row__item"><img src="assets/cs-doc-hifi-welcome.png" alt="Welcome page design" /></div>
+        <div class="cs-img-row__item"><img src="assets/cs-doc-hifi-getstarted.png" alt="Get started page design" /></div>
+        <div class="cs-img-row__item"><img src="assets/cs-doc-hifi-foundations.png" alt="Foundations page design" /></div>
+      </div>
+
+      <!-- ─── Hi-fi Designs: Row 2 ────────────────────────────────── -->
+      <div class="cs-img-row cs-img-row--pb anim-from-bottom">
+        <div class="cs-img-row__item"><img src="assets/cs-doc-hifi-matrix.png" alt="Components matrix page design" /></div>
+        <div class="cs-img-row__item"><img src="assets/cs-doc-hifi-overview.png" alt="Components overview page design" /></div>
+        <div class="cs-img-row__item"><img src="assets/cs-doc-hifi-sortable.png" alt="Components sortable page design" /></div>
+      </div>
+
+      <!-- ─── Hi-fi Designs: Row 3 ────────────────────────────────── -->
+      <div class="cs-img-row cs-img-row--pb anim-from-bottom">
+        <div class="cs-img-row__item"><img src="assets/cs-doc-hifi-patterns.png" alt="Patterns page design" /></div>
+        <div class="cs-img-row__item"><img src="assets/cs-doc-hifi-patterns-forms.png" alt="Patterns forms tabbed design" /></div>
+      </div>
+
+      <!-- ─── Live Prototype ──────────────────────────────────────── -->
+      <div class="cs-content">
+
+        <div class="cs-heading-with-btn anim-from-bottom">
+          <h2 class="cs-section-heading">Live Prototype (via Vibe Coding)</h2>
+          <a class="cs-btn-demo" href="https://pulse-design-system-docs.netlify.app" target="_blank" rel="noopener noreferrer">LIVE&nbsp;&nbsp;DEMONSTRATION</a>
+        </div>
+
+        <p class="anim-from-bottom">I set up a separate GitHub branch off the main branch and procured a GitHub Copilot license—an AI-powered coding assistant that helps write and troubleshoot code—and started experimenting.</p>
+
+        <p class="anim-from-bottom">With Copilot's help, I was able to translate my Figma designs into live HTML pages. Over time, I became comfortable enough with the tool to build the following features:</p>
+
+        <ul class="anim-from-bottom">
+          <li>Reusable promo tile components in two sizes, used across landing and second-tier pages</li>
+          <li>Category-based component filtering, allowing components to be sorted across six categories using filter chips on platform-specific overview pages</li>
+          <li>Component Matrix Table, displaying components side by side across Web, iOS, and Android, with status badges indicating availability</li>
+          <li>Reusable segmented control component on Patterns pages, used to switch between global pattern guidance and component-specific usage when a pattern was represented by one or more Figma components</li>
+        </ul>
+
+        <h2 class="cs-section-heading anim-from-bottom">Conclusion</h2>
+
+        <p class="anim-from-bottom">This work demonstrated how much impact thoughtful documentation can have on the adoption and long-term success of a design system. By bringing fragmented guidance together, validating decisions through research, and iterating closely with stakeholders, the Pulse documentation was shaped into a clear, scalable foundation—designed to support future implementation and growth.</p>
+
+        <p class="anim-from-bottom">Leading this initiative required wearing many hats: researcher, facilitator, designer, systems thinker, and, at times, builder. While the work resulted in final designs and live prototypes rather than a fully implemented production site, each decision was made with long-term sustainability, authoring workflows, and platform constraints in mind.</p>
+
+        <p class="anim-from-bottom">The outcome was a well-researched, well-tested documentation framework that positioned the team for successful execution. With engineering capacity in place, this foundation enables teams to move faster, make more consistent decisions, and build trust in the system as it continues to evolve.</p>
+      </div>
+
+    </div><!-- /.cs-inner -->
+  </main>
+
+  <!-- ─── Footer ────────────────────────────────────────────────── -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; All rights reserved 2026 Tanya Simkhovich.</p>
+      <div class="footer-contact">
+        <span class="footer-connect">Connect&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <a class="footer-email" href="mailto:tsimkhovich@gmail.com">tsimkhovich@gmail.com</a>
+        <a class="footer-linkedin" href="https://linkedin.com" target="_blank" rel="noopener">
+          <img src="assets/linkedin-logo.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
