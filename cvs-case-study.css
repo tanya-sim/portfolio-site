@@ -479,10 +479,6 @@
 
 
 .cs-img-row__item {
-  flex: 1;
-}
-
-.cs-img-row--no-grow .cs-img-row__item {
   flex: none;
   width: 300px;
 }
