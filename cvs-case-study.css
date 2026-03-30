@@ -504,6 +504,142 @@
   color: var(--gray-95);
 }
 
+/* ─── Image Row Buttons ────────────────────────────────────────── */
+.cs-img-row__btn {
+  flex: none;
+  width: 300px;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background: none;
+  overflow: hidden;
+}
+
+.cs-img-row__btn img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.cs-img-row__btn:hover img {
+  transform: scale(1.03);
+}
+
+/* ─── Wireframe Modal ──────────────────────────────────────────── */
+.wf-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.wf-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.wf-modal__panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  padding: 12px 32px 24px;
+  overflow-y: auto;
+}
+
+.wf-modal__close-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding-top: 12px;
+}
+
+.wf-modal__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.wf-modal__close img {
+  width: 14px;
+  height: 14px;
+}
+
+.wf-modal__title-wrap {
+  text-align: center;
+  max-width: 670px;
+  padding-bottom: 20px;
+}
+
+.wf-modal__title {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 48px;
+  color: var(--gray-95);
+  margin: 0;
+}
+
+.wf-modal__desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--gray-95);
+  margin-top: 8px;
+}
+
+.wf-modal__img-wrap {
+  width: 1220px;
+  max-width: 100%;
+}
+
+.wf-modal__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.wf-modal__nav {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 12px;
+  height: 44px;
+}
+
+.wf-modal__arrow {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--gray-95);
+  padding: 0;
+}
+
+.wf-modal__arrow:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
 /* ─── Dark Mode ─────────────────────────────────────────────────── */
 body.dark-mode .cs-label {
   color: #8b9cf7;
@@ -527,6 +663,14 @@ body.dark-mode .cs-modal__panel {
 }
 
 body.dark-mode .cs-modal__close img {
+  filter: invert(1);
+}
+
+body.dark-mode .wf-modal {
+  background: #1a1a1a;
+}
+
+body.dark-mode .wf-modal__close img {
   filter: invert(1);
 }
 
@@ -562,5 +706,9 @@ body.dark-mode .cs-modal__close img {
   .cs-two-col { flex-direction: column; }
   .cs-two-col__sidebar { width: 100%; }
   .cs-img-row { flex-direction: column; gap: 24px; }
+  .cs-img-row__btn { width: 100%; }
   .cs-heading-with-btn { flex-direction: column; align-items: flex-start; gap: 16px; }
+
+  .wf-modal__panel { padding: 12px 16px 24px; }
+  .wf-modal__title { font-size: 22px; line-height: 32px; }
 }
