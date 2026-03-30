@@ -506,6 +506,7 @@
 
 /* ─── Image Row Buttons ────────────────────────────────────────── */
 .cs-img-row__btn {
+  position: relative;
   flex: none;
   width: 300px;
   cursor: pointer;
@@ -522,8 +523,22 @@
   transition: transform 0.5s ease;
 }
 
+.cs-img-row__btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #238bbf;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
 .cs-img-row__btn:hover img {
-  transform: scale(1.03);
+  transform: scale(1.05);
+}
+
+.cs-img-row__btn:hover::after {
+  opacity: 0.2;
 }
 
 /* ─── Wireframe Modal ──────────────────────────────────────────── */
