@@ -475,6 +475,10 @@
   padding-bottom: 24px;
 }
 
+.cs-img-row--tight-top {
+  margin-top: -16px;
+}
+
 .cs-img-row__item {
   flex: 1;
 }
