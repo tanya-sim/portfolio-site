@@ -715,55 +715,76 @@
 }
 
 .cs-illustration__img {
+  position: relative;
   width: 97px;
+  height: 72px;
   border: 1px solid #dfdfdf;
   background: #fff;
-  padding: 7px 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.cs-illustration__link-row {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  height: 26px;
+  overflow: hidden;
 }
 
 .cs-illustration__link-text {
+  position: absolute;
+  left: 8px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 500;
   line-height: 26px;
   color: #000;
+  white-space: nowrap;
 }
 
+.cs-illustration__link-text--top { top: 7px; }
+.cs-illustration__link-text--bottom { top: 43px; }
+
 .cs-illustration__icon-box {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 26px;
 }
 
 .cs-illustration__icon-box--square {
   width: 26px;
+  height: 26px;
+  left: 62px;
+  top: 7px;
   border: 0.5px dashed #6423fc;
+}
+
+.cs-illustration__icon-box--square-bottom {
+  width: 26px;
+  height: 26px;
+  left: 62px;
+  top: 43px;
 }
 
 .cs-illustration__icon-box--trimmed {
-  width: auto;
-  padding: 0 1px;
+  width: 14px;
+  height: 26px;
+  left: 61px;
+  top: 7px;
   border: 0.5px dashed #6423fc;
 }
 
-.cs-illustration__icon-box--no-border {
-  border-color: transparent;
+.cs-illustration__icon-box--trimmed-bottom {
+  height: 19px;
+  left: 62px;
+  top: 47px;
 }
 
 .cs-illustration__icon-box svg {
-  width: 10px;
-  height: 16px;
+  width: 12px;
+  height: 19px;
+}
+
+.cs-illustration__link-bbox {
+  position: absolute;
+  left: 8px;
+  top: 7px;
+  width: 51px;
+  height: 26px;
+  border: 0.5px dashed #6423fc;
 }
 
 .cs-illustration__caption {
@@ -772,14 +793,14 @@
   gap: 0;
 }
 
-.cs-illustration__label {
+.cs-content .cs-illustration__label {
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
   color: var(--gray-95);
 }
 
-.cs-illustration__desc {
+.cs-content .cs-illustration__desc {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
