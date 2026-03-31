@@ -62,7 +62,7 @@
     <div class="cs-inner">
 
       <!-- ─── Header ────────────────────────────────────────────── -->
-      <header class="cs-header">
+      <header class="cs-header anim-from-bottom">
         <p class="cs-dates">May 2025 – November 2025</p>
         <p class="cs-label">Case Study</p>
         <h1 class="cs-title">CVS Icons Library Revamp</h1>
@@ -72,14 +72,14 @@
       <div class="cs-content">
 
         <!-- Problem Statement -->
-        <h2>Problem Statement</h2>
-        <p>An Icons Figma library of 400+ icons was created in Adobe Illustrator by the CVS Brand team in 2020 and shared across the entire CVS Digital Enterprise organization. The original Illustrator source files were impossible to locate at that time.</p>
-        <p>Over the course of several years, solution designers consistently reported issues with icon construction and properties. The icons did not meet engineering requirements, and as a result, the Pulse engineering team was never able to deliver a fully coded icon package.</p>
-        <p>At this point, the icon library had become a blocker rather than an enabler. It was time for a major overhaul.</p>
+        <h2 class="anim-from-bottom">Problem Statement</h2>
+        <p class="anim-from-bottom">An Icons Figma library of 400+ icons was created in Adobe Illustrator by the CVS Brand team in 2020 and shared across the entire CVS Digital Enterprise organization. The original Illustrator source files were impossible to locate at that time.</p>
+        <p class="anim-from-bottom">Over the course of several years, solution designers consistently reported issues with icon construction and properties. The icons did not meet engineering requirements, and as a result, the Pulse engineering team was never able to deliver a fully coded icon package.</p>
+        <p class="anim-from-bottom">At this point, the icon library had become a blocker rather than an enabler. It was time for a major overhaul.</p>
 
         <!-- Tasks -->
-        <h2>Tasks</h2>
-        <ul>
+        <h2 class="anim-from-bottom">Tasks</h2>
+        <ul class="anim-from-bottom">
           <li>Create a unified icon template and establish icon guidelines (principles and creative direction)</li>
           <li>Gather and compile technical requirements into a clear, actionable checklist</li>
           <li>Align creative intent with technical constraints at a system level</li>
@@ -87,18 +87,18 @@
         </ul>
 
         <!-- Game Plan -->
-        <h2 class="cs-section-heading">Game Plan</h2>
-        <ul>
+        <h2 class="cs-section-heading anim-from-bottom">Game Plan</h2>
+        <ul class="anim-from-bottom">
           <li>The icon creative process was led collaboratively by a Brand representative, the Pulse Creative Lead Designer, and a Solution Product Designer</li>
           <li>Research, analysis, and technical requirements gathering were owned by me</li>
           <li>Alignment across design and engineering teams was established to ensure production readiness and long-term scalability</li>
         </ul>
 
         <!-- Discovery -->
-        <h2>Discovery</h2>
-        <p>Before proposing any solutions, I needed to take a deep dive into what was actually wrong with the existing icon library.</p>
-        <p>This is a complete list of my findings:</p>
-        <ul>
+        <h2 class="anim-from-bottom">Discovery</h2>
+        <p class="anim-from-bottom">Before proposing any solutions, I needed to take a deep dive into what was actually wrong with the existing icon library.</p>
+        <p class="anim-from-bottom">This is a complete list of my findings:</p>
+        <ul class="anim-from-bottom">
           <li><strong>Icon size variants were not set up correctly</strong> in terms of outline thickness, which resulted in proportional scaling issues:
             <ul>
               <li>Small variant stroke — 1 px</li>
@@ -113,7 +113,7 @@
         </ul>
 
         <!-- Inline illustrations: Picture 1 + Picture 2 -->
-        <div class="cs-illustrations">
+        <div class="cs-illustrations anim-from-bottom">
           <div class="cs-illustration">
             <div class="cs-illustration__img">
               <div class="cs-illustration__link-row">
@@ -156,47 +156,47 @@
           </div>
         </div>
 
-        <p>In addition, I researched external resources—including Medium articles and YouTube videos—to understand how other design systems approach icon library creation.</p>
-        <p>The most compelling example I found was Font Awesome. Their presentation at Figma Config, "<a class="cs-link" href="https://www.youtube.com/watch?v=N1rcJRQ8u4Y&t=2s" target="_blank" rel="noopener">We Drew 30,000 Icons in Figma and So Can You</a>," stood out in particular. It offered practical, system-level insights into large-scale icon production, governance, and long-term maintainability, and helped inform my thinking around process, tooling, and constraints at scale.</p>
+        <p class="anim-from-bottom">In addition, I researched external resources—including Medium articles and YouTube videos—to understand how other design systems approach icon library creation.</p>
+        <p class="anim-from-bottom">The most compelling example I found was Font Awesome. Their presentation at Figma Config, "<a class="cs-link" href="https://www.youtube.com/watch?v=N1rcJRQ8u4Y&t=2s" target="_blank" rel="noopener">We Drew 30,000 Icons in Figma and So Can You</a>," stood out in particular. It offered practical, system-level insights into large-scale icon production, governance, and long-term maintainability, and helped inform my thinking around process, tooling, and constraints at scale.</p>
 
         <!-- Engineering Take -->
-        <h2 class="cs-section-heading">Engineering Take</h2>
-        <p>I had conversations with Web, iOS, and Android developers to understand their expectations and technical requirements.</p>
+        <h2 class="cs-section-heading anim-from-bottom">Engineering Take</h2>
+        <p class="anim-from-bottom">I had conversations with Web, iOS, and Android developers to understand their expectations and technical requirements.</p>
 
-        <h3 class="cs-subsection-heading">Web</h3>
-        <p>The Web Pulse engineer was already working on a system that uses CSS styling and sizing modifiers to scale icons programmatically. The main technical requirement was to have a single base icon that could scale up and down proportionally to generate different sizes—something that was not possible with the existing icon set due to the issues identified earlier.</p>
-        <p>His approach relied on a single SVG base icon at 16px, from which additional sizes (24px, 32px, etc.) would be generated in code. Icon color would be controlled via CSS styles and design tokens. He also emphasized that, for icons to work seamlessly inside Pulse components, they needed to be cut tightly to the actual artwork boundaries rather than being wrapped in a square bounding box. This would give engineers precise control over icon placement and its relationship to other UI elements within components. The Link component example illustrated this problem clearly. I made a note to bring this requirement back to the creative group.</p>
+        <h3 class="cs-subsection-heading anim-from-bottom">Web</h3>
+        <p class="anim-from-bottom">The Web Pulse engineer was already working on a system that uses CSS styling and sizing modifiers to scale icons programmatically. The main technical requirement was to have a single base icon that could scale up and down proportionally to generate different sizes—something that was not possible with the existing icon set due to the issues identified earlier.</p>
+        <p class="anim-from-bottom">His approach relied on a single SVG base icon at 16px, from which additional sizes (24px, 32px, etc.) would be generated in code. Icon color would be controlled via CSS styles and design tokens. He also emphasized that, for icons to work seamlessly inside Pulse components, they needed to be cut tightly to the actual artwork boundaries rather than being wrapped in a square bounding box. This would give engineers precise control over icon placement and its relationship to other UI elements within components. The Link component example illustrated this problem clearly. I made a note to bring this requirement back to the creative group.</p>
 
-        <h3 class="cs-subsection-heading">Native</h3>
-        <p>Native platforms (iOS and Android) had their own approaches due to platform-specific constraints and would most likely continue to generate their own icon repositories. While having multiple repos was not ideal, we aligned on the idea that engineering would explore the possibility of consolidating them into a single source over time. The teams were committed to finding the most optimal cross-platform solution but needed additional time to work through the complexity.</p>
-        <p>I brought my discovery analysis back to the creative group to align our approach. Our combined findings led us to the conclusion that Figma was the best tool for building a new icon set that could support both creative intent and engineering requirements.</p>
+        <h3 class="cs-subsection-heading anim-from-bottom">Native</h3>
+        <p class="anim-from-bottom">Native platforms (iOS and Android) had their own approaches due to platform-specific constraints and would most likely continue to generate their own icon repositories. While having multiple repos was not ideal, we aligned on the idea that engineering would explore the possibility of consolidating them into a single source over time. The teams were committed to finding the most optimal cross-platform solution but needed additional time to work through the complexity.</p>
+        <p class="anim-from-bottom">I brought my discovery analysis back to the creative group to align our approach. Our combined findings led us to the conclusion that Figma was the best tool for building a new icon set that could support both creative intent and engineering requirements.</p>
 
         <!-- Team Alignment -->
-        <h2 class="cs-section-heading">Team Alignment</h2>
-        <p>It's important to note that our icon team was not split into silos during the discovery phase. We were in constant communication, regularly sharing progress and key findings to maintain momentum. Keeping all involved parties informed was essential to avoid unnecessary work and prevent us from running in cycles.</p>
-        <p>For example, once I learned that certain icons needed a tighter crop to work properly within components, I brought this requirement to the creative team as early as possible. While researching the Font Awesome icon library, I came across an approach that I believed could solve this problem.</p>
-        <p>I proposed creating icon component variants:</p>
-        <ul>
+        <h2 class="cs-section-heading anim-from-bottom">Team Alignment</h2>
+        <p class="anim-from-bottom">It's important to note that our icon team was not split into silos during the discovery phase. We were in constant communication, regularly sharing progress and key findings to maintain momentum. Keeping all involved parties informed was essential to avoid unnecessary work and prevent us from running in cycles.</p>
+        <p class="anim-from-bottom">For example, once I learned that certain icons needed a tighter crop to work properly within components, I brought this requirement to the creative team as early as possible. While researching the Font Awesome icon library, I came across an approach that I believed could solve this problem.</p>
+        <p class="anim-from-bottom">I proposed creating icon component variants:</p>
+        <ul class="anim-from-bottom">
           <li><strong>Regular</strong> (16×16 px bounding box)</li>
           <li><strong>Trimmed</strong> (16 px height with the artwork cropped to its actual width)</li>
         </ul>
-        <p>Initially, the creative team pushed back, as this approach would increase production effort and potentially slow us down. After several discussions and negotiations, we reached a practical compromise: identify the icons most commonly used within components and create variants only for those.</p>
-        <p>After extensive discovery and alignment, the team arrived at a clear game plan:</p>
-        <ul>
+        <p class="anim-from-bottom">Initially, the creative team pushed back, as this approach would increase production effort and potentially slow us down. After several discussions and negotiations, we reached a practical compromise: identify the icons most commonly used within components and create variants only for those.</p>
+        <p class="anim-from-bottom">After extensive discovery and alignment, the team arrived at a clear game plan:</p>
+        <ul class="anim-from-bottom">
           <li>Figma is the right tool for creating the next-generation icon set</li>
           <li>Engineers require a single SVG file per icon for their code repositories</li>
           <li>Each icon will include all size variants to support ease of use and reinforce size standards within the Figma library</li>
           <li>Select utility icons will include both regular and trimmed variants to work seamlessly within components</li>
         </ul>
-        <p>At this point, it was time to move into execution and focus on my deliverable.</p>
+        <p class="anim-from-bottom">At this point, it was time to move into execution and focus on my deliverable.</p>
 
         <!-- Icon Technical Requirements Checklist -->
-        <h2 class="cs-section-heading">Icon Technical Requirements Checklist</h2>
+        <h2 class="cs-section-heading anim-from-bottom">Icon Technical Requirements Checklist</h2>
 
         <div class="cs-checklist">
 
           <!-- 1. Icon Size and Padding Variants -->
-          <div class="cs-checklist__item">
+          <div class="cs-checklist__item anim-from-bottom">
             <div class="cs-checklist__icon" aria-hidden="true"></div>
             <div class="cs-checklist__body">
               <h4 class="cs-checklist__title">Icon Size and Padding Variants</h4>
@@ -227,7 +227,7 @@
           </div>
 
           <!-- 2. Locking Icon Aspect Ratio -->
-          <div class="cs-checklist__item">
+          <div class="cs-checklist__item anim-from-bottom">
             <div class="cs-checklist__icon" aria-hidden="true"></div>
             <div class="cs-checklist__body">
               <h4 class="cs-checklist__title">Locking Icon Aspect Ratio</h4>
@@ -241,7 +241,7 @@
           </div>
 
           <!-- 3. Boolean Grouping and Naming -->
-          <div class="cs-checklist__item">
+          <div class="cs-checklist__item anim-from-bottom">
             <div class="cs-checklist__icon" aria-hidden="true"></div>
             <div class="cs-checklist__body">
               <h4 class="cs-checklist__title">Boolean Grouping and Naming</h4>
@@ -256,7 +256,7 @@
           </div>
 
           <!-- 4. Vector Layer Color -->
-          <div class="cs-checklist__item">
+          <div class="cs-checklist__item anim-from-bottom">
             <div class="cs-checklist__icon" aria-hidden="true"></div>
             <div class="cs-checklist__body">
               <h4 class="cs-checklist__title">Vector Layer Color</h4>
@@ -267,7 +267,7 @@
           </div>
 
           <!-- 5. Component Naming -->
-          <div class="cs-checklist__item">
+          <div class="cs-checklist__item anim-from-bottom">
             <div class="cs-checklist__icon" aria-hidden="true"></div>
             <div class="cs-checklist__body">
               <h4 class="cs-checklist__title">Component Naming</h4>
@@ -279,7 +279,7 @@
           </div>
 
           <!-- 6. Icon Library Formatting -->
-          <div class="cs-checklist__item">
+          <div class="cs-checklist__item anim-from-bottom">
             <div class="cs-checklist__icon" aria-hidden="true"></div>
             <div class="cs-checklist__body">
               <h4 class="cs-checklist__title">Icon Library Formatting</h4>
@@ -292,7 +292,7 @@
           </div>
 
           <!-- 7. Design Handoff to Engineering -->
-          <div class="cs-checklist__item">
+          <div class="cs-checklist__item anim-from-bottom">
             <div class="cs-checklist__icon" aria-hidden="true"></div>
             <div class="cs-checklist__body">
               <h4 class="cs-checklist__title">Design Handoff to Engineering</h4>
@@ -306,10 +306,10 @@
         </div>
 
         <!-- Conclusion -->
-        <h2 class="cs-section-heading">Conclusion</h2>
-        <p>What started as an icon cleanup quickly turned into a system-level problem. The existing icon set was heavily used across the organization, but it wasn't built to support real product work or engineering workflows. Icons looked inconsistent, behaved unpredictably, and were difficult to implement reliably across platforms.</p>
-        <p>Through discovery and close collaboration with both design and engineering partners, I helped turn years of scattered feedback into clear requirements, shared principles, and practical standards the team could actually use. The goal wasn't just to redraw icons, but to create a library that worked—visually, technically, and operationally.</p>
-        <p>This work laid the foundation for future scalability. The new structure supports programmatic sizing, tokenized color, predictable behavior inside components, and cross-platform adoption over time. Rather than solving isolated visual issues, the icon library became a stable, extensible asset within the Pulse Design System—one designed to evolve alongside the products it supports.</p>
+        <h2 class="cs-section-heading anim-from-bottom">Conclusion</h2>
+        <p class="anim-from-bottom">What started as an icon cleanup quickly turned into a system-level problem. The existing icon set was heavily used across the organization, but it wasn't built to support real product work or engineering workflows. Icons looked inconsistent, behaved unpredictably, and were difficult to implement reliably across platforms.</p>
+        <p class="anim-from-bottom">Through discovery and close collaboration with both design and engineering partners, I helped turn years of scattered feedback into clear requirements, shared principles, and practical standards the team could actually use. The goal wasn't just to redraw icons, but to create a library that worked—visually, technically, and operationally.</p>
+        <p class="anim-from-bottom">This work laid the foundation for future scalability. The new structure supports programmatic sizing, tokenized color, predictable behavior inside components, and cross-platform adoption over time. Rather than solving isolated visual issues, the icon library became a stable, extensible asset within the Pulse Design System—one designed to evolve alongside the products it supports.</p>
 
       </div><!-- /.cs-content -->
 
