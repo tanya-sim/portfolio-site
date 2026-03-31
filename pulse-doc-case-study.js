@@ -76,6 +76,48 @@ document.addEventListener('DOMContentLoaded', () => {
         desc: 'Through a follow-up session, the team reached alignment on category naming.',
         image: 'assets/cs-doc-sorting3-lg.png'
       }
+    ],
+    hifi: [
+      {
+        title: 'Homepage',
+        desc: 'Promo tiles: Get Started, Foundations and Components. No side navigation.',
+        image: 'assets/cs-doc-hifi-welcome.png'
+      },
+      {
+        title: 'Get Started Page',
+        desc: 'Provides quick access to the resources users need most frequently.',
+        image: 'assets/cs-doc-hifi-getstarted.png'
+      },
+      {
+        title: 'Foundations Page',
+        desc: '',
+        image: 'assets/cs-doc-hifi-foundations.png'
+      },
+      {
+        title: 'Component Matrix Page',
+        desc: 'Side navigation provides access to Web, iOS, and Android component overview pages. The matrix displays components side by side, making it easy to scan and identify availability across platforms.',
+        image: 'assets/cs-doc-hifi-matrix.png'
+      },
+      {
+        title: 'Android Components Page',
+        desc: 'Selecting the "All" filter chip displays all components available on the Android platform.',
+        image: 'assets/cs-doc-hifi-overview.png'
+      },
+      {
+        title: 'Android Components Page',
+        desc: 'Selecting the "Actions" filter chip reveals all action components available on the Android platform.',
+        image: 'assets/cs-doc-hifi-sortable.png'
+      },
+      {
+        title: 'Patterns Page',
+        desc: 'Promo tiles: Native Patterns, Web Patterns, iOS Patterns and Android Patterns.',
+        image: 'assets/cs-doc-hifi-patterns.png'
+      },
+      {
+        title: 'Android Patterns Overview Page',
+        desc: 'Segmented button toggles between Forms high level guidance and Figma Form Template component usage guidance.',
+        image: 'assets/cs-doc-hifi-patterns-forms.png'
+      }
     ]
   };
 
