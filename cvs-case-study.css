@@ -45,22 +45,38 @@
 .cs-content {
   display: flex;
   flex-direction: column;
-  gap: 24px;
 }
 
+/* Default spacing between siblings */
+.cs-content > * + * {
+  margin-top: 24px;
+}
+
+/* Section headings — more space above */
 .cs-content h2 {
   font-size: 30px;
   font-weight: 500;
   line-height: 48px;
   color: var(--gray-95);
-  margin-top: 32px;
+  margin-top: 40px;
+}
+
+.cs-content > h2:first-child {
+  margin-top: 0;
 }
 
 .cs-content h2.cs-section-heading {
   font-size: 28px;
   line-height: 42px;
-  margin-top: 32px;
-  margin-bottom: 8px;
+  margin-top: 40px;
+}
+
+/* Tight heading-to-content spacing */
+.cs-content h2 + p,
+.cs-content h2 + ul,
+.cs-content h3 + p,
+.cs-content h3 + ul {
+  margin-top: 8px;
 }
 
 .cs-content p {
@@ -695,7 +711,6 @@
   font-weight: 600;
   line-height: 42px;
   color: var(--gray-95);
-  margin-top: 16px;
 }
 
 /* ─── Inline Illustrations (Picture 1 / Picture 2) ────────────── */
