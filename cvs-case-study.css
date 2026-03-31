@@ -689,6 +689,161 @@
   opacity: 0.4;
 }
 
+/* ─── Subsection Heading (h3) ──────────────────────────────────── */
+.cs-content h3.cs-subsection-heading {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 42px;
+  color: var(--gray-95);
+  margin-top: 16px;
+}
+
+/* ─── Inline Illustrations (Picture 1 / Picture 2) ────────────── */
+.cs-illustrations {
+  display: flex;
+  gap: 64px;
+  padding-left: 24px;
+  margin: 8px 0;
+  max-width: 645px;
+}
+
+.cs-illustration {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.cs-illustration__img {
+  width: 97px;
+  border: 1px solid #dfdfdf;
+  background: #fff;
+  padding: 7px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cs-illustration__link-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  height: 26px;
+}
+
+.cs-illustration__link-text {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #000;
+}
+
+.cs-illustration__icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+}
+
+.cs-illustration__icon-box--square {
+  width: 26px;
+  border: 0.5px dashed #6423fc;
+}
+
+.cs-illustration__icon-box--trimmed {
+  width: auto;
+  padding: 0 1px;
+  border: 0.5px dashed #6423fc;
+}
+
+.cs-illustration__icon-box--no-border {
+  border-color: transparent;
+}
+
+.cs-illustration__icon-box svg {
+  width: 10px;
+  height: 16px;
+}
+
+.cs-illustration__caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cs-illustration__label {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--gray-95);
+}
+
+.cs-illustration__desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--gray-95);
+}
+
+/* ─── Checklist ────────────────────────────────────────────────── */
+.cs-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cs-checklist__item {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.cs-checklist__icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border: 4px solid #3345c9;
+  margin-top: 8px;
+}
+
+.cs-checklist__body {
+  flex: 1;
+}
+
+.cs-checklist__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 42px;
+  color: var(--gray-95);
+}
+
+.cs-checklist__body p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--gray-95);
+}
+
+.cs-checklist__body ul {
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.cs-checklist__body li {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--gray-95);
+}
+
+.cs-checklist__body ul ul {
+  margin-top: 4px;
+}
+
 /* ─── Dark Mode ─────────────────────────────────────────────────── */
 body.dark-mode .cs-label {
   color: #8b9cf7;
@@ -721,6 +876,23 @@ body.dark-mode .wf-modal {
 
 body.dark-mode .wf-modal__close img {
   filter: invert(1);
+}
+
+body.dark-mode .cs-checklist__icon {
+  border-color: #8b9cf7;
+}
+
+body.dark-mode .cs-illustration__img {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+body.dark-mode .cs-illustration__link-text {
+  color: #fff;
+}
+
+body.dark-mode .cs-illustration__icon-box svg path {
+  stroke: #fff;
 }
 
 @media (max-width: 768px) {
@@ -767,6 +939,11 @@ body.dark-mode .wf-modal__close img {
   .cs-img-row { flex-direction: column; gap: 24px; }
   .cs-img-row__btn { width: 100%; }
   .cs-heading-with-btn { flex-direction: column; align-items: flex-start; gap: 16px; }
+
+  .cs-illustrations { flex-direction: column; gap: 32px; padding-left: 0; }
+  .cs-checklist__item { gap: 16px; }
+  .cs-checklist__title { font-size: 20px; line-height: 32px; }
+  .cs-content h3.cs-subsection-heading { font-size: 20px; line-height: 32px; }
 
   .wf-modal__panel { padding: 12px 16px 24px; }
   .wf-modal__title { font-size: 22px; line-height: 32px; }
