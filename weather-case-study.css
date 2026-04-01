@@ -198,7 +198,8 @@
   width: 375px;
 }
 
-.wi-phone img {
+.wi-phone img,
+.wi-phone video {
   width: 100%;
   height: auto;
   display: block;
