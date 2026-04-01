@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather InSight — Tanya Simkhovich</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Inria+Serif:ital,wght@1,400;1,700&display=block" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cvs-case-study.css" />
+  <link rel="stylesheet" href="weather-case-study.css" />
+</head>
+<body>
+
+  <!-- ─── Navigation ──────────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-headshot">
+        <img class="nav-avatar" src="assets/avatar.png" alt="Tanya Simkhovich" />
+        <span class="nav-name">Tanya Simkhovich</span>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="work.html" class="active">WORK</a></li>
+          <li><a href="index.html#philosophy">ABOUT</a></li>
+          <li><a href="#">JOURNEY</a></li>
+          <li><a href="#footer">CONTACT</a></li>
+        </ul>
+        <button class="toggle-mode" id="toggleMode" aria-label="Toggle dark/light mode" data-mode="light">
+          <span class="toggle-mode__bg"></span>
+          <img class="toggle-mode__icon" src="assets/icon-moon.svg" alt="" />
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+          <img src="assets/icon-hamburger.svg" alt="" />
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__panel">
+      <div class="mobile-menu__header">
+        <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+          <img src="assets/icon-close.svg" alt="" />
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="index.html#philosophy">About</a></li>
+        <li><a href="#">Journey</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main class="case-study">
+    <div class="cs-inner">
+
+      <!-- ─── Header ────────────────────────────────────────────── -->
+      <header class="cs-header anim-from-bottom">
+        <p class="cs-dates">2019 &ndash; 2020</p>
+        <p class="cs-label">Case Study</p>
+        <h1 class="cs-title">A Reimagined Mobile Weather Experience</h1>
+      </header>
+
+      <!-- ─── Content ───────────────────────────────────────────── -->
+      <div class="cs-content">
+
+        <!-- Intro -->
+        <p class="anim-from-bottom"><strong>87% of people check the weather first thing in the morning</strong> on their devices before they check text messages, email or news. But there are thousands of weather apps out there! Weather apps make you data mine...Weather apps give everyone similar experiences...Weather apps are cookie cutter and don't change their behavior to suit the user's needs...</p>
+
+        <p class="anim-from-bottom"><strong>Need to stand-out.</strong><br />
+        <strong>Do more than look different........</strong><br />
+        <strong>BE DIFFERENT</strong></p>
+
+        <!-- Problem Statement -->
+        <h2 class="anim-from-bottom">Problem Statement</h2>
+        <p class="anim-from-bottom">We want to put the weather data miner out of business, change the paradigm so that we give you the weather information you need without making you navigate around the app to find it. But we want to take it a step further than that: not only do we want to show you the right weather information in the right order, we want to help you understand what to pay attention to. We want to call out the things that you should be noticing to help you understand the weather data.</p>
+
+        <!-- My Role -->
+        <h2 class="cs-section-heading anim-from-bottom">My Role</h2>
+        <ul class="anim-from-bottom">
+          <li>Collaborate with business offering managers, executives, meteorologists, data scientists, developers and QA engineers.</li>
+          <li>Participate in creating personas and user stories</li>
+          <li>Facilitate design thinking sessions with stakeholders</li>
+          <li>Translate ideas into design concepts</li>
+          <li>Lead the UX exploration phase; build out wireframes and rough prototypes</li>
+          <li>Lead the visual design phase; deliver high-fidelity screens and interactive prototypes</li>
+          <li>Conduct user testing and roll back users' feedback into production</li>
+          <li>Deliver visual &amp; technical specs to development team</li>
+          <li>Conduct visual QA and provide feedback to development team throughout implementation</li>
+        </ul>
+
+        <!-- Personas -->
+        <h2 class="anim-from-bottom">Personas</h2>
+
+        <div class="wi-persona anim-from-bottom">
+          <div class="wi-persona__img">
+            <img src="assets/cs-weather-persona-michael.png" alt="Michael" />
+          </div>
+          <div class="wi-persona__text">
+            <p class="wi-persona__name">Michael</p>
+            <p class="wi-persona__tagline">Age 62 | Non Tech Savvy | Likes weather information delivered to him</p>
+            <p>Michael has been conditioned for decades to get his weather information "gerbered" to him from the television and he still watches the news in the morning and evening. He is used to having information given to him and still prefers this approach. Having to scroll in a mobile app to get his weather information isn't what he has been conditioned to do. Weather InSight should give Michael his information without him needing to interface with the experience. Click and watch is his preferred method versus hunting around.</p>
+          </div>
+        </div>
+
+        <div class="wi-persona anim-from-bottom">
+          <div class="wi-persona__img">
+            <img src="assets/cs-weather-persona-barbara.png" alt="Barbara" />
+          </div>
+          <div class="wi-persona__text">
+            <p class="wi-persona__name">Barbara</p>
+            <p class="wi-persona__tagline">Age 55 | Non Tech Savvy | Why is so hard to understand the weather?</p>
+            <p>Barbara is not tech savvy and is commonly disappointed with the weather information she is getting because it is different from the actual weather she gets. She commonly cancels outdoor plans because the forecast called for rain, but she missed the fact that the app was telling her the amount of rain was going to be .003 inches of rain.</p>
+            <p>She doesn't discern the difference between .003 inches of rain and .3 inches of rain and makes plans as if they are the same. She sees rain as rain and needs help translating weather data to what the weather experience will be. She ultimately wants to know when the weather will impact her plans.</p>
+          </div>
+        </div>
+
+        <div class="wi-persona anim-from-bottom">
+          <div class="wi-persona__img">
+            <img src="assets/cs-weather-persona-derek.png" alt="Derek" />
+          </div>
+          <div class="wi-persona__text">
+            <p class="wi-persona__name">Derek</p>
+            <p class="wi-persona__tagline">Age 19 | Super Tech Savvy | Short attention span kind of guy</p>
+            <p>Derek is a millennial and regularly uses Social Media Apps like Snapchat and Instagram; he is used to the Stories capabilities built into these products. He likes quick snippets of information and consumes a lot of information in a little bit of time. He wants a weather app that seems similar to the experiences he gets from his other social media apps: fast moving data where he can quickly navigate through a lot of information in a short amount of time.</p>
+          </div>
+        </div>
+
+        <div class="wi-persona anim-from-bottom">
+          <div class="wi-persona__img">
+            <img src="assets/cs-weather-persona-amanda.png" alt="Amanda" />
+          </div>
+          <div class="wi-persona__text">
+            <p class="wi-persona__name">Amanda</p>
+            <p class="wi-persona__tagline">Age 32 | Tech Savvy | I get my information on-the-fly</p>
+            <p>Amanda is a working professional and an active Mom. She is always on the go. Between meetings she wants to check what the afternoon weather will be for her son's soccer game, and then she has plans to meet with friends later in the evening for a walk.</p>
+            <p>Amanda is really looking for a quick way of seeing what her afternoon and evening weather will be; if her next meeting starts a little late, she may even glimpse at tomorrow's weather because she has a similar schedule for the next day.</p>
+          </div>
+        </div>
+
+        <div class="wi-persona anim-from-bottom">
+          <div class="wi-persona__img">
+            <img src="assets/cs-weather-persona-nick.png" alt="Nick" />
+          </div>
+          <div class="wi-persona__text">
+            <p class="wi-persona__name">Nick</p>
+            <p class="wi-persona__tagline">Age 29 | Tech Savvy | Mr. cool experience guy</p>
+            <p>Nick is an outdoor enthusiast and weather doesn't stop him from enjoying the outdoors. He is a chill kind of guy and likes to check the weather for multiple locations so he can make his weekend plans. He gravitates towards apps that are visually appealing and frequently checks for week day trail runs and cranking out some single track mountain bike rides after work. He checks the weather throughout the day for his after work and weekend forecast.</p>
+          </div>
+        </div>
+
+        <div class="wi-persona anim-from-bottom">
+          <div class="wi-persona__img">
+            <img src="assets/cs-weather-persona-eleni.png" alt="Eleni" />
+          </div>
+          <div class="wi-persona__text">
+            <p class="wi-persona__name">Eleni</p>
+            <p class="wi-persona__tagline">Age 15 | Super Tech Savvy | It's all about me</p>
+            <p>Eleni is a teenager and has become accustomed to getting targeted/relevant information through other mobile apps. Eleni would like to view the forecast snapshots that matter to her more often than the ones that don't matter to her. If she frequently skips a screen, she doesn't want to see it as frequently. Eleni wants a hyperpersonal forecast.</p>
+          </div>
+        </div>
+
+        <!-- Market Findings -->
+        <h2 class="anim-from-bottom">Market Findings</h2>
+
+        <!-- User Needs -->
+        <h2 class="cs-section-heading anim-from-bottom">User Needs</h2>
+
+        <!-- Stat Cards -->
+        <div class="wi-stat-cards anim-from-bottom">
+          <div class="wi-stat-card wi-stat-card--warm">
+            <div class="wi-stat-card__icon">
+              <img src="assets/cs-weather-stat-icon-1.svg" alt="" />
+            </div>
+            <p class="wi-stat-card__number">80%</p>
+            <p class="wi-stat-card__desc">of users want ease of use when viewing weather content</p>
+          </div>
+          <div class="wi-stat-card wi-stat-card--warm">
+            <div class="wi-stat-card__icon">
+              <img src="assets/cs-weather-stat-icon-2.svg" alt="" />
+            </div>
+            <p class="wi-stat-card__number">65%</p>
+            <p class="wi-stat-card__desc">of users want to be told how weather impacts them personally</p>
+          </div>
+          <div class="wi-stat-card wi-stat-card--warm">
+            <div class="wi-stat-card__icon">
+              <img src="assets/cs-weather-stat-icon-3.svg" alt="" />
+            </div>
+            <p class="wi-stat-card__number">52%</p>
+            <p class="wi-stat-card__desc">of users want more local data</p>
+          </div>
+        </div>
+
+        <!-- User Needs Quote Cards -->
+        <div class="wi-quote-cards anim-from-bottom">
+          <div class="wi-quote-card">
+            <p class="wi-quote-card__text">"I want information that is relevant to me."</p>
+          </div>
+          <div class="wi-quote-card">
+            <p class="wi-quote-card__text">"I don't want to be overwhelmed by weather data. I just want a weather-at-a-glance experience."</p>
+          </div>
+          <div class="wi-quote-card">
+            <p class="wi-quote-card__text">"I like visually compelling apps like Instagram or Snapshot."</p>
+          </div>
+          <div class="wi-quote-card">
+            <p class="wi-quote-card__text">"I don't want to understand weather data. What's a dew point?"</p>
+          </div>
+        </div>
+
+        <!-- Big Ideas -->
+        <h2 class="anim-from-bottom">Big Ideas Vignettes &amp; Prioritization Grid</h2>
+        <p class="anim-from-bottom">Next, our team brainstormed Big Ideas. According to the IBM Design Thinking toolkit, this exercise helps us to rapidly diverge on a breadth of possible solutions to meet our users' needs. These were the ideas that the team came up with and sketched around:</p>
+
+        <!-- Idea Cards Row 1 -->
+        <div class="wi-idea-cards anim-from-bottom">
+          <div class="wi-idea-card">
+            <div class="wi-idea-card__icon">
+              <img src="assets/cs-weather-idea-icon.svg" alt="" />
+            </div>
+            <p class="wi-idea-card__text">I want a personal mini-meteorologist delivering forecast to me.</p>
+          </div>
+          <div class="wi-idea-card">
+            <div class="wi-idea-card__icon">
+              <img src="assets/cs-weather-idea-icon.svg" alt="" />
+            </div>
+            <p class="wi-idea-card__text">I like simple navigation. A continuous scroll maybe? When I'm in a commuter train I relax and use simple gestures to look at stuff.</p>
+          </div>
+          <div class="wi-idea-card">
+            <div class="wi-idea-card__icon">
+              <img src="assets/cs-weather-idea-icon-2.svg" alt="" />
+            </div>
+            <p class="wi-idea-card__text">If I have an outdoor event scheduled in my calendar it would be nice to have a weather info next to it.</p>
+          </div>
+        </div>
+
+        <!-- Idea Cards Row 2 -->
+        <div class="wi-idea-cards wi-idea-cards--centered anim-from-bottom">
+          <div class="wi-idea-card">
+            <div class="wi-idea-card__icon">
+              <img src="assets/cs-weather-idea-icon-3.svg" alt="" />
+            </div>
+            <p class="wi-idea-card__text">I want to be entertained by sophisticated motion animations which is not too tacky.</p>
+          </div>
+          <div class="wi-idea-card">
+            <div class="wi-idea-card__icon">
+              <img src="assets/cs-weather-idea-icon-3.svg" alt="" />
+            </div>
+            <p class="wi-idea-card__text">I don't want to see numbers, I want to see cool graphics and easy to understand charts.</p>
+          </div>
+        </div>
+
+        <!-- Concept Exploration & Wireframing -->
+        <h2 class="anim-from-bottom">Concept Exploration &amp; Wireframing</h2>
+        <p class="anim-from-bottom">Combining elements from all of these ideas, taking into consideration where they fell within our team's importance and feasibility Prioritization Grid exercise, inspired the starting point for my concept wireframes.</p>
+
+        <div class="wi-wireframes anim-from-bottom">
+          <img src="assets/cs-weather-wireframe-currents.png" alt="Currents wireframe" />
+          <img src="assets/cs-weather-wireframe-alerts.png" alt="Alerts wireframe" />
+          <img src="assets/cs-weather-wireframe-highlights.png" alt="Highlights wireframe" />
+        </div>
+
+        <!-- Data Visualization -->
+        <h2 class="anim-from-bottom">Data Visualization</h2>
+        <p class="anim-from-bottom">We wanted to simplify the weather data and use compelling visualizations to delight our end users. We created a humidity/temperature relationship discomfort (Dew Point) dial for warmer weather and a cold discomfort dial for the winter months.</p>
+        <p class="anim-from-bottom">The speed of the wind turbines spinning reflects the actual wind strength</p>
+
+        <div class="wi-phones-row anim-from-bottom">
+          <div class="wi-phone">
+            <img src="assets/cs-weather-phone-dataviz-1.png" alt="Data visualization - humidity dial" />
+          </div>
+          <div class="wi-phone">
+            <img src="assets/cs-weather-phone-dataviz-2.png" alt="Data visualization - wind turbines" />
+          </div>
+        </div>
+
+        <!-- Weather Impact Highlights -->
+        <h2 class="anim-from-bottom">Weather Impact Highlights</h2>
+        <p class="anim-from-bottom">The app will tell you when you will be impacted by the weather. Whether it's a negative or positive impact.</p>
+
+        <div class="wi-phones-row anim-from-bottom">
+          <div class="wi-phone">
+            <img src="assets/cs-weather-phone-impact-hours.png" alt="Weather impact - hours highlight" />
+          </div>
+          <div class="wi-phone">
+            <img src="assets/cs-weather-phone-impact-weekend.png" alt="Weather impact - weekend positive" />
+          </div>
+        </div>
+
+        <!-- Simple Navigation -->
+        <h2 class="anim-from-bottom">Simple Navigation</h2>
+        <p class="anim-from-bottom">Swipe horizontally to see weather snapshots. Similar to Facebook or Instagram stories.</p>
+
+        <div class="wi-phones-row wi-phones-row--centered anim-from-bottom">
+          <div class="wi-phone">
+            <img src="assets/cs-weather-phone-navigation.png" alt="Simple navigation - swipe through weather snapshots" />
+          </div>
+        </div>
+
+        <!-- Client Branding -->
+        <h2 class="anim-from-bottom">Client Branding</h2>
+        <p class="anim-from-bottom">Client can drop their own background images, put sponsor/station logos on the first and last screens, and custom design the app launch button.</p>
+
+        <div class="wi-phones-row wi-phones-row--centered anim-from-bottom">
+          <div class="wi-phone">
+            <img src="assets/cs-weather-phone-branding.png" alt="Client branding - KSL Weather In Depth" />
+          </div>
+        </div>
+
+        <!-- What Makes Weather InSight Different -->
+        <h2 class="anim-from-bottom">What Makes Weather InSight Different</h2>
+        <ul class="anim-from-bottom">
+          <li><strong>Hyper Local:</strong> Builds a customized experience built for your specific location</li>
+          <li><strong>Hyper Local:</strong> Videos produced by your local station put you directly into the experience</li>
+          <li><strong>Hyper Smart:</strong> It will tell you when you will be impacted by the weather</li>
+          <li><strong>Hyper Smart:</strong> The card order will change depending on the weather and day</li>
+          <li><strong>Hyper Smart:</strong> It will get to know you and display screens relevant to you</li>
+          <li><strong>Hyper Focused:</strong> It will simplify the data</li>
+          <li>Monetizing opportunities</li>
+        </ul>
+
+      </div><!-- /.cs-content -->
+
+    </div><!-- /.cs-inner -->
+  </main>
+
+  <!-- ─── Footer ────────────────────────────────────────────────── -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; All rights reserved 2026 Tanya Simkhovich.</p>
+      <div class="footer-contact">
+        <span class="footer-connect">Connect&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <a class="footer-email" href="mailto:tsimkhovich@gmail.com">tsimkhovich@gmail.com</a>
+        <a class="footer-linkedin" href="https://linkedin.com" target="_blank" rel="noopener">
+          <img src="assets/linkedin-logo.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

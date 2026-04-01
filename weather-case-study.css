@@ -1,0 +1,258 @@
+/* ─── Weather InSight Case Study ───────────────────────────────── */
+
+/* ─── Persona Cards ────────────────────────────────────────────── */
+.wi-persona {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  padding-bottom: 24px;
+}
+
+.wi-persona__img {
+  width: 160px;
+  flex-shrink: 0;
+  padding-top: 8px;
+}
+
+.wi-persona__img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.wi-persona__text {
+  flex: 1;
+}
+
+.wi-persona__text p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--gray-95);
+}
+
+.wi-persona__text p + p {
+  margin-top: 0;
+}
+
+.wi-persona__name {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  line-height: 32px !important;
+}
+
+.wi-persona__tagline {
+  margin-bottom: 16px;
+}
+
+/* ─── Stat Cards ───────────────────────────────────────────────── */
+.wi-stat-cards {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  padding: 24px 0 48px;
+}
+
+.wi-stat-card {
+  width: 281px;
+  border-radius: 24px;
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.2);
+  padding: 28px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.8;
+}
+
+.wi-stat-card--warm {
+  background-image: linear-gradient(160deg, rgb(252, 245, 226) 3%, rgb(255, 255, 255) 74%);
+}
+
+.wi-stat-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+}
+
+.wi-stat-card__icon img {
+  height: 50px;
+  width: auto;
+}
+
+.wi-stat-card__number {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 48px;
+  color: #077bb3;
+  text-align: center;
+}
+
+.wi-stat-card__desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--gray-70, #404040);
+  text-align: center;
+}
+
+/* ─── Quote Cards ──────────────────────────────────────────────── */
+.wi-quote-cards {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  padding-bottom: 48px;
+}
+
+.wi-quote-card {
+  flex: 1;
+  border-radius: 24px;
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.2);
+  padding: 28px 32px 32px;
+  opacity: 0.8;
+  background-image: linear-gradient(160deg, rgb(229, 229, 229) 3%, rgb(255, 255, 255) 74%);
+}
+
+.wi-quote-card__text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--gray-95);
+}
+
+/* ─── Idea Cards ───────────────────────────────────────────────── */
+.wi-idea-cards {
+  display: flex;
+  gap: 40px;
+  justify-content: flex-start;
+  padding: 24px 0;
+}
+
+.wi-idea-cards--centered {
+  justify-content: center;
+}
+
+.wi-idea-card {
+  width: 281px;
+  border-radius: 24px;
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.2);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.8;
+  background-image: linear-gradient(160deg, rgb(255, 186, 167) 3%, rgb(255, 255, 255) 74%);
+}
+
+.wi-idea-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  padding-bottom: 12px;
+}
+
+.wi-idea-card__icon img {
+  height: 50px;
+  width: auto;
+}
+
+.wi-idea-card__text {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--gray-95);
+}
+
+/* ─── Wireframes ───────────────────────────────────────────────── */
+.wi-wireframes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 12px 0 24px;
+}
+
+.wi-wireframes img {
+  width: 800px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── Phone Screenshots ───────────────────────────────────────── */
+.wi-phones-row {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  padding: 24px 0 32px;
+}
+
+.wi-phones-row--centered {
+  justify-content: center;
+}
+
+.wi-phone {
+  width: 375px;
+}
+
+.wi-phone img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── Dark Mode ─────────────────────────────────────────────────── */
+body.dark-mode .wi-stat-card--warm {
+  background-image: linear-gradient(160deg, rgba(252, 245, 226, 0.1) 3%, rgba(30, 30, 30, 1) 74%);
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .wi-stat-card__number {
+  color: #4ab8e0;
+}
+
+body.dark-mode .wi-stat-card__desc {
+  color: var(--gray-30, #bfbfbf);
+}
+
+body.dark-mode .wi-quote-card {
+  background-image: linear-gradient(160deg, rgba(229, 229, 229, 0.1) 3%, rgba(30, 30, 30, 1) 74%);
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .wi-idea-card {
+  background-image: linear-gradient(160deg, rgba(255, 186, 167, 0.15) 3%, rgba(30, 30, 30, 1) 74%);
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.4);
+}
+
+/* ─── Responsive ────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .wi-stat-cards,
+  .wi-quote-cards,
+  .wi-idea-cards { gap: 24px; }
+  .wi-stat-card,
+  .wi-idea-card { width: auto; flex: 1; }
+  .wi-phones-row { gap: 24px; }
+  .wi-phone { width: auto; flex: 1; }
+}
+
+@media (max-width: 768px) {
+  .wi-persona { flex-direction: column; gap: 16px; }
+  .wi-persona__img { width: 120px; }
+
+  .wi-stat-cards,
+  .wi-quote-cards { flex-direction: column; gap: 16px; align-items: center; }
+  .wi-stat-card { width: 100%; max-width: 320px; }
+  .wi-quote-card { width: 100%; }
+
+  .wi-idea-cards { flex-direction: column; gap: 16px; align-items: center; }
+  .wi-idea-card { width: 100%; max-width: 320px; }
+
+  .wi-wireframes img { width: 100%; }
+
+  .wi-phones-row { flex-direction: column; gap: 24px; align-items: center; }
+  .wi-phone { width: 280px; }
+}
