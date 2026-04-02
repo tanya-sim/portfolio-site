@@ -1,0 +1,83 @@
+/* ─── Map UI Redesign Case Study ───────────────────────────────── */
+
+/* ─── Phone Screenshots ───────────────────────────────────────── */
+.map-phones-row {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  padding: 24px 0 32px;
+}
+
+.map-phones-row--centered {
+  justify-content: center;
+}
+
+.map-phone {
+  width: 320px;
+}
+
+.map-phone--wide {
+  width: 444px;
+}
+
+.map-phone--tall {
+  width: 374px;
+}
+
+.map-phone img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── Single Image Rows ───────────────────────────────────────── */
+.map-image-row {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 32px;
+}
+
+.map-image-row img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── Timeline Row (3 images) ─────────────────────────────────── */
+.map-timeline-row {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0 32px;
+}
+
+.map-timeline-row img {
+  width: 353px;
+  height: auto;
+  display: block;
+}
+
+/* ─── Three Phones Row ────────────────────────────────────────── */
+.map-phones-row--three {
+  padding-bottom: 64px;
+}
+
+/* ─── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .map-phones-row { gap: 24px; }
+  .map-phone { width: auto; flex: 1; }
+  .map-phone--wide { width: auto; flex: 1.4; }
+  .map-phone--tall { width: auto; flex: 1; }
+  .map-timeline-row { gap: 24px; }
+  .map-timeline-row img { width: auto; flex: 1; max-width: 33%; }
+}
+
+@media (max-width: 768px) {
+  .map-phones-row { flex-direction: column; gap: 24px; align-items: center; }
+  .map-phone,
+  .map-phone--wide,
+  .map-phone--tall { width: 280px; flex: none; }
+  .map-timeline-row { flex-direction: column; gap: 24px; align-items: center; }
+  .map-timeline-row img { width: 280px; max-width: 100%; }
+}

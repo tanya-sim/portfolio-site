@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Map UI Redesign — Tanya Simkhovich</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Inria+Serif:ital,wght@1,400;1,700&display=block" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cvs-case-study.css" />
+  <link rel="stylesheet" href="map-case-study.css" />
+</head>
+<body>
+
+  <!-- ─── Navigation ──────────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-headshot">
+        <img class="nav-avatar" src="assets/avatar.png" alt="Tanya Simkhovich" />
+        <span class="nav-name">Tanya Simkhovich</span>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="work.html" class="active">WORK</a></li>
+          <li><a href="index.html#philosophy">ABOUT</a></li>
+          <li><a href="#">JOURNEY</a></li>
+          <li><a href="#footer">CONTACT</a></li>
+        </ul>
+        <button class="toggle-mode" id="toggleMode" aria-label="Toggle dark/light mode" data-mode="light">
+          <span class="toggle-mode__bg"></span>
+          <img class="toggle-mode__icon" src="assets/icon-moon.svg" alt="" />
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+          <img src="assets/icon-hamburger.svg" alt="" />
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__panel">
+      <div class="mobile-menu__header">
+        <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+          <img src="assets/icon-close.svg" alt="" />
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="index.html#philosophy">About</a></li>
+        <li><a href="#">Journey</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main class="case-study">
+    <div class="cs-inner">
+
+      <!-- ─── Header ────────────────────────────────────────────── -->
+      <header class="cs-header anim-from-bottom">
+        <p class="cs-dates">March 2018 &ndash; November 2018</p>
+        <p class="cs-label">Case Study</p>
+        <h1 class="cs-title">Enhanced Interactive Map Experience</h1>
+      </header>
+
+      <!-- ─── Content ───────────────────────────────────────────── -->
+      <div class="cs-content">
+
+        <!-- Intro -->
+        <p class="anim-from-bottom">In 2018 our team was adopting a new map SDK product developed by The Weather Company internal SDK team. The new SDK was exciting as it offered new weather data visualization and rendering possibilities on top of the existing options.</p>
+
+        <p class="anim-from-bottom">Everybody on our team was so excited about this new SDK, with its robust and powerful feature set, and we wanted our users to be as enthusiastic and pumped up as we were! On reviewing app traffic analytics we saw little interest in the existing weather map. We had to reinvent the outdated map UI, leveraging the new backend technology, in order to drive users to the map page and train them to dive deeper into the experience.</p>
+
+        <!-- Problem Statement -->
+        <h2 class="anim-from-bottom">Problem Statement</h2>
+        <p class="anim-from-bottom">Users rarely visited the map page and, according to analytics, almost none were exploring the map visualization layers. The map UI was outdated and not optimized for delightful exploration.</p>
+
+        <!-- Goal -->
+        <h2 class="anim-from-bottom">Goal</h2>
+        <p class="anim-from-bottom"><strong>USER-FOCUS:</strong> Provide an engaging and fun experience enabling users to explore the numerous map visualization options, turning them into weather enthusiasts!</p>
+        <p class="anim-from-bottom"><strong>BUSINESS GOAL:</strong> With increased traffic and user engagement, a map page that displays video and static banner ads will generate more revenue for the station.</p>
+
+        <!-- My Role -->
+        <h2 class="cs-section-heading anim-from-bottom">My Role</h2>
+        <ul class="anim-from-bottom">
+          <li>Collaborate with product manager, meteorologists, data scientists, iOS and Android developers and QA engineers.</li>
+          <li>Facilitate brainstorming and white-boarding sessions with stakeholders</li>
+          <li>Research competitive weather app map solutions</li>
+          <li>Translate ideas into design concepts</li>
+          <li>Lead the UX exploration phase; build out wireframes</li>
+          <li>Lead the visual design phase; deliver high-fidelity screens</li>
+          <li>Conduct user testing and roll back users' feedback into production</li>
+          <li>Deliver visual &amp; technical specs to development team</li>
+          <li>Conduct visual QA and provide feedback to development team throughout implementation</li>
+        </ul>
+
+        <!-- Original Map Interface -->
+        <h2 class="anim-from-bottom">Original Map interface</h2>
+        <p class="anim-from-bottom">The Map Layers button was small and barely visible against the busy map image. The Map Layer Editor was taking up the entire screen, taking the user out of the map experience.</p>
+
+        <div class="map-phones-row anim-from-bottom">
+          <div class="map-phone map-phone--wide">
+            <img src="assets/cs-map-old-icon.png" alt="Original map layers button" />
+          </div>
+          <div class="map-phone">
+            <img src="assets/cs-map-old-editor.png" alt="Original map layer editor" />
+          </div>
+        </div>
+
+        <!-- Wireframing -->
+        <h2 class="anim-from-bottom">Wireframing</h2>
+        <p class="anim-from-bottom">While researching competitive solutions I observed that some weather apps had default shortcuts for map layers that a user could instantly see and interact with in order to explore map visualization layers. I thought it was a great idea and wanted to incorporate it into my proposed solution.</p>
+        <p class="anim-from-bottom">I also thought that a carousel of map options that took just a part of the map page would be practical and engaging as it would give the user a chance to observe each visualization layer right on the map as he/she tapped on different map options.</p>
+
+        <div class="map-image-row anim-from-bottom">
+          <img src="assets/cs-map-wireframes.png" alt="Map wireframes" />
+        </div>
+
+        <!-- Prototyping -->
+        <h2 class="anim-from-bottom">Prototyping</h2>
+        <p class="anim-from-bottom">The app ships with three default quick picks. The user can customize them later or delete the quick pick set entirely. Deleting, creating or replacing a quick pick is intuitive. To create a new quick pick a user can drag and drop a desired layer icon over an empty quick pick placeholder. A user can delete a quick pick by tapping on the delete icon in the top right corner.</p>
+
+        <div class="map-image-row anim-from-bottom">
+          <img src="assets/cs-map-prototypes.png" alt="Map prototypes" />
+        </div>
+
+        <!-- Radar Timeline Animation Redesign -->
+        <h2 class="anim-from-bottom">Radar Timeline Animation Redesign</h2>
+        <p class="anim-from-bottom">Most weather apps were offering radar timeline animation in two modes only: observed (PAST) data and forecasted (FUTURE) data.</p>
+        <p class="anim-from-bottom">Our team was inspired to innovate and we developed a third option: a combo of both PAST + FUTURE. A user can toggle through PAST, FUTURE and PAST + FUTURE options. The PAST + FUTURE combo provides a continuous radar timeline animation experience</p>
+
+        <div class="map-timeline-row anim-from-bottom">
+          <img src="assets/cs-map-tl-combo.png" alt="Timeline combo mode" />
+          <img src="assets/cs-map-tl-future.png" alt="Timeline future mode" />
+          <img src="assets/cs-map-tl-past.png" alt="Timeline past mode" />
+        </div>
+
+        <!-- Redesigned User Experience -->
+        <h3 class="anim-from-bottom">Redesigned User Experience</h3>
+        <p class="anim-from-bottom">Once all designs were finalized and vetted by stakeholders I worked closely with iOS and Android engineers to implement the solution per design specs on both platforms.</p>
+
+        <div class="map-phones-row map-phones-row--centered anim-from-bottom">
+          <div class="map-phone map-phone--tall">
+            <img src="assets/cs-map-app.png" alt="Redesigned map experience" />
+          </div>
+        </div>
+
+        <!-- Results -->
+        <h3 class="anim-from-bottom">Results</h3>
+        <p class="anim-from-bottom">According to the analytics the use of map layers went up but not as much as we had hoped for. It seemed that users were intimidated by the complexity of the map features and shied away from exploring. We did notice that users interacted with the default shortcuts: radar (precipitation), satellite, and temperature.</p>
+
+        <!-- Bringing Map Experience into Weather InSight -->
+        <h3 class="anim-from-bottom">Bringing Map Experience into Weather InSight</h3>
+        <p class="anim-from-bottom">The modest results of our efforts inspired the idea of bringing map layers into our new weather app Weather InSight. But instead of inserting the whole map experience we "peel off" and present an isolated layer of the most impactful weather condition. The user can tap on a link to access the full map experience.</p>
+
+        <div class="map-phones-row map-phones-row--three anim-from-bottom">
+          <div class="map-phone">
+            <img src="assets/cs-map-radar-moments.png" alt="Radar moments in Weather InSight" />
+          </div>
+          <div class="map-phone">
+            <img src="assets/cs-map-temp-plots.png" alt="Temperature plots in Weather InSight" />
+          </div>
+          <div class="map-phone">
+            <img src="assets/cs-map-wind-particles.png" alt="Wind particles in Weather InSight" />
+          </div>
+        </div>
+
+      </div><!-- /.cs-content -->
+
+    </div><!-- /.cs-inner -->
+  </main>
+
+  <!-- ─── Footer ────────────────────────────────────────────────── -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; All rights reserved 2026 Tanya Simkhovich.</p>
+      <div class="footer-contact">
+        <span class="footer-connect">Connect&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <a class="footer-email" href="mailto:tsimkhovich@gmail.com">tsimkhovich@gmail.com</a>
+        <a class="footer-linkedin" href="https://linkedin.com" target="_blank" rel="noopener">
+          <img src="assets/linkedin-logo.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
