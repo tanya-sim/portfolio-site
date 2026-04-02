@@ -86,7 +86,7 @@
   height: auto;
 }
 
-.wi-stat-card__number {
+p.wi-stat-card__number {
   font-size: 30px;
   font-weight: 500;
   line-height: 48px;
