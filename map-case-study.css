@@ -24,7 +24,8 @@
   width: 374px;
 }
 
-.map-phone img {
+.map-phone img,
+.map-phone video {
   width: 100%;
   height: auto;
   display: block;
