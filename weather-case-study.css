@@ -235,7 +235,7 @@ body.dark-mode .wi-stat-card__number {
 }
 
 body.dark-mode .wi-stat-card__desc {
-  color: var(--gray-30, #bfbfbf);
+  color: var(--gray-70, #aaaaaa);
 }
 
 body.dark-mode .wi-quote-card {
