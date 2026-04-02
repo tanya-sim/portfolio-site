@@ -21,7 +21,12 @@
 }
 
 .map-phone--tall {
-  width: 374px;
+  width: auto;
+}
+
+.map-phone--tall video {
+  height: 670px;
+  width: auto;
 }
 
 .map-phone img,
