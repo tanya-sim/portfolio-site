@@ -53,7 +53,8 @@
 }
 
 .map-timeline-row img {
-  width: 331px;
+  flex: 1;
+  min-width: 0;
   height: auto;
   display: block;
 }
