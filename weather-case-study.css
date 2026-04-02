@@ -156,13 +156,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 55px;
-  padding-bottom: 12px;
+  overflow: clip;
+  padding: 0 13px 12px;
 }
 
 .wi-idea-card__icon img {
-  height: 50px;
+  max-height: 51px;
+  max-width: 48px;
   width: auto;
+  height: auto;
 }
 
 .wi-idea-card__text {
