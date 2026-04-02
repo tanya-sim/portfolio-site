@@ -103,3 +103,38 @@ document.addEventListener('DOMContentLoaded', () => {
     '.anim-title-expand'
   ).forEach(el => observer.observe(el));
 });
+
+/**
+ * Stat-card percentage count-up animation.
+ * Counts from 0 to the target value in 10% increments when scrolled into view.
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const numbers = document.querySelectorAll('.wi-stat-card__number');
+  if (!numbers.length) return;
+
+  const countObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      countObserver.unobserve(entry.target);
+
+      const el = entry.target;
+      const target = parseInt(el.textContent, 10);
+      const step = 10;
+      const steps = Math.ceil(target / step);
+      const interval = 600 / steps;
+      let current = 0;
+
+      el.textContent = '0%';
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        el.textContent = current + '%';
+      }, interval);
+    });
+  }, { root: null, rootMargin: '-100px', threshold: 0 });
+
+  numbers.forEach(el => countObserver.observe(el));
+});
