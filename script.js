@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = parseInt(el.textContent, 10);
       const step = 10;
       const steps = Math.ceil(target / step);
-      const interval = 600 / steps;
+      const interval = 1500 / steps;
       let current = 0;
 
       el.textContent = '0%';
