@@ -1,0 +1,67 @@
+/* ─── Video View Optimization Case Study ───────────────────────── */
+
+/* ─── Phone Screenshots ───────────────────────────────────────── */
+.vid-phones-row {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  padding: 24px 0 32px;
+}
+
+.vid-phones-row--centered {
+  justify-content: center;
+}
+
+.vid-phones-row--left {
+  justify-content: flex-start;
+  padding-left: calc((100% - 376px * 2 - 40px) / 2);
+}
+
+.vid-phone {
+  width: 376px;
+}
+
+.vid-phone--tall {
+  width: 262px;
+}
+
+.vid-phone img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── Single Image Rows ───────────────────────────────────────── */
+.vid-image-row {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 32px;
+}
+
+.vid-carousel-img {
+  width: 624px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── Last paragraph extra bottom padding ─────────────────────── */
+.vid-last-paragraph {
+  padding-bottom: 32px;
+}
+
+/* ─── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .vid-phones-row { gap: 24px; }
+  .vid-phone { width: auto; flex: 1; }
+  .vid-phone--tall { width: auto; flex: 0.7; }
+  .vid-phones-row--left { padding-left: 0; justify-content: center; }
+}
+
+@media (max-width: 768px) {
+  .vid-phones-row { flex-direction: column; gap: 24px; align-items: center; }
+  .vid-phone { width: 280px; flex: none; }
+  .vid-phone--tall { width: 220px; flex: none; }
+  .vid-phones-row--left { padding-left: 0; }
+  .vid-carousel-img { width: 100%; }
+}

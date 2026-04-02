@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video View Optimization — Tanya Simkhovich</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Inria+Serif:ital,wght@1,400;1,700&display=block" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cvs-case-study.css" />
+  <link rel="stylesheet" href="video-case-study.css" />
+</head>
+<body>
+
+  <!-- ─── Navigation ──────────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-headshot">
+        <img class="nav-avatar" src="assets/avatar.png" alt="Tanya Simkhovich" />
+        <span class="nav-name">Tanya Simkhovich</span>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="work.html" class="active">WORK</a></li>
+          <li><a href="index.html#philosophy">ABOUT</a></li>
+          <li><a href="#">JOURNEY</a></li>
+          <li><a href="#footer">CONTACT</a></li>
+        </ul>
+        <button class="toggle-mode" id="toggleMode" aria-label="Toggle dark/light mode" data-mode="light">
+          <span class="toggle-mode__bg"></span>
+          <img class="toggle-mode__icon" src="assets/icon-moon.svg" alt="" />
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+          <img src="assets/icon-hamburger.svg" alt="" />
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__panel">
+      <div class="mobile-menu__header">
+        <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+          <img src="assets/icon-close.svg" alt="" />
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="index.html#philosophy">About</a></li>
+        <li><a href="#">Journey</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main class="case-study">
+    <div class="cs-inner">
+
+      <!-- ─── Header ────────────────────────────────────────────── -->
+      <header class="cs-header anim-from-bottom">
+        <p class="cs-dates">October 2017 &ndash; February 2018</p>
+        <p class="cs-label">Case Study</p>
+        <h1 class="cs-title">Video View Optimization</h1>
+      </header>
+
+      <!-- ─── Content ───────────────────────────────────────────── -->
+      <div class="cs-content">
+
+        <!-- Intro -->
+        <p class="anim-from-bottom">TV Stations produce a lot of digital content that can be re-purposed for the mobile platform. Our team advocated for increasing video content volume and optimizing for mobile consumption. We had a strategic vision &ndash; short entertaining weather stories would engage and entertain users; the more videos that are viewed, the more video ads will be served and the more revenue will be generated.</p>
+
+        <!-- Problem Statement -->
+        <h2 class="anim-from-bottom">Problem Statement</h2>
+        <p class="anim-from-bottom">TV Stations were not focusing on video production tailored for the mobile platform. They needed to see low cost results before further investing in high volume production.</p>
+
+        <!-- Goal -->
+        <h2 class="anim-from-bottom">Goal</h2>
+        <p class="anim-from-bottom">Design engaging multi-point video viewing experiences throughout the app in order to promote more video consumption and more ad revenue.</p>
+
+        <!-- My Role -->
+        <h2 class="cs-section-heading anim-from-bottom">My Role</h2>
+        <ul class="anim-from-bottom">
+          <li>Collaborate with a team of executives, business offering managers, iOS/Android developers and QA engineers</li>
+          <li>Facilitate brainstorming and white-boarding sessions with stakeholders</li>
+          <li>Research news and competitive weather apps</li>
+          <li>Translate ideas into design concepts</li>
+          <li>Lead UX/UI design; build out wireframes, deliver high-fidelity prototypes</li>
+          <li>Deliver visual &amp; technical specs to development team</li>
+          <li>Conduct visual QA and provide feedback to development team throughout implementation</li>
+          <li>Collaborate with business managers to measure impact after implementation</li>
+        </ul>
+
+        <!-- Existing Solutions -->
+        <h2 class="anim-from-bottom">Existing Solutions</h2>
+        <p class="anim-from-bottom">Before I started working on a potential solution I evaluated what had already been implemented in the app. Most of videos were presented by small thumbnails. It was almost impossible to see what the video was about.</p>
+
+        <div class="vid-phones-row anim-from-bottom">
+          <div class="vid-phone">
+            <img src="assets/cs-video-1.png" alt="Existing video solution 1" />
+          </div>
+          <div class="vid-phone">
+            <img src="assets/cs-video-2.png" alt="Existing video solution 2" />
+          </div>
+        </div>
+
+        <div class="vid-phones-row anim-from-bottom">
+          <div class="vid-phone">
+            <img src="assets/cs-video-3.png" alt="Existing video solution 3" />
+          </div>
+          <div class="vid-phone">
+            <img src="assets/cs-video-5.png" alt="Existing video solution 5" />
+          </div>
+        </div>
+
+        <div class="vid-phones-row vid-phones-row--left anim-from-bottom">
+          <div class="vid-phone">
+            <img src="assets/cs-video-4.png" alt="Existing video solution 4" />
+          </div>
+        </div>
+
+        <!-- Horizontal Scroll -->
+        <h2 class="anim-from-bottom">Horizontal Scroll</h2>
+        <p class="anim-from-bottom">I felt that larger size videos were much more engaging. Horizontal scroll and maximizing video size seemed like the best solution to me. Horizontal scroll saves vertical space in the app. The size of the thumbnail is big enough to give the user a good preview and at the same time suggests there are more videos in the scroll. Autoplay and auto-advance options could be set up by the client in the web-based configuration portal.</p>
+
+        <div class="vid-image-row anim-from-bottom">
+          <img class="vid-carousel-img" src="assets/cs-video-carousel.png" alt="Video horizontal carousel" />
+        </div>
+
+        <!-- Measurable Results -->
+        <h2 class="anim-from-bottom">Measurable Results</h2>
+        <p class="anim-from-bottom">This horizontal carousel design increased video viewing an average of <strong>146%</strong> for a typical TV station (WKRB Nashville), over the 6 month period following implementation.</p>
+
+        <!-- Vertical "Infinity" Scroll -->
+        <h2 class="anim-from-bottom">Vertical "Infinity" Scroll</h2>
+        <p class="anim-from-bottom">Tapping on any video in the app launched a Video Player originally.</p>
+        <p class="anim-from-bottom">What if tapping on a video instead took the user to a collection of all video content available in the app, so that users don't have to hunt for more videos throughout the app? The user can stay on the video library page and browse through all available weather stories. Each video on that page will have a pre-roll ad. More video views &ndash; more monetization</p>
+
+        <div class="vid-phones-row vid-phones-row--centered anim-from-bottom">
+          <div class="vid-phone vid-phone--tall">
+            <img src="assets/cs-video-discovery.png" alt="Video discovery vertical scroll" />
+          </div>
+        </div>
+
+        <!-- Measurable Results 2 -->
+        <h2 class="anim-from-bottom">Measurable Results</h2>
+        <p class="anim-from-bottom vid-last-paragraph">After the proposed solution was implemented and went live, stations started getting measurable results: increased video views and traffic. Providing videos that are properly timed, scaled and targeted for mobile user behaviors increased video views by <strong>441% for a group of over 130 TV stations</strong>.</p>
+
+      </div><!-- /.cs-content -->
+
+    </div><!-- /.cs-inner -->
+  </main>
+
+  <!-- ─── Footer ────────────────────────────────────────────────── -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; All rights reserved 2026 Tanya Simkhovich.</p>
+      <div class="footer-contact">
+        <span class="footer-connect">Connect&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <a class="footer-email" href="mailto:tsimkhovich@gmail.com">tsimkhovich@gmail.com</a>
+        <a class="footer-linkedin" href="https://linkedin.com" target="_blank" rel="noopener">
+          <img src="assets/linkedin-logo.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
