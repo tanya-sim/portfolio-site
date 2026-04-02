@@ -106,6 +106,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /**
+ * Idea-card icon pulse animation.
+ * Icons grow to 120% then settle back, one by one sequentially.
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const icons = document.querySelectorAll('.wi-idea-card__icon');
+  if (!icons.length) return;
+  let triggered = false;
+
+  const pulseObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting || triggered) return;
+      triggered = true;
+      pulseObserver.disconnect();
+
+      icons.forEach((icon, i) => {
+        setTimeout(() => icon.classList.add('is-pulsed'), i * 500);
+      });
+    });
+  }, { root: null, rootMargin: '-100px', threshold: 0 });
+
+  icons.forEach(el => pulseObserver.observe(el));
+});
+
+/**
  * Stat-card percentage count-up animation.
  * Counts from 0 to the target value in 10% increments when scrolled into view.
  */

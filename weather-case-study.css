@@ -165,6 +165,17 @@ p.wi-stat-card__number {
   max-width: 48px;
   width: auto;
   height: auto;
+  transition: transform 0.4s ease;
+}
+
+.wi-idea-card__icon.is-pulsed img {
+  animation: icon-pulse 0.8s ease;
+}
+
+@keyframes icon-pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }
 
 .wi-idea-card__text {
