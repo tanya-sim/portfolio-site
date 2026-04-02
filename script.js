@@ -106,22 +106,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /**
  * Idea-card page-curl animation.
- * Curls bottom-right corner one by one with staggered delay.
+ * Curls then uncurls bottom-right corner one by one sequentially.
  */
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.wi-idea-card');
   if (!cards.length) return;
+  let triggered = false;
 
   const curlObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      curlObserver.unobserve(entry.target);
+      if (!entry.isIntersecting || triggered) return;
+      triggered = true;
+      curlObserver.disconnect();
 
-      // Find this card's index among all idea cards for stagger
-      const idx = Array.from(cards).indexOf(entry.target);
-      setTimeout(() => {
-        entry.target.classList.add('is-curled');
-      }, idx * 400);
+      // Sequentially curl then uncurl each card
+      const curlDuration = 500;   // matches CSS transition
+      const holdDuration = 600;   // how long it stays curled
+      const stagger = curlDuration + holdDuration + curlDuration + 200;
+
+      cards.forEach((card, i) => {
+        const start = i * stagger;
+        // Curl
+        setTimeout(() => card.classList.add('is-curled'), start);
+        // Uncurl
+        setTimeout(() => card.classList.remove('is-curled'), start + curlDuration + holdDuration);
+      });
     });
   }, { root: null, rootMargin: '-100px', threshold: 0 });
 

@@ -154,7 +154,8 @@ p.wi-stat-card__number {
   overflow: hidden;
 }
 
-/* Page curl */
+/* Page curl — triangular cutout reveals "underside" */
+.wi-idea-card::before,
 .wi-idea-card::after {
   content: '';
   position: absolute;
@@ -162,16 +163,37 @@ p.wi-stat-card__number {
   right: 0;
   width: 0;
   height: 0;
+  transition: width 0.5s ease, height 0.5s ease;
+  pointer-events: none;
+}
+
+/* Shadow / underside triangle */
+.wi-idea-card::before {
   background: linear-gradient(
     225deg,
-    #fff 45%,
-    #ddd 50%,
-    rgba(0, 0, 0, 0.08) 56%,
-    transparent 80%
+    rgba(0, 0, 0, 0.06) 0%,
+    rgba(0, 0, 0, 0.03) 40%,
+    transparent 60%
   );
-  box-shadow: -2px -2px 6px rgba(0, 0, 0, 0.08);
-  border-radius: 0 0 24px 0;
-  transition: width 0.5s ease, height 0.5s ease;
+  z-index: 1;
+}
+
+/* Folded corner — the "paper" flipping up */
+.wi-idea-card::after {
+  background: linear-gradient(
+    225deg,
+    #fff 30%,
+    #e8e8e8 65%,
+    #d5d5d5 100%
+  );
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+  box-shadow: -3px -3px 8px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+}
+
+.wi-idea-card.is-curled::before {
+  width: 56px;
+  height: 56px;
 }
 
 .wi-idea-card.is-curled::after {
