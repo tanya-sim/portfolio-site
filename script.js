@@ -107,26 +107,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /**
  * Idea-card icon pulse animation.
- * Icons grow to 120% then settle back, one by one sequentially.
+ * Icons grow to 120% then settle back, one by one per row.
  */
 document.addEventListener('DOMContentLoaded', () => {
-  const icons = document.querySelectorAll('.wi-idea-card__icon');
-  if (!icons.length) return;
-  let triggered = false;
+  const rows = document.querySelectorAll('.wi-idea-cards');
+  if (!rows.length) return;
 
   const pulseObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting || triggered) return;
-      triggered = true;
-      pulseObserver.disconnect();
+      if (!entry.isIntersecting) return;
+      pulseObserver.unobserve(entry.target);
 
+      const icons = entry.target.querySelectorAll('.wi-idea-card__icon');
       icons.forEach((icon, i) => {
         setTimeout(() => icon.classList.add('is-pulsed'), i * 500);
       });
     });
   }, { root: null, rootMargin: '-100px', threshold: 0 });
 
-  icons.forEach(el => pulseObserver.observe(el));
+  rows.forEach(row => pulseObserver.observe(row));
 });
 
 /**
