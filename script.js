@@ -105,6 +105,30 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
+ * Idea-card page-curl animation.
+ * Curls bottom-right corner one by one with staggered delay.
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.wi-idea-card');
+  if (!cards.length) return;
+
+  const curlObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      curlObserver.unobserve(entry.target);
+
+      // Find this card's index among all idea cards for stagger
+      const idx = Array.from(cards).indexOf(entry.target);
+      setTimeout(() => {
+        entry.target.classList.add('is-curled');
+      }, idx * 400);
+    });
+  }, { root: null, rootMargin: '-100px', threshold: 0 });
+
+  cards.forEach(el => curlObserver.observe(el));
+});
+
+/**
  * Stat-card percentage count-up animation.
  * Counts from 0 to the target value in 10% increments when scrolled into view.
  */

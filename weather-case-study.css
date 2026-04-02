@@ -150,6 +150,33 @@ p.wi-stat-card__number {
   gap: 12px;
   opacity: 0.8;
   background-image: linear-gradient(160deg, rgb(255, 186, 167) 3%, rgb(255, 255, 255) 74%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Page curl */
+.wi-idea-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  background: linear-gradient(
+    225deg,
+    #fff 45%,
+    #ddd 50%,
+    rgba(0, 0, 0, 0.08) 56%,
+    transparent 80%
+  );
+  box-shadow: -2px -2px 6px rgba(0, 0, 0, 0.08);
+  border-radius: 0 0 24px 0;
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.wi-idea-card.is-curled::after {
+  width: 48px;
+  height: 48px;
 }
 
 .wi-idea-card__icon {
