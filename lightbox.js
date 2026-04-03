@@ -84,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Click triggers
   document.querySelectorAll('.lightbox-trigger').forEach(el => {
     el.addEventListener('click', (e) => {
-      if (e.target.closest('video')) return;
       open(el);
     });
   });
