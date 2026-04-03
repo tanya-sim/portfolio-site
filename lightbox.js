@@ -1,26 +1,28 @@
 /**
- * Lightbox — reusable modal for images and videos.
+ * Full-screen modal — reusable for images and videos.
  *
  * Usage: add class="lightbox-trigger" and data attributes to any element:
  *   data-lightbox-src   — media source URL
  *   data-lightbox-type  — "image" or "video"
  *   data-lightbox-group — group name for prev/next navigation
+ *   data-lightbox-title — modal title text
+ *   data-lightbox-desc  — modal description text
  */
 document.addEventListener('DOMContentLoaded', () => {
   const lightbox  = document.getElementById('lightbox');
   if (!lightbox) return;
 
-  const scrim     = lightbox.querySelector('.lightbox__scrim');
   const closeBtn  = document.getElementById('lightboxClose');
   const prevBtn   = document.getElementById('lightboxPrev');
   const nextBtn   = document.getElementById('lightboxNext');
   const body      = document.getElementById('lightboxBody');
+  const titleEl   = document.getElementById('lightboxTitle');
+  const descEl    = document.getElementById('lightboxDesc');
 
   let triggers = [];
   let currentIndex = 0;
 
   function open(trigger) {
-    // Build group list
     const group = trigger.dataset.lightboxGroup;
     triggers = group
       ? Array.from(document.querySelectorAll(`.lightbox-trigger[data-lightbox-group="${group}"]`))
@@ -36,6 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const t    = triggers[currentIndex];
     const src  = t.dataset.lightboxSrc;
     const type = t.dataset.lightboxType;
+
+    // Title & description
+    titleEl.textContent = t.dataset.lightboxTitle || '';
+    descEl.textContent  = t.dataset.lightboxDesc  || '';
 
     // Stop any playing video
     const oldVideo = body.querySelector('video');
@@ -78,14 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Click triggers
   document.querySelectorAll('.lightbox-trigger').forEach(el => {
     el.addEventListener('click', (e) => {
-      // Don't intercept native video controls
       if (e.target.closest('video')) return;
       open(el);
     });
   });
 
   closeBtn.addEventListener('click', close);
-  scrim.addEventListener('click', close);
   prevBtn.addEventListener('click', () => navigate(-1));
   nextBtn.addEventListener('click', () => navigate(1));
 
