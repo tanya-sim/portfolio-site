@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="cvs-case-study.css" />
   <link rel="stylesheet" href="b2b-case-study.css" />
+  <link rel="stylesheet" href="lightbox.css" />
 </head>
 <body>
 
@@ -96,41 +97,41 @@
           <li>Ongoing maintenance to comply with iOS and Android updates, recommendations and requirements</li>
         </ul>
 
-        <!-- Row 1: Videos (placeholders) -->
+        <!-- Row 1: Videos -->
         <div class="b2b-phones-row anim-from-bottom">
-          <div class="b2b-phone">
-            <video src="assets/cs-b2b-fue.mp4" controls muted playsinline></video>
+          <div class="b2b-phone lightbox-trigger" data-lightbox-src="assets/cs-b2b-fue.mp4" data-lightbox-type="video" data-lightbox-group="b2b">
+            <video src="assets/cs-b2b-fue.mp4" muted playsinline></video>
           </div>
-          <div class="b2b-phone">
-            <video src="assets/cs-b2b-map.mp4" controls muted playsinline></video>
+          <div class="b2b-phone lightbox-trigger" data-lightbox-src="assets/cs-b2b-map.mp4" data-lightbox-type="video" data-lightbox-group="b2b">
+            <video src="assets/cs-b2b-map.mp4" muted playsinline></video>
           </div>
-          <div class="b2b-phone">
-            <video src="assets/cs-b2b-vid.mp4" controls muted playsinline></video>
+          <div class="b2b-phone lightbox-trigger" data-lightbox-src="assets/cs-b2b-vid.mp4" data-lightbox-type="video" data-lightbox-group="b2b">
+            <video src="assets/cs-b2b-vid.mp4" muted playsinline></video>
           </div>
         </div>
 
         <!-- Row 2: Map screenshots -->
         <div class="b2b-phones-row b2b-phones-row--narrow anim-from-bottom">
-          <div class="b2b-phone b2b-phone--sm">
+          <div class="b2b-phone b2b-phone--sm lightbox-trigger" data-lightbox-src="assets/cs-b2b-map-earthquake.png" data-lightbox-type="image" data-lightbox-group="b2b">
             <img src="assets/cs-b2b-map-earthquake.png" alt="Map earthquake view" />
           </div>
-          <div class="b2b-phone b2b-phone--sm">
+          <div class="b2b-phone b2b-phone--sm lightbox-trigger" data-lightbox-src="assets/cs-b2b-map-storm.png" data-lightbox-type="image" data-lightbox-group="b2b">
             <img src="assets/cs-b2b-map-storm.png" alt="Map storm callout" />
           </div>
-          <div class="b2b-phone b2b-phone--sm">
+          <div class="b2b-phone b2b-phone--sm lightbox-trigger" data-lightbox-src="assets/cs-b2b-map-earth-callout.png" data-lightbox-type="image" data-lightbox-group="b2b">
             <img src="assets/cs-b2b-map-earth-callout.png" alt="Map earth callout" />
           </div>
         </div>
 
         <!-- Row 3: Locations, menu, map -->
         <div class="b2b-phones-row b2b-phones-row--narrow b2b-phones-row--last anim-from-bottom">
-          <div class="b2b-phone b2b-phone--sm">
+          <div class="b2b-phone b2b-phone--sm lightbox-trigger" data-lightbox-src="assets/cs-b2b-locations.png" data-lightbox-type="image" data-lightbox-group="b2b">
             <img src="assets/cs-b2b-locations.png" alt="Locations screen" />
           </div>
-          <div class="b2b-phone b2b-phone--sm">
+          <div class="b2b-phone b2b-phone--sm lightbox-trigger" data-lightbox-src="assets/cs-b2b-menu.png" data-lightbox-type="image" data-lightbox-group="b2b">
             <img src="assets/cs-b2b-menu.png" alt="Menu screen" />
           </div>
-          <div class="b2b-phone b2b-phone--sm">
+          <div class="b2b-phone b2b-phone--sm lightbox-trigger" data-lightbox-src="assets/cs-b2b-map.png" data-lightbox-type="image" data-lightbox-group="b2b">
             <img src="assets/cs-b2b-map.png" alt="Map screen" />
           </div>
         </div>
@@ -154,6 +155,26 @@
     </div>
   </footer>
 
+  <!-- ─── Lightbox Modal ──────────────────────────────────────────── -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox__scrim"></div>
+    <div class="lightbox__panel">
+      <div class="lightbox__header">
+        <button class="lightbox__nav-btn" id="lightboxPrev" aria-label="Previous">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="lightbox__nav-btn" id="lightboxNext" aria-label="Next">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="lightbox__close" id="lightboxClose" aria-label="Close">
+          <img src="assets/icon-close.svg" alt="" />
+        </button>
+      </div>
+      <div class="lightbox__body" id="lightboxBody"></div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
+  <script src="lightbox.js"></script>
 </body>
 </html>
