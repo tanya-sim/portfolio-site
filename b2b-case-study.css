@@ -3,13 +3,9 @@
 /* ─── Phone Rows ──────────────────────────────────────────────── */
 .b2b-phones-row {
   display: flex;
-  gap: 40px;
+  gap: 80px;
   align-items: center;
   padding: 24px 0;
-}
-
-.b2b-phones-row--narrow {
-  gap: 48px;
 }
 
 .b2b-phones-row--last {
@@ -17,11 +13,7 @@
 }
 
 .b2b-phone {
-  width: 320px;
-}
-
-.b2b-phone--sm {
-  width: 310px;
+  width: 240px;
 }
 
 .b2b-phone img,
@@ -34,14 +26,11 @@
 
 /* ─── Responsive ──────────────────────────────────────────────── */
 @media (max-width: 1024px) {
-  .b2b-phones-row { gap: 24px; }
-  .b2b-phones-row--narrow { gap: 24px; }
-  .b2b-phone,
-  .b2b-phone--sm { width: auto; flex: 1; }
+  .b2b-phones-row { gap: 40px; }
+  .b2b-phone { width: auto; flex: 1; }
 }
 
 @media (max-width: 768px) {
   .b2b-phones-row { flex-direction: column; gap: 24px; align-items: center; }
-  .b2b-phone,
-  .b2b-phone--sm { width: 280px; flex: none; }
+  .b2b-phone { width: 240px; flex: none; }
 }
