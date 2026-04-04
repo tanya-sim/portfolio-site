@@ -78,11 +78,34 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
+  let isAnimating = false;
+
   function navigate(dir) {
     const next = currentIndex + dir;
-    if (next < 0 || next >= triggers.length) return;
-    currentIndex = next;
-    showCurrent();
+    if (next < 0 || next >= triggers.length || isAnimating) return;
+    isAnimating = true;
+
+    const outClass = dir > 0 ? 'slide-out-left' : 'slide-out-right';
+    const inClass  = dir > 0 ? 'slide-in-left'  : 'slide-in-right';
+
+    body.classList.add(outClass);
+
+    body.addEventListener('transitionend', function onOut() {
+      body.removeEventListener('transitionend', onOut);
+      body.classList.remove(outClass);
+
+      currentIndex = next;
+      showCurrent();
+
+      body.classList.add(inClass);
+      void body.offsetHeight;
+
+      body.classList.remove(inClass);
+      body.addEventListener('transitionend', function onIn() {
+        body.removeEventListener('transitionend', onIn);
+        isAnimating = false;
+      });
+    });
   }
 
   // Click triggers

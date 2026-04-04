@@ -110,6 +110,29 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.lightbox__body.slide-out-left {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.lightbox__body.slide-out-right {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.lightbox__body.slide-in-left {
+  transition: none;
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.lightbox__body.slide-in-right {
+  transition: none;
+  opacity: 0;
+  transform: translateX(-100%);
 }
 
 .lightbox__body img,
