@@ -49,17 +49,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     body.innerHTML = '';
 
+    const w = t.dataset.lightboxWidth;
+
     if (type === 'video') {
       const video = document.createElement('video');
       video.src = src;
       video.controls = true;
       video.autoplay = true;
       video.playsInline = true;
+      if (w) video.style.width = w + 'px';
       body.appendChild(video);
     } else {
       const img = document.createElement('img');
       img.src = src;
       img.alt = t.querySelector('img')?.alt || '';
+      if (w) img.style.width = w + 'px';
       body.appendChild(img);
     }
 
