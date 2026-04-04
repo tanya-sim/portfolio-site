@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workstation-based System Interface Redesign — Tanya Simkhovich</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Inria+Serif:ital,wght@1,400;1,700&display=block" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cvs-case-study.css" />
+  <link rel="stylesheet" href="max-case-study.css" />
+</head>
+<body>
+
+  <!-- ─── Navigation ──────────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-headshot">
+        <img class="nav-avatar" src="assets/avatar.png" alt="Tanya Simkhovich" />
+        <span class="nav-name">Tanya Simkhovich</span>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="work.html" class="active">WORK</a></li>
+          <li><a href="index.html#philosophy">ABOUT</a></li>
+          <li><a href="#">JOURNEY</a></li>
+          <li><a href="#footer">CONTACT</a></li>
+        </ul>
+        <button class="toggle-mode" id="toggleMode" aria-label="Toggle dark/light mode" data-mode="light">
+          <span class="toggle-mode__bg"></span>
+          <img class="toggle-mode__icon" src="assets/icon-moon.svg" alt="" />
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+          <img src="assets/icon-hamburger.svg" alt="" />
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__panel">
+      <div class="mobile-menu__header">
+        <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+          <img src="assets/icon-close.svg" alt="" />
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="index.html#philosophy">About</a></li>
+        <li><a href="#">Journey</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main class="case-study">
+    <div class="cs-inner">
+
+      <!-- ─── Header ────────────────────────────────────────────── -->
+      <header class="cs-header anim-from-bottom">
+        <p class="cs-dates">2019 &ndash; 2020</p>
+        <h1 class="cs-title">Workstation-based System Interface Redesign</h1>
+      </header>
+
+      <!-- ─── Content ───────────────────────────────────────────── -->
+      <div class="cs-content">
+
+        <p class="anim-from-bottom"><strong>The Weather Company Max</strong> is a workstation-based system that is used by <strong>90%+ of all local TV stations in North America</strong> to produce visualizations and graphics for broadcast.</p>
+
+        <p class="anim-from-bottom">I was responsible for providing a new look and feel for the user interface redesign:</p>
+        <ul class="anim-from-bottom">
+          <li>overall color theme</li>
+          <li>all visual components</li>
+          <li>patterns</li>
+          <li>layouts</li>
+          <li>iconography</li>
+        </ul>
+
+        <p class="anim-from-bottom">Updated the icon library, redesigning over 200 icons. This long overdue visual overhaul produced a stunning modern dark themed interface that received extremely positive feedback from end users (meteorologists).</p>
+
+        <!-- Row 1 -->
+        <div class="max-img-row anim-from-bottom">
+          <img src="assets/cs-max-wallpaper.png" alt="MAX wallpaper" />
+          <img src="assets/cs-max-showplayer.png" alt="Show Player" />
+        </div>
+
+        <!-- Row 2 -->
+        <div class="max-img-row anim-from-bottom">
+          <img src="assets/cs-max-event-config.png" alt="Event Configuration" />
+          <img src="assets/cs-max-icons.png" alt="MAX Icons" />
+          <img src="assets/cs-max-toolbar.png" alt="MAX Toolbar" />
+        </div>
+
+        <!-- Row 3: Mixed-width panels -->
+        <div class="max-img-row max-img-row--panels anim-from-bottom">
+          <img src="assets/cs-max-message-center.png" alt="Message Center" />
+          <img src="assets/cs-max-color-picker.png" alt="Color Picker" />
+          <img src="assets/cs-max-camera.png" alt="Camera Controls" />
+          <img src="assets/cs-max-material-controls.png" alt="Material Controls" />
+          <img src="assets/cs-max-3d-volumetric.png" alt="3D Volumetric Control" />
+        </div>
+
+        <!-- Row 4 -->
+        <div class="max-img-row anim-from-bottom">
+          <img src="assets/cs-max-scene-builder.png" alt="Scene Builder" />
+          <img src="assets/cs-max-scene-builder-2.png" alt="Scene Builder detail" />
+          <img src="assets/cs-max-live-lineup.png" alt="Live Lineup" />
+        </div>
+
+        <!-- Row 5: Single wide image -->
+        <div class="max-img-row max-img-row--last anim-from-bottom">
+          <img src="assets/cs-max-showplayer-before-after.png" alt="Show Player before and after" />
+        </div>
+
+        <!-- Watson Weather & Media Section -->
+        <h2 class="anim-from-bottom">Watson Weather &amp; Media</h2>
+        <p class="anim-from-bottom">An additional sample of other projects I've worked on.</p>
+
+        <!-- Row 6 -->
+        <div class="max-img-row anim-from-bottom">
+          <img src="assets/cs-max-config-tool.png" alt="Config Tool" />
+          <img src="assets/cs-max-config-tool-launch.png" alt="Config Tool Launch Button" />
+          <img src="assets/cs-max-config-tool-wings.png" alt="Config Tool Wings" />
+        </div>
+
+        <!-- Row 7 -->
+        <div class="max-img-row max-img-row--last anim-from-bottom">
+          <img src="assets/cs-max-alert-triggers.png" alt="Alert Triggers" />
+          <img src="assets/cs-max-ops-dashboard.png" alt="Ops Dashboard Concept" />
+          <img src="assets/cs-max-closed-captioning.png" alt="Closed Captioning UI" />
+        </div>
+
+      </div><!-- /.cs-content -->
+
+    </div><!-- /.cs-inner -->
+  </main>
+
+  <!-- ─── Footer ────────────────────────────────────────────────── -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; All rights reserved 2026 Tanya Simkhovich.</p>
+      <div class="footer-contact">
+        <span class="footer-connect">Connect&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <a class="footer-email" href="mailto:tsimkhovich@gmail.com">tsimkhovich@gmail.com</a>
+        <a class="footer-linkedin" href="https://linkedin.com" target="_blank" rel="noopener">
+          <img src="assets/linkedin-logo.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

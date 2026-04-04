@@ -1,0 +1,58 @@
+/* ─── MAX Case Study ─────────────────────────────────────────── */
+
+.max-img-row {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.max-img-row--panels {
+  gap: 38px;
+}
+
+.max-img-row--last {
+  padding-bottom: 64px;
+}
+
+.max-img-row img {
+  height: auto;
+  display: block;
+  flex: 1;
+  min-width: 0;
+}
+
+/* ─── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .max-img-row {
+    gap: 20px;
+  }
+  .max-img-row--panels {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .max-img-row--panels img {
+    flex: 0 0 auto;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .max-img-row {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .max-img-row img {
+    flex: none;
+    width: 100%;
+    max-width: 400px;
+  }
+  .max-img-row--panels {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .max-img-row--panels img {
+    max-width: 45%;
+  }
+}
