@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="cvs-case-study.css" />
   <link rel="stylesheet" href="max-case-study.css" />
+  <link rel="stylesheet" href="lightbox.css" />
 </head>
 <body>
 
@@ -86,37 +87,67 @@
 
         <!-- Row 1: 3 × 300px, gap 40px -->
         <div class="max-img-row max-img-row--pt anim-from-bottom" style="gap:40px;">
-          <img src="assets/cs-max-wallpaper.png" alt="MAX wallpaper" style="width:300px;" />
-          <video src="assets/cs-max-bun.mp4" muted playsinline preload="auto" controls style="width:300px;"></video>
-          <img src="assets/cs-max-showplayer.png" alt="Show Player" style="width:300px;" />
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-wallpaper.png" data-lightbox-type="image" data-lightbox-group="max" data-lightbox-title="MAX Wallpaper" data-lightbox-desc="" style="width:300px;">
+            <img src="assets/cs-max-wallpaper.png" alt="MAX wallpaper" />
+          </div>
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-bun.mp4" data-lightbox-type="video" data-lightbox-group="max" data-lightbox-title="MAX Broadcast" data-lightbox-desc="" style="width:300px;">
+            <video src="assets/cs-max-bun.mp4" muted playsinline preload="auto"></video>
+          </div>
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-showplayer.png" data-lightbox-type="image" data-lightbox-group="max" data-lightbox-title="Show Player" data-lightbox-desc="" style="width:300px;">
+            <img src="assets/cs-max-showplayer.png" alt="Show Player" />
+          </div>
         </div>
 
         <!-- Row 2: 304 + 300 + 300, gap 40px -->
         <div class="max-img-row anim-from-bottom" style="gap:40px;">
-          <img src="assets/cs-max-event-config.png" alt="Event Configuration" style="width:304px;" />
-          <img src="assets/cs-max-icons.png" alt="MAX Icons" style="width:300px;" />
-          <img src="assets/cs-max-toolbar.png" alt="MAX Toolbar" style="width:300px;" />
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-event-config.png" data-lightbox-type="image" data-lightbox-group="max" data-lightbox-title="Event Configuration" data-lightbox-desc="" style="width:304px;">
+            <img src="assets/cs-max-event-config.png" alt="Event Configuration" />
+          </div>
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-icons.png" data-lightbox-type="image" data-lightbox-group="max" data-lightbox-title="Icon Library" data-lightbox-desc="" style="width:300px;">
+            <img src="assets/cs-max-icons.png" alt="MAX Icons" />
+          </div>
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-toolbar.png" data-lightbox-type="image" data-lightbox-group="max" data-lightbox-title="Toolbar" data-lightbox-desc="" style="width:300px;">
+            <img src="assets/cs-max-toolbar.png" alt="MAX Toolbar" />
+          </div>
         </div>
 
         <!-- Row 3: Mixed-width panels, gap 38px -->
         <div class="max-img-row anim-from-bottom" style="gap:38px;">
-          <img src="assets/cs-max-message-center.png" alt="Message Center" style="width:300px;" />
-          <img src="assets/cs-max-color-picker.png" alt="Color Picker" style="width:91.5px;" />
-          <img src="assets/cs-max-camera.png" alt="Camera Controls" style="width:77px;" />
-          <img src="assets/cs-max-material-controls.png" alt="Material Controls" style="width:247px;" />
-          <img src="assets/cs-max-3d-volumetric.png" alt="3D Volumetric Control" style="width:104px;" />
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-message-center.png" data-lightbox-type="image" data-lightbox-group="max" data-lightbox-title="Message Center" data-lightbox-desc="" style="width:300px;">
+            <img src="assets/cs-max-message-center.png" alt="Message Center" />
+          </div>
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-color-picker.png" data-lightbox-type="image" data-lightbox-group="max" data-lightbox-title="Color Picker" data-lightbox-desc="" style="width:91.5px;">
+            <img src="assets/cs-max-color-picker.png" alt="Color Picker" />
+          </div>
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-camera.png" data-lightbox-type="image" data-lightbox-group="max" data-lightbox-title="Camera Controls" data-lightbox-desc="" style="width:77px;">
+            <img src="assets/cs-max-camera.png" alt="Camera Controls" />
+          </div>
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-material-controls.png" data-lightbox-type="image" data-lightbox-group="max" data-lightbox-title="Material Controls" data-lightbox-desc="" style="width:247px;">
+            <img src="assets/cs-max-material-controls.png" alt="Material Controls" />
+          </div>
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-3d-volumetric.png" data-lightbox-type="image" data-lightbox-group="max" data-lightbox-title="3D Volumetric Control" data-lightbox-desc="" style="width:104px;">
+            <img src="assets/cs-max-3d-volumetric.png" alt="3D Volumetric Control" />
+          </div>
         </div>
 
         <!-- Row 4: 300 + 328 + 300, gap 30px -->
         <div class="max-img-row anim-from-bottom" style="gap:30px;">
-          <img src="assets/cs-max-scene-builder.png" alt="Scene Builder" style="width:300px;" />
-          <img src="assets/cs-max-scene-builder-2.png" alt="Scene Builder detail" style="width:328px;" />
-          <img src="assets/cs-max-live-lineup.png" alt="Live Lineup" style="width:300px;" />
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-scene-builder.png" data-lightbox-type="image" data-lightbox-group="max" data-lightbox-title="Scene Builder" data-lightbox-desc="" style="width:300px;">
+            <img src="assets/cs-max-scene-builder.png" alt="Scene Builder" />
+          </div>
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-scene-builder-2.png" data-lightbox-type="image" data-lightbox-group="max" data-lightbox-title="Scene Builder" data-lightbox-desc="" style="width:328px;">
+            <img src="assets/cs-max-scene-builder-2.png" alt="Scene Builder detail" />
+          </div>
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-live-lineup.png" data-lightbox-type="image" data-lightbox-group="max" data-lightbox-title="Live Lineup" data-lightbox-desc="" style="width:300px;">
+            <img src="assets/cs-max-live-lineup.png" alt="Live Lineup" />
+          </div>
         </div>
 
         <!-- Row 5: Single 367px image -->
         <div class="max-img-row max-img-row--last anim-from-bottom">
-          <img src="assets/cs-max-showplayer-before-after.png" alt="Show Player before and after" style="width:367px;" />
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-showplayer-before-after.png" data-lightbox-type="image" data-lightbox-group="max" data-lightbox-title="Show Player Before &amp; After" data-lightbox-desc="" style="width:367px;">
+            <img src="assets/cs-max-showplayer-before-after.png" alt="Show Player before and after" />
+          </div>
         </div>
 
         <!-- Watson Weather & Media Section -->
@@ -125,16 +156,28 @@
 
         <!-- Row 6: 3 × 300px, gap 40px -->
         <div class="max-img-row anim-from-bottom" style="gap:40px;">
-          <img src="assets/cs-max-config-tool.png" alt="Config Tool" style="width:300px;" />
-          <img src="assets/cs-max-config-tool-launch.png" alt="Config Tool Launch Button" style="width:300px;" />
-          <img src="assets/cs-max-config-tool-wings.png" alt="Config Tool Wings" style="width:300px;" />
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-config-tool.png" data-lightbox-type="image" data-lightbox-group="watson" data-lightbox-title="Config Tool" data-lightbox-desc="" style="width:300px;">
+            <img src="assets/cs-max-config-tool.png" alt="Config Tool" />
+          </div>
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-config-tool-launch.png" data-lightbox-type="image" data-lightbox-group="watson" data-lightbox-title="Config Tool Launch Button" data-lightbox-desc="" style="width:300px;">
+            <img src="assets/cs-max-config-tool-launch.png" alt="Config Tool Launch Button" />
+          </div>
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-config-tool-wings.png" data-lightbox-type="image" data-lightbox-group="watson" data-lightbox-title="Config Tool Wings" data-lightbox-desc="" style="width:300px;">
+            <img src="assets/cs-max-config-tool-wings.png" alt="Config Tool Wings" />
+          </div>
         </div>
 
         <!-- Row 7: 3 × 300px, gap 40px -->
         <div class="max-img-row max-img-row--last anim-from-bottom" style="gap:40px;">
-          <img src="assets/cs-max-alert-triggers.png" alt="Alert Triggers" style="width:300px;" />
-          <img src="assets/cs-max-ops-dashboard.png" alt="Ops Dashboard Concept" style="width:300px;" />
-          <img src="assets/cs-max-closed-captioning.png" alt="Closed Captioning UI" style="width:300px;" />
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-alert-triggers.png" data-lightbox-type="image" data-lightbox-group="watson" data-lightbox-title="Alert Triggers" data-lightbox-desc="" style="width:300px;">
+            <img src="assets/cs-max-alert-triggers.png" alt="Alert Triggers" />
+          </div>
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-ops-dashboard.png" data-lightbox-type="image" data-lightbox-group="watson" data-lightbox-title="Ops Dashboard Concept" data-lightbox-desc="" style="width:300px;">
+            <img src="assets/cs-max-ops-dashboard.png" alt="Ops Dashboard Concept" />
+          </div>
+          <div class="max-trigger lightbox-trigger" data-lightbox-src="assets/cs-max-closed-captioning.png" data-lightbox-type="image" data-lightbox-group="watson" data-lightbox-title="Closed Captioning UI" data-lightbox-desc="" style="width:300px;">
+            <img src="assets/cs-max-closed-captioning.png" alt="Closed Captioning UI" />
+          </div>
         </div>
 
       </div><!-- /.cs-content -->
@@ -156,6 +199,29 @@
     </div>
   </footer>
 
+  <!-- ─── Full-Screen Modal ────────────────────────────────────────── -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox__header">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Close">
+        <img src="assets/icon-close.svg" alt="" />
+      </button>
+    </div>
+    <div class="lightbox__title-area">
+      <h2 class="lightbox__title" id="lightboxTitle"></h2>
+      <p class="lightbox__desc" id="lightboxDesc"></p>
+    </div>
+    <div class="lightbox__media-row">
+      <button class="lightbox__nav-btn" id="lightboxPrev" aria-label="Previous">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="lightbox__body" id="lightboxBody"></div>
+      <button class="lightbox__nav-btn" id="lightboxNext" aria-label="Next">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+
   <script src="script.js"></script>
+  <script src="lightbox.js"></script>
 </body>
 </html>

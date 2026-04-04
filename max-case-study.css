@@ -14,10 +14,22 @@
   padding-bottom: 64px;
 }
 
-.max-img-row img {
+.max-img-row img,
+.max-img-row video {
   height: auto;
   display: block;
   flex-shrink: 0;
+}
+
+.max-trigger {
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.max-trigger img,
+.max-trigger video {
+  width: 100%;
+  pointer-events: none;
 }
 
 /* ─── Responsive ──────────────────────────────────────────────── */
