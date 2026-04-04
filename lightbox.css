@@ -87,7 +87,10 @@
 }
 
 .lightbox__nav-btn {
-  flex-shrink: 0;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 210;
   width: 32px;
   height: 32px;
   display: flex;
@@ -98,6 +101,14 @@
   cursor: pointer;
   color: var(--gray-95, #0a0a0a);
   padding: 0;
+}
+
+#lightboxPrev {
+  left: 32px;
+}
+
+#lightboxNext {
+  right: 32px;
 }
 
 .lightbox__nav-btn:disabled {
@@ -178,5 +189,11 @@ body.dark-mode .lightbox__nav-btn {
   .lightbox__body img,
   .lightbox__body video {
     max-width: 100%;
+  }
+  #lightboxPrev {
+    left: 16px;
+  }
+  #lightboxNext {
+    right: 16px;
   }
 }
