@@ -43,6 +43,19 @@
   border: 1px solid #6d6d6d;
 }
 
+/* ─── Dark Mode ─────────────────────────────────────────────── */
+body.dark-mode .trait--personal {
+  background: #3d1a24;
+  border-color: #f53981;
+  color: #f0f0f0;
+}
+
+body.dark-mode .trait--pro {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #888;
+  color: #f0f0f0;
+}
+
 /* ─── Outside of Work Images ────────────────────────────────── */
 .about-img-row {
   display: flex;
