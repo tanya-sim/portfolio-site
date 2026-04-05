@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume — Tanya Simkhovich</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Inria+Serif:ital,wght@1,400;1,700&family=Inter:wght@400;600&display=block" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cvs-case-study.css" />
+  <link rel="stylesheet" href="resume.css" />
+</head>
+<body>
+
+  <!-- ─── Navigation ──────────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-headshot">
+        <img class="nav-avatar" src="assets/avatar.png" alt="Tanya Simkhovich" />
+        <span class="nav-name">Tanya Simkhovich</span>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="work.html">WORK</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="resume.html" class="active">RESUME</a></li>
+          <li><a href="#footer">CONTACT</a></li>
+        </ul>
+        <button class="toggle-mode" id="toggleMode" aria-label="Toggle dark/light mode" data-mode="light">
+          <span class="toggle-mode__bg"></span>
+          <img class="toggle-mode__icon" src="assets/icon-moon.svg" alt="" />
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+          <img src="assets/icon-hamburger.svg" alt="" />
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__panel">
+      <div class="mobile-menu__header">
+        <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+          <img src="assets/icon-close.svg" alt="" />
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main class="case-study">
+    <div class="cs-inner">
+
+      <!-- ─── Header ────────────────────────────────────────────── -->
+      <header class="cs-header anim-from-bottom" style="border-bottom:none; margin-bottom:0;">
+        <h1 class="cs-title">Resume</h1>
+      </header>
+
+      <!-- ─── Content ───────────────────────────────────────────── -->
+      <div class="cs-content">
+
+        <!-- Resume Header -->
+        <div class="resume-header anim-from-bottom">
+          <p class="resume-header__name">Tanya Simkhovich</p>
+          <p class="resume-header__role">Senior UX Product Designer</p>
+          <p class="resume-header__tagline">Design Systems &nbsp;|&nbsp; Native and Web experiences &nbsp;|&nbsp; Enterprise Platforms &nbsp;|&nbsp; Graphic Design + Iconography</p>
+        </div>
+
+        <!-- ═══ Experience ═══════════════════════════════════════ -->
+        <div class="resume-section-header anim-from-bottom">
+          <img src="assets/icon-experience.svg" alt="" />
+          <h2>Experience</h2>
+        </div>
+
+        <!-- CVS Health -->
+        <div class="resume-entry anim-from-bottom">
+          <div class="resume-entry__top">
+            <div>
+              <p class="resume-entry__title">Design System Lead Designer</p>
+              <p class="resume-entry__company">CVS Health</p>
+            </div>
+            <div class="resume-entry__meta">
+              <p class="resume-entry__date">September 2020 - December 2025</p>
+              <p class="resume-entry__location">Remote</p>
+            </div>
+          </div>
+          <p class="resume-entry__desc">Led design of enterprise-scale mobile design system foundations within CVS Health's digital ecosystem, defining reusable components, interaction patterns, and accessibility standards that supported consistent, scalable healthcare experiences across digital products.</p>
+          <div class="resume-pills">
+            <span class="skill-pill">Design Systems</span>
+            <span class="skill-pill">Component Architecture</span>
+            <span class="skill-pill">Design Frameworks</span>
+            <span class="skill-pill">Native Accessibility</span>
+            <span class="skill-pill">Governance</span>
+            <span class="skill-pill">Leadership</span>
+          </div>
+        </div>
+
+        <!-- The Weather Company / IBM -->
+        <div class="resume-entry anim-from-bottom">
+          <div class="resume-entry__top">
+            <div>
+              <p class="resume-entry__title">Senior Mobile UX Designer</p>
+              <p class="resume-entry__company">The Weather Company / IBM</p>
+            </div>
+            <div class="resume-entry__meta">
+              <p class="resume-entry__date">July 2016 - June 2020</p>
+              <p class="resume-entry__location">North Andover, MA</p>
+            </div>
+          </div>
+          <p class="resume-entry__desc">Led end-to-end product design for a large-scale consumer mobile platform powering 380+ branded apps used by 10M+ users across iOS and Android, designing data-driven experiences that improved usability and engagement at scale.</p>
+          <div class="resume-pills">
+            <span class="skill-pill">Product UX</span>
+            <span class="skill-pill">iOS</span>
+            <span class="skill-pill">Android</span>
+            <span class="skill-pill">Mobile UX</span>
+            <span class="skill-pill">User Research</span>
+            <span class="skill-pill">Interface Design</span>
+            <span class="skill-pill">Iconography</span>
+          </div>
+        </div>
+
+        <!-- John Hancock -->
+        <div class="resume-entry anim-from-bottom">
+          <div class="resume-entry__top">
+            <div>
+              <p class="resume-entry__title">Senior Web Designer</p>
+              <p class="resume-entry__company">John Hancock</p>
+            </div>
+            <div class="resume-entry__meta">
+              <p class="resume-entry__date">January 2014 - April 2016</p>
+              <p class="resume-entry__location">Westwood, MA</p>
+            </div>
+          </div>
+          <p class="resume-entry__desc">Led end-to-end product design for a large-scale consumer mobile platform powering 380+ branded apps used by 10M+ users across iOS and Android, designing data-driven experiences that improved usability and engagement at scale.</p>
+          <div class="resume-pills">
+            <span class="skill-pill">Responsive Web</span>
+            <span class="skill-pill">Agile</span>
+            <span class="skill-pill">Enterprise Design</span>
+            <span class="skill-pill">Portal Design</span>
+          </div>
+        </div>
+
+        <!-- Courion Corporation -->
+        <div class="resume-entry anim-from-bottom">
+          <div class="resume-entry__top">
+            <div>
+              <p class="resume-entry__title">Senior Visual Designer</p>
+              <p class="resume-entry__company">Courion Corportion</p>
+            </div>
+            <div class="resume-entry__meta">
+              <p class="resume-entry__date">December 2004 - January 2014</p>
+              <p class="resume-entry__location">Framingham, MA</p>
+            </div>
+          </div>
+          <p class="resume-entry__desc">Operated as a one-person in-house creative agency supporting all digital and visual design needs for an identity and access management software provider serving 500+ enterprise customers.</p>
+          <div class="resume-pills">
+            <span class="skill-pill">Digital Marketing</span>
+            <span class="skill-pill">Brand Identity</span>
+            <span class="skill-pill">Trade Shows</span>
+            <span class="skill-pill">Print Design</span>
+            <span class="skill-pill">CSS</span>
+            <span class="skill-pill">JavaScript</span>
+          </div>
+        </div>
+
+        <!-- Macs At Work -->
+        <div class="resume-entry anim-from-bottom">
+          <div class="resume-entry__top">
+            <div>
+              <p class="resume-entry__title">Web Designer</p>
+              <p class="resume-entry__company">Macs At Work</p>
+            </div>
+            <div class="resume-entry__meta">
+              <p class="resume-entry__date">July 2000 - August 2002</p>
+              <p class="resume-entry__location">Southborough, MA</p>
+            </div>
+          </div>
+          <p class="resume-entry__desc">Designed web site for local businesses.</p>
+          <div class="resume-pills">
+            <span class="skill-pill">HTML</span>
+            <span class="skill-pill">Web Graphics</span>
+            <span class="skill-pill">Agency Experience</span>
+          </div>
+        </div>
+
+        <!-- ═══ Education ════════════════════════════════════════ -->
+        <div class="resume-section-header anim-from-bottom">
+          <img src="assets/icon-education.svg" alt="" />
+          <h2>Education</h2>
+        </div>
+
+        <div class="resume-entry resume-entry--edu anim-from-bottom">
+          <div class="resume-entry__top">
+            <div>
+              <p class="resume-entry__title">BS of Electromechanical Engineering</p>
+              <p class="resume-entry__company">Urals State University</p>
+            </div>
+            <div class="resume-entry__meta">
+              <p class="resume-entry__date">Russia</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ Additional Skills ════════════════════════════════ -->
+        <div class="resume-section-header anim-from-bottom">
+          <img src="assets/icon-skills.svg" alt="" />
+          <h2>Additional Skills</h2>
+        </div>
+
+        <div class="resume-additional-skills anim-from-bottom">
+          <span class="skill-pill"><strong>AI:</strong> Claude Code, GitHub Copilot, Figma Make, Chat GPT</span>
+          <span class="skill-pill"><strong>Design Tools:</strong> Figma, Sketch, Adobe Creative Suite</span>
+          <span class="skill-pill"><strong>UX:</strong> Wireframing, Prototyping, User Journeys, Usability Testing</span>
+          <span class="skill-pill"><strong>Technical Skills:</strong> HTML, CSS, Visual Code Studio, Markdown</span>
+          <span class="skill-pill"><strong>Enterprise Tools:</strong> Teams, MS Office, JIRA, Rally, Slack, Miro, Sharepoint</span>
+        </div>
+
+      </div><!-- /.cs-content -->
+
+    </div><!-- /.cs-inner -->
+  </main>
+
+  <!-- ─── Footer ────────────────────────────────────────────────── -->
+  <footer id="footer" style="padding-top: 64px;">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; All rights reserved 2026 Tanya Simkhovich.</p>
+      <div class="footer-contact">
+        <span class="footer-connect">Connect&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <a class="footer-email" href="mailto:tsimkhovich@gmail.com">tsimkhovich@gmail.com</a>
+        <a class="footer-linkedin" href="https://linkedin.com" target="_blank" rel="noopener">
+          <img src="assets/linkedin-logo.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

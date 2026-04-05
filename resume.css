@@ -1,0 +1,190 @@
+/* ─── Resume Page ──────────────────────────────────────────── */
+
+.resume-header {
+  padding-bottom: 24px;
+}
+
+.resume-header__name {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 48px;
+  color: var(--gray-95);
+  margin: 0;
+}
+
+.resume-header__role {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 42px;
+  color: #5362d2;
+  margin: 0;
+}
+
+.resume-header__tagline {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--gray-60);
+  margin: 18px 0 0;
+}
+
+/* ─── Section Headers ──────────────────────────────────────── */
+.resume-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--gray-20);
+  padding-bottom: 0;
+}
+
+.resume-section-header img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.resume-section-header h2 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 42px;
+  color: var(--gray-95);
+  margin: 0;
+}
+
+/* ─── Experience Entry ─────────────────────────────────────── */
+.resume-entry {
+  padding-bottom: 48px;
+}
+
+.resume-entry--edu {
+  padding-bottom: 32px;
+}
+
+.resume-entry__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.resume-entry__title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: var(--gray-95);
+  margin: 0;
+}
+
+.resume-entry__company {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  color: #737373;
+  margin: 0;
+}
+
+.resume-entry__meta {
+  text-align: right;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.resume-entry__date {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--gray-60);
+  margin: 0;
+}
+
+.resume-entry__location {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--gray-60);
+  margin: 0;
+}
+
+.resume-entry__desc {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--gray-95);
+  margin: 0;
+  padding-top: 12px;
+}
+
+/* ─── Skill Pills ──────────────────────────────────────────── */
+.resume-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px 6px;
+  border-radius: 18px;
+  background: #fdf6e4;
+  border: 1px solid #a3a3a3;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray-70);
+  white-space: nowrap;
+}
+
+.skill-pill strong {
+  font-weight: 600;
+}
+
+/* ─── Additional Skills ────────────────────────────────────── */
+.resume-additional-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ─── Dark Mode ────────────────────────────────────────────── */
+body.dark-mode .resume-header__role {
+  color: #8b9cf7;
+}
+
+body.dark-mode .resume-entry__company {
+  color: #a3a3a3;
+}
+
+body.dark-mode .skill-pill {
+  background: rgba(253, 246, 228, 0.1);
+  border-color: #666;
+  color: #ccc;
+}
+
+body.dark-mode .skill-pill strong {
+  color: #e0e0e0;
+}
+
+/* ─── Responsive ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .resume-entry__top {
+    flex-direction: column;
+  }
+  .resume-entry__meta {
+    text-align: left;
+    white-space: normal;
+  }
+  .resume-header__tagline {
+    font-size: 16px;
+  }
+}
