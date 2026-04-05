@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevBtn   = document.getElementById('lightboxPrev');
   const nextBtn   = document.getElementById('lightboxNext');
   const body      = document.getElementById('lightboxBody');
+  const titleArea = document.querySelector('.lightbox__title-area');
   const titleEl   = document.getElementById('lightboxTitle');
   const descEl    = document.getElementById('lightboxDesc');
 
@@ -88,18 +89,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const outClass = dir > 0 ? 'slide-out-left' : 'slide-out-right';
     const inClass  = dir > 0 ? 'slide-in-left'  : 'slide-in-right';
 
+    titleArea.classList.add(outClass);
     body.classList.add(outClass);
 
     body.addEventListener('transitionend', function onOut() {
       body.removeEventListener('transitionend', onOut);
+      titleArea.classList.remove(outClass);
       body.classList.remove(outClass);
 
       currentIndex = next;
       showCurrent();
 
+      titleArea.classList.add(inClass);
       body.classList.add(inClass);
       void body.offsetHeight;
 
+      titleArea.classList.remove(inClass);
       body.classList.remove(inClass);
       body.addEventListener('transitionend', function onIn() {
         body.removeEventListener('transitionend', onIn);
