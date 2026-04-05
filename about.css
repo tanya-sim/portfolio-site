@@ -12,6 +12,22 @@
   min-width: 0;
 }
 
+.about-intro__text--tight p {
+  margin: 0;
+}
+
+.about-spacer {
+  line-height: 24px;
+}
+
+.about-subheading {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 48px;
+  color: var(--gray-95);
+}
+
 .about-intro__traits {
   flex: 1;
   min-width: 0;
