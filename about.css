@@ -12,7 +12,8 @@
   min-width: 0;
 }
 
-.about-intro__text--tight p {
+.about-intro__text--tight p,
+.about-intro__text--tight h2 {
   margin: 0;
 }
 
