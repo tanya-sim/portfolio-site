@@ -1,0 +1,94 @@
+/* ─── About Me Page ─────────────────────────────────────────── */
+
+.about-intro {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding-bottom: 24px;
+}
+
+.about-intro__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.about-intro__traits {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  min-height: 400px;
+}
+
+/* ─── Trait Chips ────────────────────────────────────────────── */
+.trait {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 18px;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  white-space: nowrap;
+  position: absolute;
+}
+
+.trait--personal {
+  background: #ffe2da;
+  border: 1px solid #f53981;
+}
+
+.trait--pro {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid #6d6d6d;
+}
+
+/* ─── Outside of Work Images ────────────────────────────────── */
+.about-img-row {
+  display: flex;
+  align-items: center;
+}
+
+.about-img-row img {
+  display: block;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* ─── Responsive ────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .about-intro {
+    flex-direction: column;
+  }
+  .about-intro__traits {
+    min-height: 300px;
+    width: 100%;
+  }
+  .about-img-row {
+    flex-wrap: wrap;
+    gap: 20px !important;
+    justify-content: center;
+  }
+  .about-img-row img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-img-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px !important;
+  }
+  .about-img-row img {
+    width: 100% !important;
+    max-width: 100%;
+  }
+  .about-intro__traits {
+    min-height: 360px;
+  }
+  .trait {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+}
