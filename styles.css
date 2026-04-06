@@ -92,7 +92,7 @@ nav {
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--blue-70); }
-.nav-links a.active { font-weight: 600; }
+.nav-links a.active { font-weight: 700; }
 
 /* ─── Toggle Mode Button ─────────────────────────────────────────────── */
 .toggle-mode {
