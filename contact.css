@@ -3,6 +3,7 @@
 .contact-wrap {
   width: 670px;
   max-width: 100%;
+  align-self: center;
 }
 
 .contact-card {
