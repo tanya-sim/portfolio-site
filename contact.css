@@ -117,9 +117,9 @@ body.dark-mode .contact-card {
 
 body.dark-mode .contact-input,
 body.dark-mode .contact-textarea {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.08);
   border-color: #666;
-  color: var(--gray-95);
+  color: #f0f0f0;
 }
 
 body.dark-mode .contact-input::placeholder,
