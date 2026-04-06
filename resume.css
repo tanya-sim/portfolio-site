@@ -157,6 +157,11 @@
   gap: 12px;
 }
 
+/* ─── Footer Spacing ───────────────────────────────────────── */
+.resume-additional-skills {
+  margin-bottom: 64px;
+}
+
 /* ─── Dark Mode ────────────────────────────────────────────── */
 body.dark-mode .resume-header__role {
   color: #8b9cf7;
