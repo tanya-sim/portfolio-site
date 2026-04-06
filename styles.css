@@ -611,7 +611,7 @@ footer {
 .footer-contact {
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 9px;
   font-size: 14px;
   font-family: 'Inter', 'Manrope', sans-serif;
 }
@@ -621,17 +621,12 @@ footer {
   white-space: pre;
 }
 
-.footer-email {
-  color: var(--blue-70);
-}
-
 .footer-linkedin {
   border: 1px solid var(--gray-20);
   border-radius: 4px;
   overflow: hidden;
   width: 37px;
   height: 31px;
-  margin-left: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
