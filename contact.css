@@ -4,6 +4,18 @@
   width: 670px;
   max-width: 100%;
   align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cs-content .contact-title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 60px;
+  color: var(--gray-95);
+  margin: 0;
 }
 
 .contact-card {
