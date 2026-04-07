@@ -162,3 +162,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
   numbers.forEach(el => countObserver.observe(el));
 });
+
+/**
+ * Homepage stat-card count-up animation.
+ * Counts from 0 to the target number when scrolled into view.
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const statNumbers = document.querySelectorAll('.stat-number');
+  if (!statNumbers.length) return;
+
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      statObserver.unobserve(entry.target);
+
+      const el = entry.target;
+      const target = parseInt(el.textContent, 10);
+      const duration = 1500;
+      const steps = target;
+      const interval = duration / steps;
+      let current = 0;
+
+      el.textContent = '0';
+      const timer = setInterval(() => {
+        current += 1;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        el.textContent = current;
+      }, interval);
+    });
+  }, { root: null, rootMargin: '-100px', threshold: 0 });
+
+  statNumbers.forEach(el => statObserver.observe(el));
+});
