@@ -52,24 +52,24 @@
 
 .trait--personal {
   background: #ffe2da;
-  border: 1px solid #f53981;
+  border: 1px solid #ff9579;
 }
 
 .trait--pro {
-  background: rgba(0, 0, 0, 0.15);
-  border: 1px solid #6d6d6d;
+  background: #e5e5e5;
+  border: 1px solid #a3a3a3;
 }
 
 /* ─── Dark Mode ─────────────────────────────────────────────── */
 body.dark-mode .trait--personal {
   background: #3d1a24;
-  border-color: #f53981;
+  border-color: #ff9579;
   color: #f0f0f0;
 }
 
 body.dark-mode .trait--pro {
   background: rgba(255, 255, 255, 0.1);
-  border-color: #888;
+  border-color: #a3a3a3;
   color: #f0f0f0;
 }
 
