@@ -167,6 +167,9 @@
   border-radius: 32px;
   background: var(--yellow-30);
 }
+.work-card__thumb--dark {
+  background: var(--gray-95);
+}
 .work-card__thumb img {
   position: absolute;
   display: block;
