@@ -168,7 +168,7 @@
   background: var(--yellow-30);
 }
 .work-card__thumb--dark {
-  background: var(--gray-95);
+  background: #0a0a0a;
 }
 .work-card__thumb img {
   position: absolute;
